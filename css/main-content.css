@@ -1,0 +1,445 @@
+.main-content-section{
+    margin: 0px auto 36px auto;
+}
+.main-content-section > div{
+    margin: 20px;
+}
+.main-content-section .more-btn{
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.625em;
+    letter-spacing: 2px;
+    font-weight: 100;
+    display: inline-block;
+    border: 1px solid white;
+    padding: 8px 33px 8px 35px;
+}
+.eternity{
+    background-image: url('../assets/eternity-bg.png');
+    background-position: center;
+    background-size: cover;
+    padding-top: 73px;
+    padding-bottom: 58px;
+}
+.eternity, .create-your-own{
+    padding-top: 53px;
+    padding-bottom: 58px;
+}
+.eternity h2, .create-your-own h2,
+.diamonds h2, .engagements-rings h2, .sapphire-rings h2,
+.our-philosophy h2, .wedding-rings h2,
+.jewellery h2,
+.valuations h2, .guidance h2{
+    font-family: "GILSans", Helvetica, Arial, sans-serif;
+    color: white;
+    font-size: 1.25em;
+    letter-spacing: 4px;
+    line-height: 29px;
+}
+.eternity h2, .create-your-own h2{
+    margin-bottom: 309px;
+}
+.create-your-own{
+    background-color: #32969B;
+    /*background-image: url('../assets/eternity-bg.png');*/
+    background-position: center;
+    background-size: cover;
+    padding-left: 15px;
+    text-align: center;
+}
+.create-your-own h2{
+    margin-bottom: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.create-your-own hr{
+    width: 75px;
+    border-top-color: white;
+    margin-bottom: 28px;
+}
+.create-your-own p{
+    color: white;
+    margin-bottom: 100px;
+    font-family: "ProximaNovaThin", Helvetica, Arial, sans-serif;
+    font-size: 1.125em;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    text-align: center;
+    padding: 0px 27px;
+}
+@media(min-width: 768px) {
+    .create-your-own p{
+        padding: 0px 80px;
+    }
+    @-moz-document url-prefix() {
+        .create-your-own p {
+            display: block;
+        }
+    }
+    .create-your-own p {
+        display: block\9;
+    }
+}
+@media(min-width: 992px) {
+    .main-content-section {
+        margin-top: -20px; /*hack*/
+    }
+    .main-content-section .eternity{
+        width: calc(58.33333333% - 40px);
+        margin-right: 0px;
+    }
+    .create-your-own{
+        width: calc(41.66666666% - 20px);
+        padding-left: 80px;
+        text-align: left;
+    }
+    .create-your-own h2{
+        margin-left: 0px;
+        margin-right: 0px;
+        text-align: left;
+    }
+    .create-your-own hr {
+        display: inline-block
+    }
+    .create-your-own p {
+        width: 276px;
+        height: 112px;
+        text-align: left;
+        padding: 0px;
+        overflow: hidden;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+    }
+}
+@media(min-width: 1200px) {
+    .create-your-own {
+        padding-left: 110px;
+    }
+}
+/* - - - */
+.diamonds{
+    background-color: #e99096;
+    background-image: url('../assets/diamonds.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.engagements-rings{
+    background-color: #c4d4e0;
+    background-image: url('../assets/engage-ring.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.sapphire-rings{
+    background-color: #d2cecb;
+    background-image: url('../assets/sapphire-ring.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.diamonds span, .engagements-rings span, .sapphire-rings span{
+    display: inline-block;
+}
+.main-content-section .diamonds, .main-content-section .engagements-rings, .main-content-section .sapphire-rings{
+    padding-top: 30px;
+    margin-top: 0px;
+    padding-bottom: 58px;
+}
+.diamonds h2, .engagements-rings h2, .sapphire-rings h2{
+    margin-bottom: 329px;
+}
+@media(min-width: 992px) {
+    .main-content-section .diamonds, .main-content-section .engagements-rings, .main-content-section .sapphire-rings{
+        width: calc(33.33333333% - 26.66666666px);
+        margin-right: 0px;
+    }
+}
+/*- - - - */
+.main-content-section .our-philosophy, .main-content-section .wedding-rings,
+.main-content-section .jewellery, .main-content-section .testimonial,
+.main-content-section .valuations, .main-content-section .guidance{
+    margin-top: 0px;
+}
+.our-philosophy{
+    padding-top: 22px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 58px;
+    text-align: center;
+}
+.our-philosophy h2, .our-philosophy p, .our-philosophy .more-btn{
+    color: #4d4d4d;
+}
+.our-philosophy h2{
+    margin-bottom: 64px;
+    text-align: center;
+}
+.our-philosophy p{
+    font-family: "ProximaNovaThin", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: 0px;
+    font-size: 0.9375em;
+    line-height: 30px;
+    margin-bottom: 66px;
+    word-spacing: 2px;
+    text-align: center;
+}
+.our-philosophy .more-btn{
+    border-color: #8c8c8c;
+}
+.wedding-rings{
+    background-image: url('../assets/wedding.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 195px;
+    padding-bottom: 201px;
+}
+.wedding-rings h2{
+    line-height: 38px;
+    margin-bottom: 24px;
+    float: right;
+    margin-top: -92px;
+    margin-right: 5px;
+}
+.wedding-rings .more-btn{
+    float:right;
+    margin-right: -120px;
+    margin-top: 6px;
+}
+@media(min-width: 768px) {
+    .our-philosophy {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .wedding-rings h2{
+        margin-right: 54px;
+    }
+}
+@media(min-width: 992px) {
+    .main-content-section .our-philosophy, .main-content-section .wedding-rings,
+    .main-content-section .valuations, .main-content-section .guidance{
+        width: calc(50% - 30px);
+        margin-right: 0px;
+    }
+    .our-philosophy {
+        padding-left: 49px;
+        padding-right: 0px;
+        text-align: left;
+    }
+    .our-philosophy h2, .our-philosophy p{
+        text-align: left;
+    }
+    .our-philosophy p {
+        margin-bottom: 56px;
+        width: 376px;
+        height: 240px;
+        overflow: hidden;
+        -webkit-line-clamp: 8;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+    }
+    @-moz-document url-prefix() {
+        .our-philosophy p {
+            display: block;
+        }
+    }
+    .our-philosophy p {
+        display: block\9;
+    }
+    .wedding-rings h2{
+        margin-top: -8px;
+        margin-right: 95px;
+    }
+    .wedding-rings .more-btn{
+        margin-right: -120px;
+        margin-top: 93px;
+    }
+
+}
+@media(min-width: 1200px) {
+    .our-philosophy{
+        padding-left: 89px;
+        padding-top: 42px;
+    }
+    .our-philosophy p {
+        margin-bottom: 66px;
+        width: 408px;
+        height: 210px;
+        -webkit-line-clamp: 7;
+    }
+}
+/*- - - - */
+.jewellery{
+    background-image: url('../assets/jewellery.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 195px;
+    padding-bottom: 201px;
+}
+.jewellery h2{
+    line-height: 38px;
+    margin-bottom: 0px;
+    float: right;
+    margin-top: -92px;
+    margin-right: 5px;
+}
+.jewellery .more-btn{
+    float:right;
+    margin-right: 12px;
+    margin-top: -36px;
+}
+.testimonial{
+    padding-top: 72px;
+}
+.testimonial h2{
+    font-size: 4.25em;
+    font-family: serif;
+    line-height: 22px;
+    color: #38959a;
+    margin-bottom: 40px;
+}
+.testimonial p.testimonial-text{
+    width: 90%;
+    font-family: "AGaramondItalic", serif;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.testimonial p.testimonial-from{
+    text-transform: uppercase;
+    color: #38959a;
+    border-bottom: 1px solid #38959a;
+    display: inline-block;
+    padding-bottom: 5px;
+    font-size: 0.75em;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    margin-bottom: 28px;
+}
+@media(min-width: 768px) {
+    .jewellery h2{
+        margin-right: 54px;
+        margin-bottom: 0px;
+        margin-top: -51px;
+    }
+    .jewellery .more-btn{
+        margin-right: 60px;
+        margin-top: 6px;
+    }
+    .testimonial p.testimonial-text{
+        width: 325px;
+        height: 192px;
+        overflow: hidden;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+    }
+    @-moz-document url-prefix() {
+        .testimonial p.testimonial-text{
+            display: inline-block;
+        }
+    }
+    .testimonial p.testimonial-text{
+        display: block\9;
+    }
+}
+@media(min-width: 992px) {
+    .main-content-section .jewellery{
+        width: calc(66.66666666% - 60px);
+        margin-right: 0px;
+    }
+    .jewellery h2{
+        margin-top: 10px;
+        margin-right: 95px;
+    }
+    .jewellery .more-btn{
+        margin-right: -129px;
+        margin-top: 74px;
+    }
+    .testimonial p.testimonial-text {
+        margin-bottom: 100px;
+    }
+}
+/*- - - -*/
+.valuations{
+    background-color: #3db0a5;
+    padding-top: 70px;
+}
+.guidance{
+    background-image: url('../assets/guidance.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 150px;
+}
+.valuations{
+    padding-bottom: 58px;
+}
+.guidance{
+    padding-bottom: 152px;
+}
+.valuations h2, .guidance h2{
+    margin-bottom: 32px;
+}
+.valuations p, .guidance p{
+    color: white;
+    font-family: "ProximaNovaThin", Helvetica, Arial, sans-serif;
+    font-size: 1.125em;
+    margin-bottom: 34px;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    text-align: center;
+    width: 219px;
+    display: inline-block;
+}
+.valuations li{
+    font-size: 0.625em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.valuations .more-btn{
+    margin-top: 52px;
+}
+li.arrow img{
+    margin-top: -91px;
+}
+li.process img{
+    margin-bottom: 5px;
+}
+.guidance p{
+    margin-bottom: 30px;
+}
+@media(min-width: 768px) {
+    .valuations p, .guidance p {
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        display: -webkit-inline-box;
+        width: 280px;
+    }
+    @-moz-document url-prefix() {
+        .valuations p, .guidance p {
+            display: inline-block;
+        }
+    }
+    .valuations p, .guidance p {
+        display: inline-block\9;
+    }
+}
