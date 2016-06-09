@@ -2,7 +2,7 @@
     margin: 0px auto 36px auto;
 }
 .main-content-section > div{
-    margin: 20px;
+    margin: 10px;
 }
 .main-content-section .more-btn{
     color: white;
@@ -70,6 +70,9 @@
     padding: 0px 27px;
 }
 @media(min-width: 768px) {
+    .main-content-section > div{
+        margin: 20px;
+    }
     .create-your-own p{
         padding: 0px 80px;
     }
