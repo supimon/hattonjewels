@@ -1,8 +1,7 @@
 footer{
     font-size: .75em;
     background-color: #f0eceb;
-    width: calc(100% - 40px);
-    margin: 0px 20px;
+    margin: 0px;
     padding-top: 30px;
 }
 footer hr{
@@ -91,6 +90,10 @@ footer h3{
     font-size: .75em;
 }
 @media(min-width: 768px){
+    footer{
+        width: calc(100% - 40px);
+        margin: 0px 20px;
+    }
     .customer-service{
         width: 260px;
     }
