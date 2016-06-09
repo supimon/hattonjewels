@@ -4,6 +4,9 @@
 .main-content-section > div{
     margin: 10px;
 }
+.main-products > div{
+    padding: 0px;
+}
 .main-content-section .more-btn{
     color: white;
     text-transform: uppercase;
@@ -13,6 +16,9 @@
     display: inline-block;
     border: 1px solid white;
     padding: 8px 33px 8px 35px;
+}
+.main-products .more-btn{
+    padding: 8px;
 }
 .eternity{
     background-image: url('../assets/eternity-bg.png');
@@ -26,7 +32,6 @@
     padding-bottom: 58px;
 }
 .eternity h2, .create-your-own h2,
-.diamonds h2, .engagements-rings h2, .sapphire-rings h2,
 .our-philosophy h2, .wedding-rings h2,
 .jewellery h2,
 .valuations h2, .guidance h2{
@@ -35,6 +40,13 @@
     font-size: 1.25em;
     letter-spacing: 4px;
     line-height: 29px;
+}
+.diamonds h2, .engagements-rings h2, .sapphire-rings h2{
+    font-family: "GILSans", Helvetica, Arial, sans-serif;
+    color: white;
+    font-size: .7em;
+    letter-spacing: 1px;
+    line-height: 20px;
 }
 .eternity h2, .create-your-own h2{
     margin-bottom: 309px;
@@ -70,6 +82,9 @@
     padding: 0px 27px;
 }
 @media(min-width: 768px) {
+    .main-products .more-btn{
+        padding: 8px 33px 8px 35px;
+    }
     .main-content-section > div{
         margin: 20px;
     }
@@ -127,20 +142,18 @@
 .diamonds{
     background-color: #e99096;
     background-image: url('../assets/diamonds.png');
-    background-position: center;
-    background-repeat: no-repeat;
+    margin-right: 7px;
 }
 .engagements-rings{
     background-color: #c4d4e0;
     background-image: url('../assets/engage-ring.png');
-    background-position: center;
-    background-repeat: no-repeat;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 .sapphire-rings{
     background-color: #d2cecb;
     background-image: url('../assets/sapphire-ring.png');
-    background-position: center;
-    background-repeat: no-repeat;
+    margin-left: 7px;
 }
 .diamonds span, .engagements-rings span, .sapphire-rings span{
     display: inline-block;
@@ -149,14 +162,42 @@
     padding-top: 30px;
     margin-top: 0px;
     padding-bottom: 58px;
+    position: relative;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
 }
 .diamonds h2, .engagements-rings h2, .sapphire-rings h2{
-    margin-bottom: 329px;
+
 }
-@media(min-width: 992px) {
+.main-products .explore-holder{
+    position: absolute;
+    width: 100%;
+    bottom: 38px;
+}
+@media(min-width: 768px) {
+    .main-content-section .diamonds{
+        margin-right: 14px;
+    }
+    .main-content-section .engagements-rings{
+        margin-left: 6px;
+        margin-right: 7px;
+    }
+    .main-content-section .sapphire-rings{
+        margin-left: 13px;
+    }
     .main-content-section .diamonds, .main-content-section .engagements-rings, .main-content-section .sapphire-rings{
-        width: calc(33.33333333% - 26.66666666px);
-        margin-right: 0px;
+        background-size: auto;
+        height: 498px;
+    }
+    .diamonds h2, .engagements-rings h2, .sapphire-rings h2{
+        font-size: 1.25em;
+        letter-spacing: 4px;
+        line-height: 29px;
+    }
+    .main-products .explore-holder{
+        bottom: 58px;
     }
 }
 /*- - - - */
