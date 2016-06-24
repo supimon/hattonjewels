@@ -23,12 +23,9 @@ $(function(){
             default: screenSize = "xs"; break;
         }
     }
-    // make slides responsive
+    // make home page slides responsive
     function adjustSliderHeight(){
-        $('.slider-section .slide-div').width($('.slider-section').width())
-            .height(lookupTable.sliderHeight[screenSize]);
-        //$('.product-slider-section .slide-div').width($('.product-slider-section').width())
-            //.height(lookupTable.productSliderHeight[screenSize]);
+        $('.slider-section .slide-div').width($('.slider-section').width()).height(lookupTable.sliderHeight[screenSize]);
     }
     // populate slides
     function populateSliderProducts(id){
@@ -90,6 +87,7 @@ $(function(){
                         .children(".prod-title").text($(prodArr[firstSlide+i]).text()).end()
                         .children(".prod-price").text($(prodArr[firstSlide+i]).attr("price"));
             });
+            // to avoid redundant AJAX calls for products
             lookupTable.productSliders[id].dataExists[lookupTable.productSliders[id].currentSlide] = true;
         });
     }
