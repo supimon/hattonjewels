@@ -1,4 +1,4 @@
-.inner.banner-section h1{
+.inner-inner.banner-section h1{
     font-family: AGaramondRegular;
     line-height: 60px;
     text-align: center;
@@ -9,14 +9,14 @@
     margin-bottom: 0px;
 }
 @media(min-width: 768px){
-    .inner.banner-section h1 {
+    .inner-inner.banner-section h1 {
         font-size: 1.875em;
         line-height: 110px;
         margin-bottom: 10px;
     }
 }
 @media(min-width: 992px){
-    .inner.banner-section h1 {
+    .inner-inner.banner-section h1 {
         line-height: 290px;
     }
 }
