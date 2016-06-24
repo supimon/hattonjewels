@@ -1,22 +1,22 @@
 @font-face {
     font-family: ProximaNovaThin;
-    src: url(vendor/fonts/Proxima%20Nova%20S%20W01SC%20Thin.woff);
+    src: url("../../vendor/fonts/Proxima Nova S W01SC Thin.woff");
 }
 @font-face {
     font-family: ProximaNovaRegular;
-    src: url(vendor/fonts/Mark%20Simonson%20-%20Proxima%20Nova%20Alt%20Regular.woff);
+    src: url("../../vendor/fonts/Mark Simonson - Proxima Nova Alt Regular.woff");
 }
 @font-face {
     font-family: AGaramondItalic;
-    src: url(vendor/fonts/AGaramond%20Italic.woff);
+    src: url("../../vendor/fonts/AGaramond Italic.woff");
 }
 @font-face {
     font-family: AGaramondRegular;
-    src: url(vendor/fonts/AGaramond-Regular.woff);
+    src: url("../../vendor/fonts/AGaramond-Regular.woff");
 }
 @font-face {
     font-family: GILSans;
-    src: url(vendor/fonts/GIL.woff);
+    src: url("../../vendor/fonts/GIL.woff");
 }
 body{
     font-family: 'ProximaNovaRegular', sans-serif;

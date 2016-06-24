@@ -21,7 +21,7 @@
     padding: 8px;
 }
 .eternity{
-    background-image: url('../assets/eternity-bg.png');
+    background-image: url('../../../assets/eternity-bg.png');
     background-position: center;
     background-size: cover;
     padding-top: 73px;
@@ -141,18 +141,18 @@
 /* - - - */
 .diamonds{
     background-color: #e99096;
-    background-image: url('../assets/diamonds.png');
+    background-image: url('../../../assets/diamonds.png');
     margin-right: 7px;
 }
 .engagements-rings{
     background-color: #c4d4e0;
-    background-image: url('../assets/engage-ring.png');
+    background-image: url('../../../assets/engage-ring.png');
     margin-left: 3px;
     margin-right: 3px;
 }
 .sapphire-rings{
     background-color: #d2cecb;
-    background-image: url('../assets/sapphire-ring.png');
+    background-image: url('../../../assets/sapphire-ring.png');
     margin-left: 7px;
 }
 .diamonds span, .engagements-rings span, .sapphire-rings span{
@@ -234,7 +234,7 @@
     border-color: #8c8c8c;
 }
 .wedding-rings{
-    background-image: url('../assets/wedding.png');
+    background-image: url('../../../assets/wedding.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -318,7 +318,7 @@
 }
 /*- - - - */
 .jewellery{
-    background-image: url('../assets/jewellery.png');
+    background-image: url('../../../assets/jewellery.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -422,7 +422,7 @@
     padding-top: 70px;
 }
 .guidance{
-    background-image: url('../assets/guidance.png');
+    background-image: url('../../../assets/guidance.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
