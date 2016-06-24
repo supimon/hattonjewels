@@ -2,7 +2,6 @@ $(function(){
     // lookup table
     var lookupTable = {
                         sliderHeight: {xs:375, sm:375, md:463, lg:563},
-                        productSliderHeight: {xs:"auto", sm:"auto", md:"auto", lg:"auto"},
                         sliderProdCount: {xs:2, sm:3, md:5, lg:5},
                         productSliders: resetSliders(true),
                     },
