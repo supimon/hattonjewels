@@ -27,8 +27,8 @@ $(function(){
     function adjustSliderHeight(){
         $('.slider-section .slide-div').width($('.slider-section').width())
             .height(lookupTable.sliderHeight[screenSize]);
-        $('.product-slider-section .slide-div').width($('.product-slider-section').width())
-            .height(lookupTable.productSliderHeight[screenSize]);
+        //$('.product-slider-section .slide-div').width($('.product-slider-section').width())
+            //.height(lookupTable.productSliderHeight[screenSize]);
     }
     // populate slides
     function populateSliderProducts(id){
@@ -72,7 +72,7 @@ $(function(){
                     active = j==0 ? 'active' : '';
                     holderDiv = '<div class="item '+ active +'"><div class="slide-div"><div class="row">'+ prodDiv +
                         '</div></div></div>';
-                    $('.carousel-inner').append(holderDiv);
+                    $('#'+id+' .carousel-inner').append(holderDiv);
                 }
                 // set height and instantiate carousel on the next tick due to race condition
                 setTimeout(function(){
