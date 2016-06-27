@@ -1,22 +1,21 @@
 .inner-inner.banner-section h1{
     font-family: AGaramondRegular;
-    line-height: 60px;
+    line-height: 40px;
     text-align: center;
     background-color: #bccedb;
     color: white;
     font-size: 1.275em;
     letter-spacing: 5.4px;
     margin-bottom: 0px;
+    padding-top: 5px;
 }
 @media(min-width: 768px){
     .inner-inner.banner-section h1 {
-        font-size: 1.875em;
-        line-height: 110px;
-        margin-bottom: 10px;
+        font-size: 1.375em;
     }
 }
 @media(min-width: 992px){
     .inner-inner.banner-section h1 {
-        line-height: 290px;
+        line-height: 50px;
     }
 }

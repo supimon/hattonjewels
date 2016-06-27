@@ -11,6 +11,7 @@ $(function(){
     // make responsive adjustments to page elements
     function makeResponsiveAdjustments(){
         getscreenSize();
+        adjustSliderHeight();
         populateSliderProducts(null);
     }
     // utility function to get width of screen
@@ -90,4 +91,6 @@ $(function(){
             lookupTable.productSliders[id].dataExists[lookupTable.productSliders[id].currentSlide] = true;
         });
     }
+    // sliders
+    $("#ex12c").slider({ id: "slider12c", min: 0, max: 10, range: true, value: [0, 2], tooltip: "hide"});
 });

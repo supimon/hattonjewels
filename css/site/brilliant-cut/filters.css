@@ -1,0 +1,90 @@
+.filter-section{
+    font-family: "ProximaNovaRegular", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    padding: 20px;
+}
+.filter-section h3{
+    font-size: 14px;
+    text-align: left;
+    color: #38959c;
+    letter-spacing: 2px;
+}
+.filter-section .category-filters{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.filter-section .category-filters h4, .filter-section .shape-filters h4{
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    color: #3a3a3a;
+}
+.filter-section .category-filters .single-filter, .filter-section .shape-filters .single-filter{
+    display: inline-block;
+    width: 86px;
+    height: 71px;
+    margin: 11px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+}
+/*test sliders*/
+.slider.slider-horizontal {
+    width: 392px;
+}
+.slider.slider-horizontal .slider-tick-label-container{
+    margin-left: 0px !important;
+    font-size: 11px;
+    letter-spacing: 1.2px;
+}
+#slider12a .slider-track-high, #slider12c .slider-track-high {
+    background: none;
+}
+#slider12b .slider-track-low, #slider12c .slider-track-low {
+    background: none;
+}
+#slider12c .slider-selection {
+    background: #38959b;
+}
+.fa-caret-right:before, .fa-caret-left:before{
+    position: absolute;
+    top: -9px;
+    color: #38959b;
+}
+.fa-caret-right:before{
+    left: 1px;
+}
+.fa-caret-left:before{
+    right: 0px;
+}
+.slider-handle{
+    left: 40%;
+    font-size: 33px;
+    background: none;
+    box-shadow: none;
+}
+.min-slider-handle{
+    padding-left: 6px;
+}
+.max-slider-handle{
+    padding-right: 6px;
+}
+.slider.slider-horizontal .slider-track{
+    height: 4px;
+    background: none;
+    background-color: #a2d0d4;
+}
+.slider.slider-horizontal .slider-tick, .slider.slider-horizontal .slider-tick.in-selection{
+    background: none;
+    box-shadow: none;
+    width: 1px;
+    margin-top: -8px;
+    background-color: #c4d4e0;
+    margin-left: 0px;
+}
+.slider-tick.round{
+    border-radius: 0%;
+}
