@@ -3,7 +3,7 @@ $(function(){
     var lookupTable = {
                         sliderHeight: {xs:375, sm:375, md:463, lg:563},
                         sliderProdCount: {xs:2, sm:3, md:5, lg:5},
-                        productSliders: $('.products-slider-section') ? resetSliders(true) : ''
+                        productSliders: $('.products-slider-section').length ? resetSliders(true) : ''
                     },
         screenSize; // indicates current screenSize
     makeResponsiveAdjustments();
@@ -11,8 +11,8 @@ $(function(){
     // make responsive adjustments to page elements
     function makeResponsiveAdjustments(){
         getscreenSize();
-        $('.slider-section') ? adjustSliderHeight(): '';
-        $('.products-slider-section') ? populateSliderProducts(null): '';
+        $('.slider-section').length ? adjustSliderHeight(): '';
+        lookupTable.productSliders ? populateSliderProducts(null): '';
     }
     // utility function to get width of screen
     function getscreenSize(){
@@ -92,5 +92,7 @@ $(function(){
         });
     }
     // sliders
-    $("#ex12c").slider({ id: "slider12c", min: 0, max: 10, range: true, value: [0, 2], tooltip: "hide"});
+    if($('.filter-section').length) {
+        $("#ex12c").slider({id: "slider12c", min: 0, max: 10, range: true, value: [0, 2], tooltip: "hide"});
+    }
 });
