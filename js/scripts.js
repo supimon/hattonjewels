@@ -3,7 +3,7 @@ $(function(){
     var lookupTable = {
                         sliderHeight: {xs:375, sm:375, md:463, lg:563},
                         sliderProdCount: {xs:2, sm:3, md:5, lg:5},
-                        productSliders: resetSliders(true)
+                        productSliders: $('.products-slider-section') ? resetSliders(true) : ''
                     },
         screenSize; // indicates current screenSize
     makeResponsiveAdjustments();
@@ -11,8 +11,8 @@ $(function(){
     // make responsive adjustments to page elements
     function makeResponsiveAdjustments(){
         getscreenSize();
-        adjustSliderHeight();
-        populateSliderProducts(null);
+        $('.slider-section') ? adjustSliderHeight(): '';
+        $('.products-slider-section') ? populateSliderProducts(null): '';
     }
     // utility function to get width of screen
     function getscreenSize(){
