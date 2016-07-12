@@ -3,6 +3,7 @@ $(function(){
     var lookupTable = {
                         sliderHeight: {xs:375, sm:375, md:463, lg:563},
                         sliderProdCount: {xs:2, sm:3, md:5, lg:5},
+                        filteredProdInsertAfterElement: {xs:1, sm:2, md:3, lg:4},
                         productSliders: $('.products-slider-section').length ? resetSliders(true) : ''
                     },
         screenSize; // indicates current screenSize
@@ -93,6 +94,49 @@ $(function(){
     }
     // sliders
     if($('.filter-section').length) {
-        $("#ex12c").slider({id: "slider12c", min: 0, max: 10, range: true, value: [0, 2], tooltip: "hide"});
+        $("#cut-slider")
+            .slider({id: "cutSlider", min: 0, max: 10, range: true, value: [0, 2], tooltip: "hide"});
+        $("#polish-slider")
+            .slider({id: "polishSlider", min: 0, max: 10, range: true, value: [0, 2], tooltip: "hide"});
+        $("#symmetry-slider")
+            .slider({id: "symmetrySlider", min: 0, max: 10, range: true, value: [0, 2], tooltip: "hide"});
+        $("#caret-slider")
+            .slider({id: "caretSlider", min: 0.10, max: 30.00, range: true, value: [4.50, 20.50], tooltip: "always"});
+        $("#clarity-slider")
+            .slider({id: "claritySlider", min: 0, max: 10, range: true, value: [0, 2], tooltip: "hide"});
+        $("#color-slider")
+            .slider({id: "colorSlider", min: 0, max: 11, range: true, value: [2, 5], tooltip: "hide"});
+        $("#price-slider")
+            .slider({id: "priceSlider", min: 200, max: 2500, range: true, value: [500, 1000], tooltip: "always"});
     }
+    // handle filtered product details view
+    $('.filtered-product-section .product').parent().on('click', function(){
+        $('.filtered-product-details').remove();
+        $('.filtered-product-section .product.active').removeClass('active');
+        $(this).children().addClass('active');
+        var i = (lookupTable.filteredProdInsertAfterElement[screenSize] -
+            $(this).index()%lookupTable.filteredProdInsertAfterElement[screenSize]) +
+            $(this).index(),
+            elem = '<div class="col-xs-12 filtered-product-details">'+
+                '<div><span class="close-prod-details">Close <i class="fa fa-times" aria-hidden="true"></i></span>' +
+                '<div class="clearfix"></div></div>'+
+                '<div class="col-sm-6 prod-gallery"></div>' +
+                '<div class="col-sm-4 prod-details">' +
+                    '<h2 class="prod-details-title">'+ $(this).children().children('.prod-title').text() +'</h2>' +
+                    '<h3 class="prod-sub-title">'+ $(this).children().children('.sub-heading').text() +'</h3>' +
+                    '<p class="prod-description">'+ $(this).children().children('.description').text() +'</p>' +
+                '</div>' +
+                '<div class="col-sm-2 price-select text-right">' +
+                '<p class="price">'+ $(this).children().children('.prod-price').text() +'</p>' +
+                '<a class="btn btn-default select-btn">Select</a>' +
+                '</div>' +
+                '</div>';
+        $(".filtered-product-section .row > div:nth-child(" + (i) + ")").length ?
+        $(".filtered-product-section .row > div:nth-child(" + (i) + ")").after(elem):
+            $(".filtered-product-section .row > div:last-child").after(elem);
+        $('.close-prod-details').on('click', function(){
+            $('.filtered-product-section .product.active').removeClass('active');
+            $('.filtered-product-details').remove();
+        });
+    });
 });

@@ -127,9 +127,180 @@
             <div class="single-filter" style="background-image: url('assets/unique-ring-category.png')"><h4>Heart</h4></div>
         </div>
         <div class="slider-filters">
-            <input id="ex12c" type="text" data-slider-step="2"
-                   data-slider-ticks="[0, 2, 4, 6, 8]"
-                   data-slider-ticks-labels='["Excellent", "Very Good", "Good", "Fair"]'/>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 single-slider-filter">
+                    <h3>Cut</h3>
+                    <input id="cut-slider" type="text" data-slider-step="2"
+                           data-slider-ticks="[0, 2, 4, 6, 8]"
+                           data-slider-ticks-labels='["Excellent", "Very Good", "Good", "Fair"]'/>
+                </div>
+                <div class="col-sm-6 col-md-4 single-slider-filter">
+                    <h3>Polish</h3>
+                    <input id="polish-slider" type="text" data-slider-step="2"
+                           data-slider-ticks="[0, 2, 4, 6, 8]"
+                           data-slider-ticks-labels='["Excellent", "Very Good", "Good", "Fair"]'/>
+                </div>
+                <div class="col-sm-6 col-md-4 single-slider-filter">
+                    <h3>Symmetry</h3>
+                    <input id="symmetry-slider" type="text" data-slider-step="2"
+                           data-slider-ticks="[0, 2, 4, 6, 8]"
+                           data-slider-ticks-labels='["Excellent", "Very Good", "Good", "Fair"]'/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 single-slider-filter">
+                    <h3>Caret</h3>
+                    <input id="caret-slider" type="text" data-slider-step="0.1"/>
+                    <div class="twoTicks-slider-label-container">
+                        <div class="min-label">0.10</div>
+                        <div class="max-label">30.00</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 single-slider-filter">
+                    <h3>Color</h3>
+                    <input id="color-slider" type="text" data-slider-step="1"
+                           data-slider-ticks="[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+                           data-slider-ticks-labels='["D", "E", "F", "G", "H", "I", "J", "K", "L", "M"]'/>
+                </div>
+                <div class="col-sm-6 col-md-4 single-slider-filter">
+                    <h3>Clarity</h3>
+                    <input id="clarity-slider" type="text" data-slider-step="1"
+                           data-slider-ticks="[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]"
+                           data-slider-ticks-labels='["IF", "VVS1", "VVS2", "VS1", "VS2", "SI1", "SI2", "SI3", "I1"]'/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 single-slider-filter">
+                    <h3>Price</h3>
+                    <input id="price-slider" type="text" data-slider-step="1"/>
+                    <div class="twoTicks-slider-label-container">
+                        <div class="min-label">$200</div>
+                        <div class="max-label">$2500</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 single-slider-filter">
+                    <h3>Select A Metal</h3>
+                    <div id="metal-filter">
+                        <ul class="list-inline">
+                            <li><span class="outer-circle yellow"><span class="inner-circle yellow"></span></span><br/>Yellow</li>
+                            <li><span class="outer-circle rose"><span class="inner-circle rose"></span></span><br/>Rose</li>
+                            <li><span class="outer-circle platinum"><span class="inner-circle platinum"></span></span><br/>Platinum</li>
+                            <li><span class="outer-circle white"><span class="inner-circle white"></span></span><br/>White</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 single-slider-filter">
+                    <h3>Certificate</h3>
+                    <div id="certificate-filter">
+                        <ul class="list-inline">
+                            <li>Any</li>
+                            <li>GIA</li>
+                            <li>HRD</li>
+                            <li>IGI</li>
+                            <li>Other</li>
+                            <li>None</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--filtered products-->
+<section class="filtered-product-section">
+    <div class="filtered-product-holder">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center">
+                <div class="product">
+                    <h3 class="prod-title">Selena</h3>
+                    <p class="prod-price">$495.00</p>
+                    <h4 class="sub-heading">Classic Princess Cut Solitaire</h4>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt</p>
+                    <img class="prod-thumbnail main" src="" />
+                    <img class="prod-thumbnail" src="" />
+                    <img class="prod-thumbnail" src="" />
+                    <img class="prod-thumbnail" src="" />
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center">
+                <div class="product">
+                    <h3 class="prod-title">Selena</h3>
+                    <p class="prod-price">$495.00</p>
+                    <h4 class="sub-heading">Classic Princess Cut Solitaire</h4>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt</p>
+                    <img class="prod-thumbnail main" src="" />
+                    <img class="prod-thumbnail" src="" />
+                    <img class="prod-thumbnail" src="" />
+                    <img class="prod-thumbnail" src="" />
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center">
+                <div class="product">
+                    <h3 class="prod-title">Selena</h3>
+                    <p class="prod-price">$495.00</p>
+                    <h4 class="sub-heading">Classic Princess Cut Solitaire</h4>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt</p>
+                    <img class="prod-thumbnail main" src="" />
+                    <img class="prod-thumbnail" src="" />
+                    <img class="prod-thumbnail" src="" />
+                    <img class="prod-thumbnail" src="" />
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center">
+                <div class="product">
+                    <h3 class="prod-title">Selena</h3>
+                    <p class="prod-price">$495.00</p>
+                    <h4 class="sub-heading">Classic Princess Cut Solitaire</h4>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt</p>
+                    <img class="prod-thumbnail main" src="" />
+                    <img class="prod-thumbnail" src="" />
+                    <img class="prod-thumbnail" src="" />
+                    <img class="prod-thumbnail" src="" />
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center">
+                <div class="product">
+                    <h3 class="prod-title">Selena</h3>
+                    <p class="prod-price">$495.00</p>
+                    <h4 class="sub-heading">Classic Princess Cut Solitaire</h4>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt</p>
+                    <img class="prod-thumbnail main" src="" />
+                    <img class="prod-thumbnail" src="" />
+                    <img class="prod-thumbnail" src="" />
+                    <img class="prod-thumbnail" src="" />
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center">
+                <div class="product">
+                    <h3 class="prod-title">Selena</h3>
+                    <p class="prod-price">$495.00</p>
+                    <h4 class="sub-heading">Classic Princess Cut Solitaire</h4>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt</p>
+                    <img class="prod-thumbnail main" src="" />
+                    <img class="prod-thumbnail" src="" />
+                    <img class="prod-thumbnail" src="" />
+                    <img class="prod-thumbnail" src="" />
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center">
+                <div class="product">
+                    <h3 class="prod-title">Selena</h3>
+                    <p class="prod-price">$495.00</p>
+                    <h4 class="sub-heading">Classic Princess Cut Solitaire</h4>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt</p>
+                    <img class="prod-thumbnail main" src="" />
+                    <img class="prod-thumbnail" src="" />
+                    <img class="prod-thumbnail" src="" />
+                    <img class="prod-thumbnail" src="" />
+                </div>
+            </div>
         </div>
     </div>
 </section>
