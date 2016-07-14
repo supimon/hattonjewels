@@ -1,22 +1,115 @@
-.inner.banner-section h1{
-    font-family: AGaramondRegular;
-    line-height: 60px;
-    text-align: center;
+.inner.banner-section{
+    height: 239px;
     background-color: #bccedb;
     color: white;
+    padding-top: 1px;
+}
+.inner.banner-section h1 {
+    font-family: AGaramondRegular;
     font-size: 1.275em;
-    letter-spacing: 5.4px;
-    margin-bottom: 0px;
+    letter-spacing: 3.4px;
+    margin-bottom: 10px;
+    margin-top: 26px;
+}
+.inner.banner-section h3, .inner.banner-section a{
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: ProximaNovaRegular, sans-serif;
+    letter-spacing: 1.8px;
+}
+.inner.banner-section h3{
+    margin-top: 17px;
+    margin-bottom: 18px;
+}
+.inner.banner-section a {
+    display: inline-block;
+    border: 1px solid white;
+    margin: 0px 28px 14px 28px;
+    position: relative;
+    color: white;
+}
+.inner.banner-section a span{
+    position: absolute;
+    top: 9px;
+    left: 30px;
+}
+.inner.banner-section a:before{
+    position: absolute;
+    border: 1px solid white;
+}
+.inner.banner-section a.stone:before{
+    content: " ";
+    width: 151px;
+    height: 42px;
+    top: -5px;
+    left: 3px;
+}
+.inner.banner-section a.setting:before{
+    content: " ";
+    width: 165px;
+    height: 42px;
+    top: -5px;
+    left: 3px;
+}
+.inner.banner-section .stone{
+    width: 159px;
+    height: 34px;
+}
+.inner.banner-section .setting{
+    width: 173px;
+    height: 34px;
+}
+.inner.banner-section hr{
+    width: 11%;
 }
 @media(min-width: 768px){
+    .inner.banner-section{
+        height: 350px;
+        padding-top: 56px;
+    }
     .inner.banner-section h1 {
+        letter-spacing: 5.4px;
         font-size: 1.875em;
-        line-height: 110px;
-        margin-bottom: 10px;
+        margin-bottom: 27px;
+        margin-top: 0px;
+    }
+    .inner.banner-section hr{
+        width: 3%;
+    }
+    .inner.banner-section h3, .inner.banner-section a{
+        font-size: 14px;
+    }
+    .inner.banner-section h3{
+        margin-top: 33px;
+        margin-bottom: 36px;
+    }
+    .inner.banner-section a{
+        margin: 0px 28px;
+    }
+    .inner.banner-section .stone{
+        width: 202px;
+        height: 42px;
+    }
+    .inner.banner-section .setting{
+        width: 217px;
+        height: 42px;
+    }
+    .inner.banner-section a.stone:before{
+        width: 194px;
+        height: 50px;
+    }
+    .inner.banner-section a.setting:before{
+        width: 209px;
+        height: 50px;
+    }
+    .inner.banner-section a span{
+        top: 11px;
     }
 }
 @media(min-width: 992px){
-    .inner.banner-section h1 {
-        line-height: 290px;
+    .inner.banner-section{
+        height: 536px;
+        padding-top: 142px;
     }
 }
