@@ -1,0 +1,61 @@
+.social-sharing-section{
+    padding: 0px 20px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #318389;
+}
+.social-sharing-section .social-holder{
+    position: relative;
+    background-color: #e8e8e8;
+    padding: 10px 0px;
+}
+.social-sharing-section .social{
+    display: inline-block;
+    border-radius: 16px;
+    border: 1px solid #318389;
+    width: 32px;
+    height: 32px;
+}
+.social-sharing-section .continue-shopping{
+    position: absolute;
+    left: 26px;
+    top: 19px;
+    color: #318389;
+}
+.social-sharing-section ul{
+    margin-bottom: 0px;
+}
+.social-sharing-section .fa-facebook, .social-sharing-section .fa-instagram, .social-sharing-section .fa-twitter,
+.social-sharing-section .fa-pinterest-p{
+    color: #318389;
+    margin-top: 6px;
+    font-size: 19px;
+}
+.social-sharing-section .blog {
+    color: #318389;
+    margin-top: 14px;
+    padding-bottom: 8px;
+    font-size: 9px;
+    display: inline-block;
+    position: relative;
+    text-transform: none;
+    letter-spacing: normal;
+}
+.social-sharing-section .blog:before {
+    content: "Blog";
+    top: -4px;
+    position: absolute;
+    left: -9px;
+}
+.social-sharing-section .fa-long-arrow-left{
+    margin-right: 26px;
+    font-size: 18px;
+    position: relative;
+}
+.social-sharing-section .fa-long-arrow-left:before {
+    content: "\f177";
+    top: -13px;
+    position: absolute;
+}

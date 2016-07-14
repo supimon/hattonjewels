@@ -1,0 +1,153 @@
+.gallery-details-section{
+    text-transform: uppercase;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.gallery-details-section .details-holder{
+    padding-right: 150px;
+}
+.gallery-details-section .prod-title{
+    font-family: 'AGaramondRegular', serif;
+}
+.gallery-details-section .sub-heading{
+    text-transform: none;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 35px;
+    color: #318389;
+}
+.gallery-details-section .description{
+    font-family: "ProximaNovaThin", Helvetica, Arial, sans-serif;
+    text-transform: none;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 23px;
+    margin-bottom: 16px;
+    word-spacing: 2px;
+}
+.gallery-details-section .specifications{
+    margin: 0px;
+    letter-spacing: 1.8px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.gallery-details-section .specifications li {
+    width: 49%;
+    padding: 0px 0px 6px 0px;
+}
+.gallery-details-section .specifications li .name{
+    color: #318389;
+}
+.gallery-details-section .specifications li .value{
+    font-size: 10px;
+}
+.details-holder hr{
+    border-top-color: #787878;
+    margin-bottom: 26px;
+    margin-top: 11px;
+}
+.gallery-details-section .certificate{
+    padding-left: 0px;
+}
+.gallery-details-section .certificate .btn{
+    border-radius: 0px;
+    border-color: #318389;
+    font-size: 12px;
+    letter-spacing: 1.6px;
+    padding: 6px 12px;
+    color: #318389;
+    margin-bottom: 22px;
+}
+.gallery-details-section .certificate .price{
+    font-size: 22px;
+    letter-spacing: 3px;
+    color: #318389;
+}
+.gallery-details-section .add-to-bag{
+    padding-right: 0px;
+    padding-top: 1px;
+}
+.gallery-details-section .btn-link.ring-size{
+    font-size: 12px;
+    letter-spacing: 1.6px;
+    color: #318389;
+    margin-bottom: 27px;
+    display: inline-block;
+}
+.gallery-details-section .size-circle{
+    margin-left: 5px;
+    display: inline-block;
+    border-radius: 10px;
+    border: 1px solid #318389;
+    width: 21px;
+    height: 21px;
+}
+.gallery-details-section .add-to-bag .fa-angle-down{
+    margin-right: 2px;
+    margin-top: 1px;
+    font-size: 17px;
+}
+.gallery-details-section .add-to-bag .btn.bag{
+    background-color: #318389;
+    border-color: #318389;
+    border-radius: 0px;
+    font-size: 12px;
+    letter-spacing: 1.8px;
+    padding: 7px 39px;
+}
+.gallery-details-section .add-to-bag .wishlist{
+    display: inline-block;
+    text-align: center;
+    width: 168px;
+    font-size: 12px;
+    text-transform: none;
+    text-decoration: underline;
+    margin-top: 10px;
+    color: #318389;
+}
+.gallery-details-section .free-delivery{
+    margin-top: 20px;
+    padding: 10px 10px 10px 25px;
+    background-color: #e8e8e8;
+}
+.gallery-details-section .free-delivery h4{
+    color: #318389;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+}
+.gallery-details-section .free-delivery p{
+    font-family: "ProximaNovaThin", Helvetica, Arial, sans-serif;
+    text-transform: none;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 23px;
+    word-spacing: 2px;
+}
+.gallery-details-section .help-guide{
+    border-radius: 0px;
+    border-color: #318389;
+    color: #318389;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1.6px;
+    margin-top: 28px;
+}
+.gallery-details-section .book{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.gallery-details-section .questions{
+    padding-right: 0px;
+}
+.gallery-details-section .book .btn, .gallery-details-section .questions .btn{
+    width: 100%;
+    border-radius: 0px;
+    border-color: #318389;
+    color: #318389;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1.6px;
+    margin-top: 13px;
+    margin-bottom: 28px;
+}
