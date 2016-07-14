@@ -1,6 +1,7 @@
 .products-slider-section .carousel{
     width: 70%;
     display: inline-block;
+    margin-top: 29px;
 }
 .products-slider-section .prod-title{
     width: 100%;
@@ -48,6 +49,9 @@
     font-size: 22px;
 }
 @media(min-width: 992px){
+    .products-slider-section{
+        margin-top: 0px;
+    }
     .products-slider-section .product, .products-slider-section .item .row > div, .products-slider-section{
         height: 171px;
     }
