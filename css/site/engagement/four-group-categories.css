@@ -1,8 +1,8 @@
 .four-products-categories{
-    margin: 70px auto 36px auto;
+    margin: 70px auto 0px auto;
 }
 .four-grp-holder{
-    margin: 10px;
+    margin: 10px 10px 0px 10px;
 }
 .four-grp-holder > div{
     padding: 0px;
@@ -68,6 +68,9 @@
     }
 }
 @media(min-width: 768px) {
+    .four-products-categories{
+        margin-bottom: 0px;
+    }
     .four-grp-holder .more-btn{
         padding: 8px 33px 8px 35px;
     }
