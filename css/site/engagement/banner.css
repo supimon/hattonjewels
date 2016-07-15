@@ -113,3 +113,25 @@
         padding-top: 142px;
     }
 }
+/* - - - hack for safari - - - */
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+{ @media{
+        .inner.banner-section a{
+            font-size: 9px;
+            letter-spacing: 1.2px;
+        }
+        .inner.banner-section a span{
+            top: 11px;
+            left: 29px;
+        }
+    }
+    @media(min-width: 768px){
+        .inner.banner-section a{
+            font-size: 13px;
+            letter-spacing: 1.2px;
+        }
+        .inner.banner-section a span{
+            left: 35px;
+        }
+    }
+}
