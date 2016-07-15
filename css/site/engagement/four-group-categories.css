@@ -1,5 +1,5 @@
 .four-products-categories{
-    margin: 70px auto 0px auto;
+    margin: 0px auto 0px auto;
 }
 .four-grp-holder{
     margin: 10px 10px 0px 10px;
@@ -108,9 +108,6 @@
     }
 }
 @media(min-width: 992px) {
-    .four-products-categories{
-        margin-top: 70px;
-    }
     .four-grp-holder .category{
         background-size: auto;
     }
