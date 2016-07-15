@@ -36,6 +36,7 @@
 }
 .filter-section .single-slider-filter{
     padding-left: 26px;
+    height: 90px;
 }
 /*test sliders*/
 .slider.slider-horizontal {
@@ -164,6 +165,9 @@
 @media(min-width: 768px){
     .slider.slider-horizontal .slider-tick-label-container {
         font-size: 0.625em;
+    }
+    .filter-section .single-slider-filter{
+        height: 111px;
     }
 }
 @media(min-width: 1200px){
