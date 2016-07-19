@@ -1,7 +1,7 @@
 $(function(){
     // lookup table
     var screenSize, // indicates current screenSize
-        filterSectionHeight = $('.filter-section').height(), // captures the expanded filter section height
+        filterSectionHeight, // captures the expanded filter section height
         minMaxFilterMarkup = '<div class="col-sm-6 col-md-4 single-slider-filter">' +
             '<h3 class="filter-title"></h3>'+
             '<input class="filter-holder" id="" type="text"/>'+
@@ -134,6 +134,8 @@ $(function(){
         getscreenSize();
         $('.slider-section').length ? adjustSliderHeight(): '';
         lookupTable.productSliders ? populateSliderProducts(null): '';
+        $('.filter-section').height('auto');
+        filterSectionHeight = $('.filter-section').height();
     }
     // utility function to get width of screen
     function getscreenSize(){
@@ -243,6 +245,7 @@ $(function(){
             lookupTable.filterSliders[sliderKey].type == "min-max")
         $('#'+lookupTable.filterSliders[sliderKey].obj.id+'Input').slider(lookupTable.filterSliders[sliderKey].obj);
     }
+    filterSectionHeight = $('.filter-section').height();
     // handle filtered product details view
     $('.filtered-product-section .product').parent().on('click', function(){
         $('.filtered-product-details').remove();
