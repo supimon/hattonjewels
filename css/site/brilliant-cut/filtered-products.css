@@ -1,7 +1,8 @@
 .filtered-product-section .filtered-product-holder{
     background-color: #e8e8e8;
     margin-bottom: 20px;
-    padding: 10px 25px;
+    padding: 50px 65px;
+    margin-top: -29px;
 }
 .filtered-product-section .row > div{
     padding-left: 10px;

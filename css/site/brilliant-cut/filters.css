@@ -1,7 +1,15 @@
 .filter-section{
     font-family: "ProximaNovaRegular", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
-    padding: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    position: relative;
+    z-index: 2;
+    background-color: white;
+    overflow: hidden;
+}
+.filter-section .filter-holder{
+    margin-top: 40px;
 }
 .filter-section h3{
     font-size: 0.875em;
@@ -107,13 +115,13 @@
     float: right;
     margin-right: 9%;
 }
-#metal-filter ul li{
+.metal-filter ul li{
     text-align: center;
     width: 63px;
     font-size: 0.6875em;
     letter-spacing: 1.2px;
 }
-#metal-filter .outer-circle{
+.metal-filter .outer-circle{
     display: inline-block;
     width: 24px;
     height: 24px;
@@ -121,38 +129,38 @@
     border-style: solid;
     border-radius: 12px;
 }
-#metal-filter .inner-circle{
+.metal-filter .inner-circle{
     display: inline-block;
     width: 18px;
     height: 18px;
     margin: 2px;
     border-radius: 9px;
 }
-#metal-filter .outer-circle.yellow{
+.metal-filter .outer-circle.yellow{
     border-color: #ccac70;
 }
-#metal-filter .inner-circle.yellow{
+.metal-filter .inner-circle.yellow{
     background-color: #ccac70;
 }
-#metal-filter .outer-circle.rose{
+.metal-filter .outer-circle.rose{
     border-color: #ef9080;
 }
-#metal-filter .inner-circle.rose{
+.metal-filter .inner-circle.rose{
     background-color: #ef9080;
 }
-#metal-filter .outer-circle.platinum{
+.metal-filter .outer-circle.platinum{
     border-color: #b8b9ba;
 }
-#metal-filter .inner-circle.platinum{
+.metal-filter .inner-circle.platinum{
     background-color: #b8b9ba;
 }
-#metal-filter .outer-circle.white{
+.metal-filter .outer-circle.white{
     border-color: #dedfe0;
 }
-#metal-filter .inner-circle.white{
+.metal-filter .inner-circle.white{
     background-color: #dedfe0;
 }
-#certificate-filter ul li{
+.label-filter ul li{
     background-color: #318389;
     color: white;
     font-size: 0.6875em;
@@ -161,6 +169,26 @@
     text-align: center;
     margin: 0px 5px;
     letter-spacing: 1.2px;
+}
+.filter-section .reset-search-holder .reset, .filter-section .reset-search-holder .search{
+    border-radius: 0px;
+    border-color: #318389;
+    font-size: 12px;
+    letter-spacing: 1.6px;
+    padding: 6px 12px;
+    margin-bottom: 22px;
+    text-transform: uppercase;
+    width: 90px;
+    margin-top: 30px;
+}
+.filter-section .reset-search-holder .reset{
+    color: #318389;
+    margin-right: 5px;
+}
+.filter-section .reset-search-holder .search{
+    background-color: #318389;
+    color: white;
+    margin-left: 5px;
 }
 @media(min-width: 768px){
     .slider.slider-horizontal .slider-tick-label-container {

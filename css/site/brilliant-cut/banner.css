@@ -1,3 +1,7 @@
+.inner-inner.banner-section{
+    position: relative;
+    z-index: 2;
+}
 .inner-inner.banner-section h1{
     font-family: AGaramondRegular;
     line-height: 40px;

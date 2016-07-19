@@ -1,0 +1,14 @@
+.collapse-expand.brilliant-cut{
+    position: relative;
+    z-index: 1;
+    margin-top: -28px;
+}
+.collapse-expand.brilliant-cut .btn-default{
+    font-size: 20px;
+    padding: 27px 20px 0px 20px;
+    border-radius: 21px;
+    border-color: transparent;
+}
+.collapse-expand.brilliant-cut .btn-default:hover, .collapse-expand.brilliant-cut .btn-default:focus{
+    background-color: white;
+}
