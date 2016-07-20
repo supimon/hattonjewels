@@ -1,0 +1,12 @@
+for populating the filters dynamically on the front end
+- - - - -
+goto js > scripts.js > line 30 var lookupTable > line 42 filterSliders
+populate the filterSliders with the desired sliders as shown
+as an example, almost all of the sliders have been populated on the front end for reference
+
+
+for coding the API call for AJAX filter search functionality
+- - - - -
+goto js > scripts.js > line 374 (or if the line number changes, Control+F for "// write the AJAX call here" within
+the file
+
