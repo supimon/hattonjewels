@@ -24,6 +24,17 @@
 .filter-section .shape-filters{
     margin-bottom: 30px;
 }
+.filter-section .fa-check-circle{
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: #318389;
+}
+.filter-section .category-filters .single-filter.active .fa-check-circle,
+.filter-section .shape-filters .single-filter.active .fa-check-circle{
+    display: inline-block;
+}
 .filter-section .category-filters h4, .filter-section .shape-filters h4{
     font-size: 0.6875em;
     letter-spacing: 1.2px;
@@ -120,6 +131,7 @@
     width: 63px;
     font-size: 0.6875em;
     letter-spacing: 1.2px;
+    cursor: pointer;
 }
 .metal-filter .outer-circle{
     display: inline-block;
@@ -169,6 +181,10 @@
     text-align: center;
     margin: 0px 5px;
     letter-spacing: 1.2px;
+    cursor: pointer;
+}
+.filter-section .reset-search-holder{
+    padding: 30px 0px;
 }
 .filter-section .reset-search-holder .reset, .filter-section .reset-search-holder .search{
     border-radius: 0px;
@@ -189,6 +205,15 @@
     background-color: #318389;
     color: white;
     margin-left: 5px;
+}
+.filter-section .metal-filter ul li.active{
+    border-bottom: 1px dashed #318389;
+    color: #318389;
+}
+.filter-section .label-filter ul li.active{
+    background-color: #e8e8e8;
+    color: #318389;
+    border: 1px dashed #318389;
 }
 @media(min-width: 768px){
     .slider.slider-horizontal .slider-tick-label-container {

@@ -2,6 +2,7 @@ $(function(){
     // lookup table
     var screenSize, // indicates current screenSize
         filterSectionHeight, // captures the expanded filter section height
+        sliderResultObj = {},
         minMaxFilterMarkup = '<div class="col-sm-6 col-md-4 single-slider-filter">' +
             '<h3 class="filter-title"></h3>'+
             '<input class="filter-holder" id="" type="text"/>'+
@@ -40,73 +41,81 @@ $(function(){
                             cutSlider: {
                                 obj: {
                                     id: "cutSlider",
-                                    min: 0, max: 10, range: true, value: [0, 2], step: 2,
+                                    min: 0, max: 4, range: true, value: [0, 4], step: 1,
                                     tooltip: "hide",
-                                    ticks: [0, 2, 4, 6, 8],
+                                    ticks: [0, 1, 2, 3, 4],
                                     ticks_labels: ["Excellent", "Very Good", "Good", "Fair"]
                                 },
                                 label: "Cut",
-                                type: "regular"
+                                type: "regular",
+                                sliderObj: ''
                             },
                             polishSlider:{
                                 obj: {
                                     id: "polishSlider",
-                                    min: 0, max: 10, range: true, value: [0, 2], step: 2,
+                                    min: 0, max: 4, range: true, value: [0, 4], step: 1,
                                     tooltip: "hide",
-                                    ticks: [0, 2, 4, 6, 8], ticks_labels: ["Excellent", "Very Good", "Good", "Fair"]
+                                    ticks: [0, 1, 2, 3, 4],
+                                    ticks_labels: ["Excellent", "Very Good", "Good", "Fair"]
                                 },
                                 label: "Polish",
-                                type: "regular"
+                                type: "regular",
+                                sliderObj: ''
                             },
                             symmetrySlider:{
                                 obj: {
                                     id: "symmetrySlider",
-                                    min: 0, max: 10, range: true, value: [0, 2], step: 2,
+                                    min: 0, max: 4, range: true, value: [0, 4], step: 1,
                                     tooltip: "hide",
-                                    ticks: [0, 2, 4, 6, 8],
+                                    ticks: [0, 1, 2, 3, 4],
                                     ticks_labels: ["Excellent", "Very Good", "Good", "Fair"]
                                 },
                                 label: "Symmetry",
-                                type: "regular"
+                                type: "regular",
+                                sliderObj: ''
                             },
                             caretSlider: {
                                 obj: {
                                     id: "caretSlider",
-                                    min: 0.10, max: 30.00, range: true, value: [4.50, 20.50], step: 0.1,
+                                    min: 0.10, max: 30.00, range: true, value: [0.10, 30.00], step: 0.1,
                                     tooltip: "always"
                                 },
                                 label: "Caret",
-                                type: "min-max"
+                                type: "min-max",
+                                sliderObj: ''
                             },
                             claritySlider: {
                                 obj: {
                                     id: "claritySlider",
-                                    min: 0, max: 10, range: true, value: [0, 2], step: 1,
+                                    min: 0, max: 10, range: true, value: [0, 10], step: 1,
                                     tooltip: "hide",
                                     ticks: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
                                     ticks_labels: ["D", "E", "F", "G", "H", "I", "J", "K", "L", "M"]
                                 },
                                 label: "Clarity",
-                                type: "regular"
+                                type: "regular",
+                                sliderObj: ''
                             },
                             colorSlider: {
                                 obj: {
-                                    id: "colorSlider", min: 0, max: 11, range: true, value: [2, 5], step: 1,
+                                    id: "colorSlider", min: 0, max: 9, range: true, value: [0, 9], step: 1,
                                     tooltip: "hide",
                                     ticks: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
                                     ticks_labels: ["IF", "VVS1", "VVS2", "VS1", "VS2", "SI1", "SI2", "SI3", "I1"]
                                 },
                                 label: "Color",
-                                type: "regular"
+                                type: "regular",
+                                sliderObj: ''
                             },
                             priceSlider: {
                                 obj: {
                                     id: "priceSlider",
-                                    min: 200, max: 2500, range: true, value: [500, 1000], step: 1,
+                                    min: 200, max: 2500, range: true, value: [200, 2500], step: 1,
                                     tooltip: "always"
                                 },
                                 label: "Price",
-                                type: "min-max"
+                                type: "min-max",
+                                sliderObj: ''
                             },
                             metalFilter: {
                                 obj: {
@@ -114,7 +123,8 @@ $(function(){
                                     values: ["Yellow", "Rose", "Platinum", "White"]
                                 },
                                 label: "Select a Metal",
-                                type: "radio-type"
+                                type: "radio-type",
+                                sliderObj: ''
                             },
                             certificateFilter: {
                                 obj: {
@@ -122,7 +132,8 @@ $(function(){
                                     values: ["Any", "GIA", "HRD", "IGI", "Other", "None"]
                                 },
                                 label: "Certificate",
-                                type: "label-type"
+                                type: "label-type",
+                                sliderObj: ''
                             }
                         }
                      };
@@ -224,6 +235,12 @@ $(function(){
             .children('.filter-holder').attr('id', lookupTable.filterSliders[sliderKey].obj.id+'Input');
 
         switch(lookupTable.filterSliders[sliderKey].type){
+            case "min-max":
+                $('#'+lookupTable.filterSliders[sliderKey].obj.id+'Input').parent().find('.min-label')
+                    .text(lookupTable.filterSliders[sliderKey].obj.min);
+                $('#'+lookupTable.filterSliders[sliderKey].obj.id+'Input').parent().find('.max-label')
+                    .text(lookupTable.filterSliders[sliderKey].obj.max);
+                break;
             case "radio-type":
                 lookupTable.filterSliders[sliderKey].obj.values.forEach(function(item, i){
                     $('#'+lookupTable.filterSliders[sliderKey].obj.id+'Input .list-inline')
@@ -243,9 +260,60 @@ $(function(){
     for(sliderKey in lookupTable.filterSliders){
         if(lookupTable.filterSliders[sliderKey].type == "regular" ||
             lookupTable.filterSliders[sliderKey].type == "min-max")
-        $('#'+lookupTable.filterSliders[sliderKey].obj.id+'Input').slider(lookupTable.filterSliders[sliderKey].obj);
+            lookupTable.filterSliders[sliderKey].sliderObj =
+                $('#'+lookupTable.filterSliders[sliderKey].obj.id+'Input')
+                    .slider(lookupTable.filterSliders[sliderKey].obj);
     }
-    filterSectionHeight = $('.filter-section').height();
+    filterSectionHeight = $('.filter-section').height(); // get filter holder height after the filters get initialised
+    $('.filter-section .metal-filter, .filter-section .label-filter').each(function(){
+        var $allItems = $(this).find('li');
+        $allItems.on('click', function(){
+            $allItems.removeClass('active');
+            $(this).addClass('active');
+        });
+    });
+    $('.filter-section .category-filters, .filter-section .shape-filters').each(function(){
+        var $allItems = $(this).children('.single-filter');
+        $allItems.on('click', function(){
+            $allItems.removeClass('active');
+            $(this).addClass('active');
+        });
+    });
+    $($('.filter-section .metal-filter ul li')[0]).trigger('click');
+    $($('.filter-section .label-filter ul li')[0]).trigger('click');
+    $($('.filter-section .category-filters .single-filter')[0]).trigger('click');
+    $($('.filter-section .shape-filters .single-filter')[0]).trigger('click');
+    $('.reset-search-holder .search').on('click', function(){
+        for(sliderKey in lookupTable.filterSliders) {
+            sliderResultObj[sliderKey] = [];
+            if(lookupTable.filterSliders[sliderKey].type == "regular"){
+                var lowerLimit = lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue')[0],
+                    upperLimit = lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue')[1];
+                if ((upperLimit - lowerLimit) == 0) {
+                    sliderResultObj[sliderKey].push(lookupTable.filterSliders[sliderKey]
+                        .obj.ticks_labels[lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue')[1] - 1]);
+                } else {
+                    for (var k = lowerLimit; k < upperLimit; k++) {
+                        sliderResultObj[sliderKey].push(lookupTable.filterSliders[sliderKey].obj.ticks_labels[k]);
+                    }
+                }
+            }else if(lookupTable.filterSliders[sliderKey].type == "radio-type" ||
+                lookupTable.filterSliders[sliderKey].type == "label-type"){
+                sliderResultObj[sliderKey].push(
+                    lookupTable.filterSliders[sliderKey]
+                        .obj.values[$('#'+lookupTable.filterSliders[sliderKey].obj.id+'Input ul')
+                        .children('.active').index()]);
+            }else{
+                sliderResultObj[sliderKey] = lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue');
+            }
+            console.log(sliderResultObj[sliderKey]);
+        }
+        if($('.filter-section .category-filters').length)
+            sliderResultObj["categoryFilter"] = $('.filter-section .category-filters .single-filter.active h4').text();
+        if($('.filter-section .shape-filters').length)
+            sliderResultObj["shapeFilter"] = $('.filter-section .shape-filters .single-filter.active h4').text();
+        console.log(sliderResultObj["categoryFilter"]+"\n"+sliderResultObj["shapeFilter"]);
+    });
     // handle filtered product details view
     $('.filtered-product-section .product').parent().on('click', function(){
         $('.filtered-product-details').remove();
