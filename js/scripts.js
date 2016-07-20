@@ -2,7 +2,7 @@ $(function(){
     // lookup table
     var screenSize, // indicates current screenSize
         filterSectionHeight, // captures the expanded filter section height
-        sliderResultObj = {},
+        sliderResultObj = {}, // for AJAX search
         shapeFilterMarkup = '<div class="shape-filters text-center">' +
             '<h3></h3></div>',
         minMaxFilterMarkup = '<div class="col-sm-6 col-md-4 single-slider-filter">' +
@@ -371,6 +371,7 @@ $(function(){
             }else{
                 sliderResultObj[sliderKey] = lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue');
             }
+            // write the AJAX call here
             console.log(sliderKey + " : " + sliderResultObj[sliderKey]);
         }
     });
