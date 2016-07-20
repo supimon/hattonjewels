@@ -17,8 +17,8 @@
     color: #38959c;
     letter-spacing: 2px;
 }
-.filter-section .category-filters{
-    margin-top: 20px;
+.filter-section .shape-filters:first-child{
+    margin-top: 40px;
     margin-bottom: 40px;
 }
 .filter-section .shape-filters{
@@ -31,11 +31,10 @@
     right: 0px;
     color: #318389;
 }
-.filter-section .category-filters .single-filter.active .fa-check-circle,
 .filter-section .shape-filters .single-filter.active .fa-check-circle{
     display: inline-block;
 }
-.filter-section .category-filters h4, .filter-section .shape-filters h4{
+.filter-section .shape-filters h4{
     font-size: 0.6875em;
     letter-spacing: 1.2px;
     position: absolute;
@@ -43,7 +42,7 @@
     top: 60px;
     color: #3a3a3a;
 }
-.filter-section .category-filters .single-filter, .filter-section .shape-filters .single-filter{
+.filter-section .shape-filters .single-filter{
     display: inline-block;
     width: 86px;
     height: 71px;

@@ -3,6 +3,8 @@ $(function(){
     var screenSize, // indicates current screenSize
         filterSectionHeight, // captures the expanded filter section height
         sliderResultObj = {},
+        shapeFilterMarkup = '<div class="shape-filters text-center">' +
+            '<h3></h3></div>',
         minMaxFilterMarkup = '<div class="col-sm-6 col-md-4 single-slider-filter">' +
             '<h3 class="filter-title"></h3>'+
             '<input class="filter-holder" id="" type="text"/>'+
@@ -34,10 +36,53 @@ $(function(){
                             "regular": fullValueFilterMarkup,
                             "min-max": minMaxFilterMarkup,
                             "radio-type": metalFilterMarkup,
-                            "label-type": labelFilterMarkup
+                            "label-type": labelFilterMarkup,
+                            "shape-filter": shapeFilterMarkup
                         },
                         filterSliders: {
                             // slider name and id has to be unique
+                            shapeFilter: {
+                                obj: {
+                                    id: "shapeFilter",
+                                    values: [
+                                        {name: "All", imgPath: "assets/unique-ring-category.png"},
+                                        {name: "Brilliant", imgPath: "assets/unique-ring-category.png"},
+                                        {name: "Asscher", imgPath: "assets/unique-ring-category.png"},
+                                        {name: "Cushion", imgPath: "assets/unique-ring-category.png"},
+                                        {name: "Oval", imgPath: "assets/unique-ring-category.png"},
+                                        {name: "Emerald", imgPath: "assets/unique-ring-category.png"},
+                                        {name: "Radiant", imgPath: "assets/unique-ring-category.png"},
+                                        {name: "Pear", imgPath: "assets/unique-ring-category.png"},
+                                        {name: "Marquise", imgPath: "assets/unique-ring-category.png"},
+                                        {name: "Princess", imgPath: "assets/unique-ring-category.png"},
+                                        {name: "Heart", imgPath: "assets/unique-ring-category.png"}
+                                    ]
+                                },
+                                label: "Select a Shape",
+                                type: "shape-filter",
+                                sliderObj: ''
+                            },
+                            categoryFilter: {
+                                obj: {
+                                    id: "categoryFilter",
+                                    values: [
+                                        {name: "All", imgPath: "assets/unique-ring-category.png"},
+                                        {name: "Solitaire", imgPath: "assets/unique-ring-category.png"},
+                                        {name: "Pave", imgPath: "assets/unique-ring-category.png"},
+                                        {name: "Channel Set", imgPath: "assets/unique-ring-category.png"},
+                                        {name: "Side-Stone", imgPath: "assets/unique-ring-category.png"},
+                                        {name: "Three-Stone", imgPath: "assets/unique-ring-category.png"},
+                                        {name: "Tension", imgPath: "assets/unique-ring-category.png"},
+                                        {name: "Halo", imgPath: "assets/unique-ring-category.png"},
+                                        {name: "Vintage", imgPath: "assets/unique-ring-category.png"},
+                                        {name: "Bridal Set", imgPath: "assets/unique-ring-category.png"},
+                                        {name: "Unique", imgPath: "assets/unique-ring-category.png"}
+                                    ]
+                                },
+                                label: "Select a Category",
+                                type: "shape-filter",
+                                sliderObj: ''
+                            },
                             cutSlider: {
                                 obj: {
                                     id: "cutSlider",
@@ -225,14 +270,28 @@ $(function(){
             lookupTable.productSliders[id].dataExists[lookupTable.productSliders[id].currentSlide] = true;
         });
     }
-    // sliders
+    // filter sliders
     for(sliderKey in lookupTable.filterSliders){
-        $($('.slider-filters .row')
-            .append(lookupTable.filterMarkups[lookupTable.filterSliders[sliderKey].type])
-            .children()[$('.slider-filters .row').children().length-1])
-            .children('.filter-title').text(lookupTable.filterSliders[sliderKey].label)
-            .end()
-            .children('.filter-holder').attr('id', lookupTable.filterSliders[sliderKey].obj.id+'Input');
+        if(lookupTable.filterSliders[sliderKey].type != "shape-filter"){
+            $($('.slider-filters .row')
+                .append(lookupTable.filterMarkups[lookupTable.filterSliders[sliderKey].type])
+                .children()[$('.slider-filters .row').children().length-1])
+                .children('.filter-title').text(lookupTable.filterSliders[sliderKey].label)
+                .end()
+                .children('.filter-holder').attr('id', lookupTable.filterSliders[sliderKey].obj.id+'Input');
+        }else{
+            $($('.filter-holder')
+                .prepend(lookupTable.filterMarkups[lookupTable.filterSliders[sliderKey].type]).children()[0])
+                .children('h3').text(lookupTable.filterSliders[sliderKey].label)
+                .end()
+                .attr('id', lookupTable.filterSliders[sliderKey].obj.id+'Input');
+            lookupTable.filterSliders[sliderKey].obj.values.forEach(function(item, i){
+                $('#'+lookupTable.filterSliders[sliderKey].obj.id+'Input')
+                    .append('<div class="single-filter" style="background-image: url('+ "'" + item.imgPath+ "'" +')">'+
+                            '<i class="fa fa-check-circle" aria-hidden="true"></i><h4>'+ item.name +'</h4>'+
+                            '</div>');
+            });
+        }
 
         switch(lookupTable.filterSliders[sliderKey].type){
             case "min-max":
@@ -279,10 +338,13 @@ $(function(){
             $(this).addClass('active');
         });
     });
+    // set initial values for filters
     $($('.filter-section .metal-filter ul li')[0]).trigger('click');
     $($('.filter-section .label-filter ul li')[0]).trigger('click');
-    $($('.filter-section .category-filters .single-filter')[0]).trigger('click');
-    $($('.filter-section .shape-filters .single-filter')[0]).trigger('click');
+    $('.filter-section .shape-filters').each(function(){
+        $($(this).find('.single-filter')[0]).trigger('click');
+    });
+    // handle filter search
     $('.reset-search-holder .search').on('click', function(){
         for(sliderKey in lookupTable.filterSliders) {
             sliderResultObj[sliderKey] = [];
@@ -303,16 +365,14 @@ $(function(){
                     lookupTable.filterSliders[sliderKey]
                         .obj.values[$('#'+lookupTable.filterSliders[sliderKey].obj.id+'Input ul')
                         .children('.active').index()]);
+            }else if(lookupTable.filterSliders[sliderKey].type == "shape-filter"){
+                sliderResultObj[sliderKey]
+                    .push($('#'+lookupTable.filterSliders[sliderKey].obj.id+'Input .single-filter.active h4').text());
             }else{
                 sliderResultObj[sliderKey] = lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue');
             }
-            console.log(sliderResultObj[sliderKey]);
+            console.log(sliderKey + " : " + sliderResultObj[sliderKey]);
         }
-        if($('.filter-section .category-filters').length)
-            sliderResultObj["categoryFilter"] = $('.filter-section .category-filters .single-filter.active h4').text();
-        if($('.filter-section .shape-filters').length)
-            sliderResultObj["shapeFilter"] = $('.filter-section .shape-filters .single-filter.active h4').text();
-        console.log(sliderResultObj["categoryFilter"]+"\n"+sliderResultObj["shapeFilter"]);
     });
     // handle filtered product details view
     $('.filtered-product-section .product').parent().on('click', function(){
