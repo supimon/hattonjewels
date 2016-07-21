@@ -105,40 +105,42 @@
 <!--product gallery and details-->
 <section class="gallery-details-section">
     <div class="row">
-        <div class="col-sm-7"></div>
-        <div class="col-sm-5 details-holder">
-            <h2 class="prod-title text-center">Selena</h2>
-            <h3 class="sub-heading text-center">Classic Princess Cut Solitaire</h3>
-            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt</p>
-            <ul class="list-inline specifications">
-                <li class="row"><span class="col-xs-6 name">Carat</span><span class="col-xs-6 value">6</span></li>
-                <li class="row"><span class="col-xs-6 name">Symmetry</span><span class="col-xs-6 value">Very Good</span></li>
-                <li class="row"><span class="col-xs-6 name">Clarity</span><span class="col-xs-6 value">VVS2</span></li>
-                <li class="row"><span class="col-xs-6 name">Cut</span><span class="col-xs-6 value">Excellent</span></li>
-                <li class="row"><span class="col-xs-6 name">Color</span><span class="col-xs-6 value">H</span></li>
-                <li class="row"><span class="col-xs-6 name">Polish</span><span class="col-xs-6 value">Good</span></li>
-            </ul>
-            <hr/>
-            <div class="col-sm-6 certificate">
-                <a class="btn btn-default" href="#">View Certificate</a>
-                <p class="price">£495.00</p>
+        <div class="col-md-7"></div>
+        <div class="col-md-5">
+            <div class="details-holder">
+                <h2 class="prod-title text-center">Selena</h2>
+                <h3 class="sub-heading text-center">Classic Princess Cut Solitaire</h3>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt</p>
+                <ul class="list-inline specifications">
+                    <li class="row"><span class="col-xs-6 name">Carat</span><span class="col-xs-6 value">6</span></li>
+                    <li class="row"><span class="col-xs-6 name">Symmetry</span><span class="col-xs-6 value">Very Good</span></li>
+                    <li class="row"><span class="col-xs-6 name">Clarity</span><span class="col-xs-6 value">VVS2</span></li>
+                    <li class="row"><span class="col-xs-6 name">Cut</span><span class="col-xs-6 value">Excellent</span></li>
+                    <li class="row"><span class="col-xs-6 name">Color</span><span class="col-xs-6 value">H</span></li>
+                    <li class="row"><span class="col-xs-6 name">Polish</span><span class="col-xs-6 value">Good</span></li>
+                </ul>
+                <hr/>
+                <div class="col-sm-6 certificate">
+                    <a class="btn btn-default" href="#">View Certificate</a>
+                    <p class="price">£495.00</p>
+                </div>
+                <div class="col-sm-6 add-to-bag text-right">
+                    <a href="#" class="btn-link ring-size" data-toggle="modal" data-target="#myModal">Select a Ring Size
+                        <span class="size-circle"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                    <a class="btn btn-success bag" href="#">Add to Bag</a>
+                    <a class="wishlist" href="#">Add to Wishlist</a>
+                </div>
+                <div class="clearfix"></div>
+                <div class="free-delivery">
+                    <h4>FREE Delivery (within the UK)</h4>
+                    <p class="delivery-details">Delivery details: If you place this order now, your <span>ring</span>
+                        will be delivered on <span>xxx</span> date.</p>
+                </div>
+                <button class="btn btn-default col-xs-12 help-guide">Help & Guidance</button>
+                <div class="col-xs-7 book"><button class="btn btn-default">Book an appointment</button></div>
+                <div class="col-xs-5 questions"><button class="btn btn-default">Questions ?</button></div>
             </div>
-            <div class="col-sm-6 add-to-bag text-right">
-                <a href="#" class="btn-link ring-size" data-toggle="modal" data-target="#myModal">Select a Ring Size
-                    <span class="size-circle"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
-                <a class="btn btn-success bag" href="#">Add to Bag</a>
-                <a class="wishlist" href="#">Add to Wishlist</a>
-            </div>
-            <div class="clearfix"></div>
-            <div class="free-delivery">
-                <h4>FREE Delivery (within the UK)</h4>
-                <p class="delivery-details">Delivery details: If you place this order now, your <span>ring</span>
-                    will be delivered on <span>xxx</span> date.</p>
-            </div>
-            <button class="btn btn-default col-xs-12 help-guide">Help & Guidance</button>
-            <div class="col-xs-7 book"><button class="btn btn-default">Book an appointment</button></div>
-            <div class="col-xs-5 questions"><button class="btn btn-default">Questions ?</button></div>
         </div>
     </div>
 </section>
@@ -160,7 +162,7 @@
 </section>
 <!--packaging-->
 <section class="packaging-section">
-    <div class="col-md-6"></div>
+    <div class="col-md-6 hidden-xs"></div>
     <div class="col-md-6 promise-holder">
         <h4 class="promise">Our Promise to you</h4>
         <ul class="list-inline">
@@ -183,7 +185,7 @@
 </section>
 <!--related products slider-->
 <h2 class="related-products text-center">Related Products</h2>
-<section class="products-slider-section text-center">
+<section class="products-slider-section product-details text-center">
     <div id="engagement-prod-slider" class="carousel slide" data-productPath="xml/products.xml">
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox"></div>

@@ -1,17 +1,23 @@
 .reviews-section{
-    padding: 0px 20px;
+    padding: 0px 10px;
     color: #318389;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 .reviews-section .reviews-holder{
-    width: 85%;
     display: inline-block;
-    padding: 35px 75px 27px 75px;
     background-color: #fbfbfb;
     margin-bottom: 20px;
+    position: relative;
+    width: auto;
+    padding: 35px 15px 27px 15px;
 }
 .reviews-section .total-reviews{
     position: absolute;
+    top: 65px;
+    left: 0px;
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 .reviews-section .total-reviews h4{
     display: inline;
@@ -28,7 +34,7 @@
     text-transform: uppercase;
     font-family: ProximaNovaRegular, sans-serif;
     letter-spacing: 1.2px;
-    margin-bottom: 40px;
+    margin-bottom: 54px;
 }
 .reviews-section ul{
     list-style: none;
@@ -55,7 +61,7 @@
     font-size: 14px;
     font-weight: bold;
     color: #333;
-    width: 50%;
+    width: auto;
 }
 .reviews-section .divider{
     border-top: 1px solid #868686;
@@ -68,4 +74,29 @@
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 1.6px;
+}
+@media(min-width: 768px) {
+    .reviews-section {
+        padding: 0px 20px;
+        margin-bottom: 50px;
+    }
+    .reviews-section .reviews-holder {
+        width: 85%;
+        padding: 35px 75px 27px 75px;
+    }
+}
+@media(min-width: 992px) {
+    .reviews-section .total-reviews{
+        top: auto;
+        left: auto;
+        display: inline;
+        width: auto;
+        text-align: inherit;
+    }
+    .reviews-section .reviews-holder h2 {
+        margin-bottom: 40px;
+    }
+    .reviews-section .review-para {
+        width: 50%;
+    }
 }

@@ -1,6 +1,6 @@
 .social-sharing-section{
-    padding: 0px 20px;
-    margin-bottom: 20px;
+    padding: 0px 10px;
+    margin-bottom: 10px;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1.2px;
@@ -19,9 +19,10 @@
     height: 32px;
 }
 .social-sharing-section .continue-shopping{
-    position: absolute;
-    left: 26px;
-    top: 19px;
+    display: block;
+    position: initial;
+    width: 100%;
+    margin-bottom: 15px;
     color: #318389;
 }
 .social-sharing-section ul{
@@ -58,4 +59,21 @@
     content: "\f177";
     top: -13px;
     position: absolute;
+}
+@media(min-width: 768px){
+    .social-sharing-section {
+        padding: 0px 20px;
+        margin-bottom: 20px;
+    }
+    .social-sharing-section .continue-shopping {
+        display: inline-block;
+        width: auto;
+        margin-bottom: 15px;
+        position: absolute;
+        left: 26px;
+        top: 19px;
+    }
+}
+@media(min-width: 992px){
+
 }

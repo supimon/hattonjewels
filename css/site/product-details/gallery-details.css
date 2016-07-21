@@ -1,10 +1,17 @@
 .gallery-details-section{
     text-transform: uppercase;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.gallery-details-section .row{
+    margin-right: -10px;
+    margin-left: -10px;
+}
+.gallery-details-section .row .col-md-5{
+    padding: 0px 10px;
 }
 .gallery-details-section .details-holder{
-    padding-right: 150px;
+    width: auto;
 }
 .gallery-details-section .prod-title{
     font-family: 'AGaramondRegular', serif;
@@ -33,7 +40,7 @@
     font-weight: bold;
 }
 .gallery-details-section .specifications li {
-    width: 49%;
+    width: 100%;
     padding: 0px 0px 6px 0px;
 }
 .gallery-details-section .specifications li .name{
@@ -44,11 +51,12 @@
 }
 .details-holder hr{
     border-top-color: #787878;
-    margin-bottom: 26px;
+    margin-bottom: 20px;
     margin-top: 11px;
 }
-.gallery-details-section .certificate{
-    padding-left: 0px;
+.gallery-details-section .certificate, .gallery-details-section .add-to-bag{
+    text-align: center;
+    padding: 0px;
 }
 .gallery-details-section .certificate .btn{
     border-radius: 0px;
@@ -57,23 +65,19 @@
     letter-spacing: 1.6px;
     padding: 6px 12px;
     color: #318389;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 }
 .gallery-details-section .certificate .price{
     font-size: 22px;
     letter-spacing: 3px;
     color: #318389;
 }
-.gallery-details-section .add-to-bag{
-    padding-right: 0px;
-    padding-top: 1px;
-}
 .gallery-details-section .btn-link.ring-size{
     font-size: 12px;
     letter-spacing: 1.6px;
     color: #318389;
-    margin-bottom: 27px;
-    display: inline-block;
+    margin-bottom: 13px;
+    display: block;
 }
 .gallery-details-section .size-circle{
     margin-left: 5px;
@@ -84,7 +88,7 @@
     height: 21px;
 }
 .gallery-details-section .add-to-bag .fa-angle-down{
-    margin-right: 2px;
+    margin-right: -2px;
     margin-top: 1px;
     font-size: 17px;
 }
@@ -131,7 +135,7 @@
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 1.6px;
-    margin-top: 28px;
+    margin-top: 10px;
 }
 .gallery-details-section .book{
     padding-left: 0px;
@@ -146,8 +150,95 @@
     border-color: #318389;
     color: #318389;
     text-transform: uppercase;
-    font-size: 12px;
     letter-spacing: 1.6px;
-    margin-top: 13px;
-    margin-bottom: 28px;
+    margin-top: 10px;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+@media(min-width: 768px) {
+    .gallery-details-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .gallery-details-section .row{
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    .gallery-details-section .row .col-md-5{
+        padding: 0px 15px;
+    }
+    .gallery-details-section .specifications li {
+        width: 49%;
+    }
+    .gallery-details-section .help-guide{
+        margin-top: 13px;
+    }
+    .gallery-details-section .free-delivery {
+        margin-top: 0px;
+    }
+    .gallery-details-section .btn-link.ring-size {
+        margin-right: 6px;
+        margin-bottom: 27px;
+    }
+    .gallery-details-section .certificate {
+        padding-right: 15px;
+        text-align: left;
+    }
+    .gallery-details-section .add-to-bag{
+        padding-left: 15px;
+        text-align: right;
+    }
+    .gallery-details-section .btn-link.ring-size{
+        display: inline-block;
+    }
+    .details-holder hr {
+        margin-bottom: 26px;
+    }
+    .gallery-details-section .certificate .btn {
+        margin-bottom: 22px;
+    }
+    .gallery-details-section .book .btn, .gallery-details-section .questions .btn {
+        font-size: 12px;
+        margin-top: 13px;
+        margin-bottom: 20px;
+    }
+    .gallery-details-section .add-to-bag .fa-angle-down{
+        margin-right: 3px;
+    }
+}
+@media(min-width: 992px) {
+    .gallery-details-section .details-holder {
+        width: 378px;
+    }
+    .gallery-details-section .specifications li .value {
+        font-size: 9px;
+        padding: 2px 0px 0px 15px;
+    }
+    .gallery-details-section .specifications li .name {
+        font-size: 11px;
+    }
+    .gallery-details-section .book .btn, .gallery-details-section .questions .btn{
+        margin-bottom: 28px;
+    }
+    .gallery-details-section .help-guide{
+        margin-top: 28px;
+    }
+    .gallery-details-section .free-delivery {
+        margin-top: 20px;
+    }
+    .gallery-details-section .btn-link.ring-size {
+        margin-right: 0px;
+    }
+}
+@media(min-width: 1200px) {
+    .gallery-details-section .details-holder {
+        width: 431px;
+    }
+    .gallery-details-section .specifications li .value{
+        font-size: 10px;
+        padding: 0px 15px;
+    }
+    .gallery-details-section .specifications li .name {
+        font-size: 12px;
+    }
 }

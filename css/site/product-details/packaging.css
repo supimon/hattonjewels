@@ -4,13 +4,13 @@
     letter-spacing: 0px;
     font-size: 14px;
     word-spacing: 2px;
-    padding: 0px 20px;
+    padding: 0px 10px;
     color: #f3f3f3;
     margin-bottom: 20px;
 }
 .packaging-section .promise-holder{
     background-color: #318389;
-    padding: 50px 0px 50px 64px;
+    padding: 20px 10px 10px 20px;
 }
 .packaging-section .promise{
     font-size: 12px;
@@ -18,13 +18,24 @@
     text-transform: uppercase;
     font-family: ProximaNovaRegular, sans-serif;
     letter-spacing: 1.2px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 .packaging-section ul li{
-    width: 49%;
+    width: 264px;
     margin-bottom: 2px;
 }
 .packaging-section ul li .bullet{
     font-size: 7px;
     margin-right: 5px;
+}
+@media(min-width: 768px){
+    .packaging-section {
+        padding: 0px 20px;
+    }
+    .packaging-section .promise-holder{
+        padding: 50px 0px 50px 64px;
+    }
+    .packaging-section .promise {
+        margin-bottom: 40px;
+    }
 }

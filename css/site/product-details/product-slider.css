@@ -1,3 +1,7 @@
+.products-slider-section.product-details{
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
 .products-slider-section .carousel{
     width: 70%;
     display: inline-block;
