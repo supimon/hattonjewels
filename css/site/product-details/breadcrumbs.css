@@ -5,13 +5,15 @@
     padding-left: 20px;
 }
 .breadcrumbs.prod-details{
-    margin-top: 70px;
+    margin-top: 20px;
+    margin-bottom: 15px;
 }
 .breadcrumbs ul{
     margin-left: -2px;
 }
 .breadcrumbs ul li{
     padding: 0px 2px;
+    margin-bottom: 5px;
 }
 .breadcrumbs ul li a{
     font-weight: bold;
@@ -19,4 +21,9 @@
 }
 .breadcrumbs ul li a:hover{
     color: black;
+}
+@media(min-width: 992px) {
+    .breadcrumbs.prod-details{
+        margin-top: 70px;
+    }
 }
