@@ -1,8 +1,9 @@
 $(function(){
     // lookup table
     var screenSize, // indicates current screenSize
-        filterSectionHeight, // captures the expanded filter section height
-        sliderResultObj = {}, // for AJAX search
+        filterSectionHeight, // expanded filter section height reference
+        sliderResultObj = {}, // final config object for AJAX search
+        // various markups for preparing the filters
         shapeFilterMarkup = '<div class="shape-filters text-center">' +
             '<h3></h3></div>',
         minMaxFilterMarkup = '<div class="col-sm-6 col-md-4 single-slider-filter">' +
@@ -27,10 +28,11 @@ $(function(){
             '<ul class="list-inline">'+
             '</ul>'+
             '</div></div>',
+        // a hypothetical config table for ease of configuration changes
         lookupTable = {
-                        sliderHeight: {xs:375, sm:375, md:463, lg:563},
-                        sliderProdCount: {xs:2, sm:3, md:5, lg:5},
-                        filteredProdInsertAfterElement: {xs:1, sm:2, md:3, lg:4},
+                        sliderHeight: {xs:375, sm:375, md:463, lg:563}, // product sliders height configurations
+                        sliderProdCount: {xs:2, sm:3, md:5, lg:5}, // product count within the sliders
+                        filteredProdInsertAfterElement: {xs:1, sm:2, md:3, lg:4}, // position to insert the details view
                         productSliders: $('.products-slider-section').length ? resetSliders(true) : '',
                         filterMarkups: {
                             "regular": fullValueFilterMarkup,
@@ -39,8 +41,8 @@ $(function(){
                             "label-type": labelFilterMarkup,
                             "shape-filter": shapeFilterMarkup
                         },
+                        // this object needs to be created from the backend. a sample is shown below
                         filterSliders: {
-                            // slider name and id has to be unique
                             shapeFilter: {
                                 obj: {
                                     id: "shapeFilter",
@@ -182,16 +184,19 @@ $(function(){
                             }
                         }
                      };
-
+    // upon load, make responsive adjustments
     makeResponsiveAdjustments();
+    // on further resize, make responsive adjustments
     $(window).on('resize', makeResponsiveAdjustments);
-    // make responsive adjustments to page elements
+    // utility function to make responsive adjustments to page elements
     function makeResponsiveAdjustments(){
         getscreenSize();
         $('.slider-section').length ? adjustSliderHeight(): '';
         lookupTable.productSliders ? populateSliderProducts(null): '';
-        $('.filter-section').height('auto');
-        filterSectionHeight = $('.filter-section').height();
+        if($('.filter-section').length){ 
+            $('.filter-section').height('auto');
+            filterSectionHeight = $('.filter-section').height();
+        }
     }
     // utility function to get width of screen
     function getscreenSize(){
@@ -271,152 +276,154 @@ $(function(){
         });
     }
     // filter sliders
-    for(sliderKey in lookupTable.filterSliders){
-        if(lookupTable.filterSliders[sliderKey].type != "shape-filter"){
-            $($('.slider-filters .row')
-                .append(lookupTable.filterMarkups[lookupTable.filterSliders[sliderKey].type])
-                .children()[$('.slider-filters .row').children().length-1])
-                .children('.filter-title').text(lookupTable.filterSliders[sliderKey].label)
-                .end()
-                .children('.filter-holder').attr('id', lookupTable.filterSliders[sliderKey].obj.id+'Input');
-        }else{
-            $($('.filter-holder')
-                .prepend(lookupTable.filterMarkups[lookupTable.filterSliders[sliderKey].type]).children()[0])
-                .children('h3').text(lookupTable.filterSliders[sliderKey].label)
-                .end()
-                .attr('id', lookupTable.filterSliders[sliderKey].obj.id+'Input');
-            lookupTable.filterSliders[sliderKey].obj.values.forEach(function(item, i){
-                $('#'+lookupTable.filterSliders[sliderKey].obj.id+'Input')
-                    .append('<div class="single-filter" style="background-image: url('+ "'" + item.imgPath+ "'" +')">'+
-                            '<i class="fa fa-check-circle" aria-hidden="true"></i><h4>'+ item.name +'</h4>'+
+    if($('.filter-section').length) {
+        for (sliderKey in lookupTable.filterSliders) {
+            if (lookupTable.filterSliders[sliderKey].type != "shape-filter") {
+                $($('.slider-filters .row')
+                    .append(lookupTable.filterMarkups[lookupTable.filterSliders[sliderKey].type])
+                    .children()[$('.slider-filters .row').children().length - 1])
+                    .children('.filter-title').text(lookupTable.filterSliders[sliderKey].label)
+                    .end()
+                    .children('.filter-holder').attr('id', lookupTable.filterSliders[sliderKey].obj.id + 'Input');
+            } else {
+                $($('.filter-holder')
+                    .prepend(lookupTable.filterMarkups[lookupTable.filterSliders[sliderKey].type]).children()[0])
+                    .children('h3').text(lookupTable.filterSliders[sliderKey].label)
+                    .end()
+                    .attr('id', lookupTable.filterSliders[sliderKey].obj.id + 'Input');
+                lookupTable.filterSliders[sliderKey].obj.values.forEach(function (item, i) {
+                    $('#' + lookupTable.filterSliders[sliderKey].obj.id + 'Input')
+                        .append('<div class="single-filter" style="background-image: url(' + "'" + item.imgPath + "'" + ')">' +
+                            '<i class="fa fa-check-circle" aria-hidden="true"></i><h4>' + item.name + '</h4>' +
                             '</div>');
-            });
-        }
-
-        switch(lookupTable.filterSliders[sliderKey].type){
-            case "min-max":
-                $('#'+lookupTable.filterSliders[sliderKey].obj.id+'Input').parent().find('.min-label')
-                    .text(lookupTable.filterSliders[sliderKey].obj.min);
-                $('#'+lookupTable.filterSliders[sliderKey].obj.id+'Input').parent().find('.max-label')
-                    .text(lookupTable.filterSliders[sliderKey].obj.max);
-                break;
-            case "radio-type":
-                lookupTable.filterSliders[sliderKey].obj.values.forEach(function(item, i){
-                    $('#'+lookupTable.filterSliders[sliderKey].obj.id+'Input .list-inline')
-                        .append('<li><span class="outer-circle '+ item.toString().toLowerCase() +'">' +
-                            '<span class="inner-circle '+ item.toString().toLowerCase() +'"></span></span><br/>' +
-                            item+'</li>');
                 });
-                break;
-            case "label-type":
-                lookupTable.filterSliders[sliderKey].obj.values.forEach(function(item, i){
-                    $('#'+lookupTable.filterSliders[sliderKey].obj.id+'Input .list-inline')
-                        .append('<li>'+item+'</li>');
-                });
-                break;
-        }
-    }
-    for(sliderKey in lookupTable.filterSliders){
-        if(lookupTable.filterSliders[sliderKey].type == "regular" ||
-            lookupTable.filterSliders[sliderKey].type == "min-max")
-            lookupTable.filterSliders[sliderKey].sliderObj =
-                $('#'+lookupTable.filterSliders[sliderKey].obj.id+'Input')
-                    .slider(lookupTable.filterSliders[sliderKey].obj);
-    }
-    filterSectionHeight = $('.filter-section').height(); // get filter holder height after the filters get initialised
-    $('.filter-section .metal-filter, .filter-section .label-filter').each(function(){
-        var $allItems = $(this).find('li');
-        $allItems.on('click', function(){
-            $allItems.removeClass('active');
-            $(this).addClass('active');
-        });
-    });
-    $('.filter-section .category-filters, .filter-section .shape-filters').each(function(){
-        var $allItems = $(this).children('.single-filter');
-        $allItems.on('click', function(){
-            $allItems.removeClass('active');
-            $(this).addClass('active');
-        });
-    });
-    // set initial values for filters
-    $($('.filter-section .metal-filter ul li')[0]).trigger('click');
-    $($('.filter-section .label-filter ul li')[0]).trigger('click');
-    $('.filter-section .shape-filters').each(function(){
-        $($(this).find('.single-filter')[0]).trigger('click');
-    });
-    // handle filter search
-    $('.reset-search-holder .search').on('click', function(){
-        for(sliderKey in lookupTable.filterSliders) {
-            sliderResultObj[sliderKey] = [];
-            if(lookupTable.filterSliders[sliderKey].type == "regular"){
-                var lowerLimit = lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue')[0],
-                    upperLimit = lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue')[1];
-                if ((upperLimit - lowerLimit) == 0) {
-                    sliderResultObj[sliderKey].push(lookupTable.filterSliders[sliderKey]
-                        .obj.ticks_labels[lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue')[1] - 1]);
-                } else {
-                    for (var k = lowerLimit; k < upperLimit; k++) {
-                        sliderResultObj[sliderKey].push(lookupTable.filterSliders[sliderKey].obj.ticks_labels[k]);
-                    }
-                }
-            }else if(lookupTable.filterSliders[sliderKey].type == "radio-type" ||
-                lookupTable.filterSliders[sliderKey].type == "label-type"){
-                sliderResultObj[sliderKey].push(
-                    lookupTable.filterSliders[sliderKey]
-                        .obj.values[$('#'+lookupTable.filterSliders[sliderKey].obj.id+'Input ul')
-                        .children('.active').index()]);
-            }else if(lookupTable.filterSliders[sliderKey].type == "shape-filter"){
-                sliderResultObj[sliderKey]
-                    .push($('#'+lookupTable.filterSliders[sliderKey].obj.id+'Input .single-filter.active h4').text());
-            }else{
-                sliderResultObj[sliderKey] = lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue');
             }
-            // write the AJAX call here
-            console.log(sliderKey + " : " + sliderResultObj[sliderKey]);
-        }
-    });
-    // handle filtered product details view
-    $('.filtered-product-section .product').parent().on('click', function(){
-        $('.filtered-product-details').remove();
-        $('.filtered-product-section .product.active').removeClass('active');
-        $(this).children().addClass('active');
-        var i = (lookupTable.filteredProdInsertAfterElement[screenSize] -
-            $(this).index()%lookupTable.filteredProdInsertAfterElement[screenSize]) +
-            $(this).index(),
-            elem = '<div class="col-xs-12 filtered-product-details">'+
-                '<div><span class="close-prod-details">Close <i class="fa fa-times" aria-hidden="true"></i></span>' +
-                '<div class="clearfix"></div></div>'+
-                '<div class="col-sm-6 prod-gallery"></div>' +
-                '<div class="col-sm-4 prod-details">' +
-                    '<h2 class="prod-details-title">'+ $(this).children().children('.prod-title').text() +'</h2>' +
-                    '<h3 class="prod-sub-title">'+ $(this).children().children('.sub-heading').text() +'</h3>' +
-                    '<p class="prod-description">'+ $(this).children().children('.description').text() +'</p>' +
-                '</div>' +
-                '<div class="col-sm-2 price-select text-right">' +
-                '<p class="price">'+ $(this).children().children('.prod-price').text() +'</p>' +
-                '<a class="btn btn-default select-btn">Select</a>' +
-                '</div>' +
-                '</div>';
-        $(".filtered-product-section .row > div:nth-child(" + (i) + ")").length ?
-        $(".filtered-product-section .row > div:nth-child(" + (i) + ")").after(elem):
-            $(".filtered-product-section .row > div:last-child").after(elem);
-        $('.close-prod-details').on('click', function(){
-            $('.filtered-product-section .product.active').removeClass('active');
-            $('.filtered-product-details').remove();
-        });
-    });
-    // expand collapse filters
-    $('.collapse-expand .btn').on('click', function(){
-        var that = this;
 
-        $('.filter-section').hasClass('expanded') ?
-            $('.filter-section').animate({height: '0px'}, 500, function(){
-                $('.filter-section').removeClass('expanded');
-                $(that).children().removeClass('fa-angle-up').addClass('fa-angle-down');
-            }) :
-            $('.filter-section').animate({height: filterSectionHeight+'px'}, 500, function(){
-                $('.filter-section').addClass('expanded');
-                $(that).children().removeClass('fa-angle-down').addClass('fa-angle-up');
+            switch (lookupTable.filterSliders[sliderKey].type) {
+                case "min-max":
+                    $('#' + lookupTable.filterSliders[sliderKey].obj.id + 'Input').parent().find('.min-label')
+                        .text(lookupTable.filterSliders[sliderKey].obj.min);
+                    $('#' + lookupTable.filterSliders[sliderKey].obj.id + 'Input').parent().find('.max-label')
+                        .text(lookupTable.filterSliders[sliderKey].obj.max);
+                    break;
+                case "radio-type":
+                    lookupTable.filterSliders[sliderKey].obj.values.forEach(function (item, i) {
+                        $('#' + lookupTable.filterSliders[sliderKey].obj.id + 'Input .list-inline')
+                            .append('<li><span class="outer-circle ' + item.toString().toLowerCase() + '">' +
+                                '<span class="inner-circle ' + item.toString().toLowerCase() + '"></span></span><br/>' +
+                                item + '</li>');
+                    });
+                    break;
+                case "label-type":
+                    lookupTable.filterSliders[sliderKey].obj.values.forEach(function (item, i) {
+                        $('#' + lookupTable.filterSliders[sliderKey].obj.id + 'Input .list-inline')
+                            .append('<li>' + item + '</li>');
+                    });
+                    break;
+            }
+        }
+        for (sliderKey in lookupTable.filterSliders) {
+            if (lookupTable.filterSliders[sliderKey].type == "regular" ||
+                lookupTable.filterSliders[sliderKey].type == "min-max")
+                lookupTable.filterSliders[sliderKey].sliderObj =
+                    $('#' + lookupTable.filterSliders[sliderKey].obj.id + 'Input')
+                        .slider(lookupTable.filterSliders[sliderKey].obj);
+        }
+        filterSectionHeight = $('.filter-section').height(); // get filter holder height after the filters get initialised
+        $('.filter-section .metal-filter, .filter-section .label-filter').each(function () {
+            var $allItems = $(this).find('li');
+            $allItems.on('click', function () {
+                $allItems.removeClass('active');
+                $(this).addClass('active');
             });
-    });
+        });
+        $('.filter-section .category-filters, .filter-section .shape-filters').each(function () {
+            var $allItems = $(this).children('.single-filter');
+            $allItems.on('click', function () {
+                $allItems.removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+        // set initial values for filters
+        $($('.filter-section .metal-filter ul li')[0]).trigger('click');
+        $($('.filter-section .label-filter ul li')[0]).trigger('click');
+        $('.filter-section .shape-filters').each(function () {
+            $($(this).find('.single-filter')[0]).trigger('click');
+        });
+        // handle filter search
+        $('.reset-search-holder .search').on('click', function () {
+            for (sliderKey in lookupTable.filterSliders) {
+                sliderResultObj[sliderKey] = [];
+                if (lookupTable.filterSliders[sliderKey].type == "regular") {
+                    var lowerLimit = lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue')[0],
+                        upperLimit = lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue')[1];
+                    if ((upperLimit - lowerLimit) == 0) {
+                        sliderResultObj[sliderKey].push(lookupTable.filterSliders[sliderKey]
+                            .obj.ticks_labels[lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue')[1] - 1]);
+                    } else {
+                        for (var k = lowerLimit; k < upperLimit; k++) {
+                            sliderResultObj[sliderKey].push(lookupTable.filterSliders[sliderKey].obj.ticks_labels[k]);
+                        }
+                    }
+                } else if (lookupTable.filterSliders[sliderKey].type == "radio-type" ||
+                    lookupTable.filterSliders[sliderKey].type == "label-type") {
+                    sliderResultObj[sliderKey].push(
+                        lookupTable.filterSliders[sliderKey]
+                            .obj.values[$('#' + lookupTable.filterSliders[sliderKey].obj.id + 'Input ul')
+                            .children('.active').index()]);
+                } else if (lookupTable.filterSliders[sliderKey].type == "shape-filter") {
+                    sliderResultObj[sliderKey]
+                        .push($('#' + lookupTable.filterSliders[sliderKey].obj.id + 'Input .single-filter.active h4').text());
+                } else {
+                    sliderResultObj[sliderKey] = lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue');
+                }
+                // write the AJAX call here
+                console.log(sliderKey + " : " + sliderResultObj[sliderKey]);
+            }
+        });
+        // handle filtered product details view
+        $('.filtered-product-section .product').parent().on('click', function () {
+            $('.filtered-product-details').remove();
+            $('.filtered-product-section .product.active').removeClass('active');
+            $(this).children().addClass('active');
+            var i = (lookupTable.filteredProdInsertAfterElement[screenSize] -
+                    $(this).index() % lookupTable.filteredProdInsertAfterElement[screenSize]) +
+                    $(this).index(),
+                elem = '<div class="col-xs-12 filtered-product-details">' +
+                    '<div><span class="close-prod-details">Close <i class="fa fa-times" aria-hidden="true"></i></span>' +
+                    '<div class="clearfix"></div></div>' +
+                    '<div class="col-sm-6 prod-gallery"></div>' +
+                    '<div class="col-sm-4 prod-details">' +
+                    '<h2 class="prod-details-title">' + $(this).children().children('.prod-title').text() + '</h2>' +
+                    '<h3 class="prod-sub-title">' + $(this).children().children('.sub-heading').text() + '</h3>' +
+                    '<p class="prod-description">' + $(this).children().children('.description').text() + '</p>' +
+                    '</div>' +
+                    '<div class="col-sm-2 price-select text-right">' +
+                    '<p class="price">' + $(this).children().children('.prod-price').text() + '</p>' +
+                    '<a class="btn btn-default select-btn">Select</a>' +
+                    '</div>' +
+                    '</div>';
+            $(".filtered-product-section .row > div:nth-child(" + (i) + ")").length ?
+                $(".filtered-product-section .row > div:nth-child(" + (i) + ")").after(elem) :
+                $(".filtered-product-section .row > div:last-child").after(elem);
+            $('.close-prod-details').on('click', function () {
+                $('.filtered-product-section .product.active').removeClass('active');
+                $('.filtered-product-details').remove();
+            });
+        });
+        // expand collapse filters
+        $('.collapse-expand .btn').on('click', function () {
+            var that = this;
+
+            $('.filter-section').hasClass('expanded') ?
+                $('.filter-section').animate({height: '0px'}, 500, function () {
+                    $('.filter-section').removeClass('expanded');
+                    $(that).children().removeClass('fa-angle-up').addClass('fa-angle-down');
+                }) :
+                $('.filter-section').animate({height: filterSectionHeight + 'px'}, 500, function () {
+                    $('.filter-section').addClass('expanded');
+                    $(that).children().removeClass('fa-angle-down').addClass('fa-angle-up');
+                });
+        });
+    }
 });
