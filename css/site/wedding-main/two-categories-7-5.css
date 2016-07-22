@@ -1,0 +1,75 @@
+.two-categories-7-5-section{
+    font-family: "GILSans", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    padding: 0px 10px;
+}
+.two-categories-7-5-section .two-categories-holder .col-sm-7,
+.two-categories-7-5-section .two-categories-holder .col-sm-5{
+    padding: 0px;
+    position: relative;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.two-categories-7-5-section .category {
+    height: 332px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.two-categories-7-5-section h2{
+    margin: 0px;
+    font-size: 1em;
+    letter-spacing: 3px;
+    color: #3a3a3a;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    line-height: 22px;
+    padding-right: 23px;
+    padding-left: 10px;
+}
+.two-categories-7-5-section .category-1 h2{
+    display: inline-block;
+    width: auto;
+    top: 147px;
+    left: 34px;
+}
+.two-categories-7-5-section .category-2 h2{
+    bottom: 32px
+}
+.two-categories-7-5-section .category-1{
+    background-size: cover;
+}
+.two-categories-7-5-section .category-2{
+    background-color: #c4d4e1 ;/* - to be removed - */
+}
+@media(min-width: 768px) {
+    .two-categories-7-5-section.wedding-main{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .two-categories-7-5-section {
+        padding: 0px 20px;
+    }
+    .two-categories-7-5-section .two-categories-holder .col-sm-7,
+    .two-categories-7-5-section .two-categories-holder .col-sm-5{
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    .two-categories-7-5-section.wedding-main .category {
+        height: 380px;
+    }
+    .two-categories-7-5-section h2{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .two-categories-7-5-section .category-1{
+        margin-right: 10px;
+    }
+    .two-categories-7-5-section .category-2{
+        margin-left: 10px;
+    }
+    .two-categories-7-5-section .category-1 h2{
+        top: 147px;
+        left: 138px;
+    }
+}
