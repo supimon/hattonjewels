@@ -1,0 +1,89 @@
+.three-products-grp, .four-products-grp{
+    font-family: "GILSans", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+}
+.three-products-grp, .four-products-grp, .promos-section{
+    padding: 0px 25px;
+}
+.three-products-grp, .four-products-grp, .promos-section{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.three-products-grp .product, .four-products-grp .product, .promos-section .promo{
+    height: 400px;
+    background-color: #fcfcfc;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 30px;
+    margin-top: 0px;
+    padding-bottom: 58px;
+    position: relative;
+}
+.promo.different-text-pos h2{
+    width: auto;
+    top: 147px;
+    left: 34px;
+}
+.three-products-grp .product-cell, .four-products-grp .product-cell, .promos-section .promo-cell{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+}
+.three-products-grp .product-cell:last-child, .four-products-grp .product-cell:last-child{
+    margin-bottom: 0px;
+}
+.three-products-grp .product, .four-products-grp .product{
+    background-size: contain;
+}
+.promos-section .promo{
+    background-size: cover;
+}
+.three-products-grp h2, .four-products-grp h2, .promos-section h2{
+    font-size: 1em;
+    letter-spacing: 3px;
+    color: #3a3a3a;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 336px;
+}
+.engagement.promos-section{
+    margin-bottom: 20px;
+}
+@media(min-width: 768px){
+    .promos-section{
+        padding: 0px 20px;
+    }
+    .promos-section .row > div:first-child{
+        padding-right: 10px;
+    }
+    .promos-section .row > div:last-child{
+        padding-left: 10px;
+    }
+    .three-products-grp .product-cell, .four-products-grp .product-cell{
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 0px;
+    }
+    .promos-section .promo-cell{
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 0px;
+    }
+    .promo.different-text-pos h2{
+        top: 197px;
+        left: 80px;
+    }
+    .three-products-grp, .four-products-grp, .promos-section{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .engagement.promos-section{
+        margin-bottom: 40px;
+    }
+}
+@media(min-width: 992px){
+    .promo.different-text-pos h2{
+        left: 138px;
+    }
+}
