@@ -1,8 +1,8 @@
 .wedding.banner-section{
-    height: 239px;
+    height: 80px;
     background-color: #181818;
     color: white;
-    padding-top: 1px;
+    padding-top: 4px;
 }
 .wedding.banner-section h1 {
     font-family: AGaramondRegular;
@@ -13,8 +13,8 @@
 }
 @media(min-width: 768px){
     .wedding.banner-section{
-        height: 350px;
-        padding-top: 56px;
+        height: 200px;
+        padding-top: 80px;
     }
     .wedding.banner-section h1 {
         letter-spacing: 5.4px;
