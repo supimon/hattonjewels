@@ -1,5 +1,4 @@
 $(function(){
-    // lookup table
     var screenSize, // indicates current screenSize
         filterSectionHeight, // expanded filter section height reference
         sliderResultObj = {}, // final config object for AJAX search
