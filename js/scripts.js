@@ -34,6 +34,7 @@ $(function(){
                         sliderProdCount: {xs:2, sm:3, md:5, lg:5}, // product count within the sliders
                         filteredProdInsertAfterElement: {xs:1, sm:2, md:3, lg:4}, // position to insert the details view
                         filteredProductsPerPage: 12,
+                        selectedSettingID: '',
                         productSliders: $('.products-slider-section').length ? resetSliders(true) : '',
                         filteredProducts: {path: 'xml/products-sample.xml/'},
                         filterMarkups: {
@@ -329,7 +330,8 @@ $(function(){
         var filteredProdArr = $(data).find('product');
         filteredProdArr.each(function(i){
             if(i < 12){
-                var temp = '<div class="col-lg-3 col-md-4 col-sm-6 text-center"><div class="product">' +
+                var temp = '<div class="col-lg-3 col-md-4 col-sm-6 text-center">' +
+                    '<div class="product" id="'+ $(filteredProdArr[i]).children('id').text() +'">' +
                     '<h3 class="prod-title">'+ $(filteredProdArr[i]).children('name').text() +'</h3>' +
                     '<p class="prod-price">'+ $(filteredProdArr[i]).children('price').text() +'</p>' +
                     '<h4 class="sub-heading">'+ $(filteredProdArr[i]).children('subheading').text() +'</h4>' +
@@ -353,36 +355,54 @@ $(function(){
         // handle filtered product details view
         $('.filtered-product-section .product').parent().on('click', function(e) {
             if($(e.target).hasClass('product')||$($(e.target).parents()).hasClass('product')){
+                // clear any previously selected setting
+                lookupTable.selectedSettingID = '';
+                $('.filtered-product-section .settings-continue').attr('disabled', true).addClass('disabled');
+                // clear any previously selected product
                 $('.filtered-product-details').remove();
                 $('.filtered-product-section .product.active').removeClass('active');
                 $(this).children().addClass('active');
+                // get the position to insert the details view on each screen
                 var i = (lookupTable.filteredProdInsertAfterElement[screenSize] -
                         $(this).index() % lookupTable.filteredProdInsertAfterElement[screenSize]) +
                         $(this).index(),
-                    temp = $(this).parents().hasClass('brilliant-cut') ?
-                    '<a class="btn btn-default cart-btn">Add to Cart</a>' +
-                    '<a class="btn btn-default view-btn">View Details</a>' :
-                        '<a class="btn btn-default select-btn">Select</a>';
-                elem = '<div class="col-xs-12 filtered-product-details">' +
-                    '<div><span class="close-prod-details">Close <i class="fa fa-times" aria-hidden="true"></i></span>' +
-                    '<div class="clearfix"></div></div>' +
-                    '<div class="col-sm-6 prod-gallery"></div>' +
-                    '<div class="col-sm-4 prod-details">' +
-                    '<h2 class="prod-details-title">' + $(this).children().children('.prod-title').text() + '</h2>' +
-                    '<h3 class="prod-sub-title">' + $(this).children().children('.sub-heading').text() + '</h3>' +
-                    '<p class="prod-description">' + $(this).children().children('.description').text() + '</p>' +
-                    '</div>' +
-                    '<div class="col-sm-2 price-select text-right">' +
-                    '<p class="price">' + $(this).children().children('.prod-price').text() + '</p>' +
-                    temp +
-                    '</div>' +
-                    '</div>';
+                    // prepare the details view markup
+                    temp = $(this).parents().hasClass('byo') ?
+                            '<a class="btn btn-default select-btn">Select</a>' :
+                            '<a class="btn btn-default cart-btn">Add to Cart</a>' +
+                            '<a class="btn btn-default view-btn">View Details</a>',
+                    elem = '<div class="col-xs-12 filtered-product-details">' +
+                            '<div><span class="close-prod-details">Close ' +
+                            '<i class="fa fa-times" aria-hidden="true"></i></span>' +
+                            '<div class="clearfix"></div></div>' +
+                            '<div class="col-sm-6 prod-gallery"></div>' +
+                            '<div class="col-sm-4 prod-details">' +
+                            '<h2 class="prod-details-title">' +
+                            $(this).children().children('.prod-title').text() + '</h2>' +
+                            '<h3 class="prod-sub-title">' +
+                            $(this).children().children('.sub-heading').text() + '</h3>' +
+                            '<p class="prod-description">' +
+                            $(this).children().children('.description').text() + '</p>' +
+                            '</div>' +
+                            '<div class="col-sm-2 price-select text-right">' +
+                            '<p class="price">' + $(this).children().children('.prod-price').text() + '</p>' + temp +
+                            '</div></div>';
+                // insert details view
                 $(".filtered-product-section .row > div:nth-child(" + (i) + ")").length ?
                     $(".filtered-product-section .row > div:nth-child(" + (i) + ")").after(elem) :
                     $(".filtered-product-section .row > div:last-child").after(elem);
+                // close details view
                 $('.close-prod-details').on('click', function () {
                     $('.filtered-product-section .product.active').removeClass('active');
                     $('.filtered-product-details').remove();
+                    // reset the selected setting
+                    lookupTable.selectedSettingID = '';
+                    $('.filtered-product-section .settings-continue').attr('disabled', true).addClass('disabled');
+                });
+                // select a setting
+                $('.filtered-product-details .select-btn').on('click', function () {
+                    lookupTable.selectedSettingID = $(".filtered-product-section .row .product.active").attr('id');
+                    $('.filtered-product-section .settings-continue').attr('disabled', false).removeClass('disabled');
                 });
             }
         });

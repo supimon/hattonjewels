@@ -95,12 +95,29 @@
 </section>
 <!--main slider-->
 <section class="byo-section text-center">
-    <ul class="list-inline byo">
+    <ul class="list-inline">
         <li><a href="#"><span>1</span>Choose your stone</a></li>
         <li class="active"><a href="#"><span>2</span>Select your setting</a></li>
         <li><a href="#"><span>3</span>Review & Checkout</a></li>
     </ul>
 </section>
+<!--product sliders-->
+<section class="products-slider-section text-center">
+    <div id="engagement-prod-slider" class="carousel slide" data-productPath="xml/products.xml">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox"></div>
+        <!-- Controls -->
+        <a class="left carousel-control" href="#engagement-prod-slider" role="button" data-slide="prev">
+            <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#engagement-prod-slider" role="button" data-slide="next">
+            <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</section>
+<!--filters-->
 <section class="filter-section expanded">
     <div class="filter-holder">
         <div class="slider-filters">
@@ -117,11 +134,14 @@
     <div class="btn btn-default"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
 </div>
 <!--filtered products-->
-<section class="filtered-product-section">
+<section class="filtered-product-section byo">
     <div class="filtered-product-holder">
         <div class="row"></div>
         <nav class="text-center">
             <ul class="pagination pagination-sm"></ul>
+        </nav>
+        <nav class="text-center">
+            <button class="btn btn-default disabled settings-continue" disabled>Continue</button>
         </nav>
     </div>
 </section>

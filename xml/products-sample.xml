@@ -2,214 +2,7 @@
 <products>
     <totalProducts>61</totalProducts>
     <product>
-        <name>Sienna1</name>
-        <subheading>Classic Princess Cut Solitaire</subheading>
-        <price>£495.00</price>
-        <imgURL main="true">assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt</description>
-        <addToCartLink>#</addToCartLink>
-        <viewDetailsLink>#</viewDetailsLink>
-    </product>
-    <product>
-        <name>Sienna2</name>
-        <subheading>Classic Princess Cut Solitaire</subheading>
-        <price>£495.00</price>
-        <imgURL main="true">assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt</description>
-        <addToCartLink>#</addToCartLink>
-        <viewDetailsLink>#</viewDetailsLink>
-    </product>
-    <product>
-        <name>Sienna3</name>
-        <subheading>Classic Princess Cut Solitaire</subheading>
-        <price>£495.00</price>
-        <imgURL main="true">assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt</description>
-        <addToCartLink>#</addToCartLink>
-        <viewDetailsLink>#</viewDetailsLink>
-    </product>
-    <product>
-        <name>Sienna4</name>
-        <subheading>Classic Princess Cut Solitaire</subheading>
-        <price>£495.00</price>
-        <imgURL main="true">assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt</description>
-        <addToCartLink>#</addToCartLink>
-        <viewDetailsLink>#</viewDetailsLink>
-    </product>
-    <product>
-        <name>Sienna5</name>
-        <subheading>Classic Princess Cut Solitaire</subheading>
-        <price>£495.00</price>
-        <imgURL main="true">assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt</description>
-        <addToCartLink>#</addToCartLink>
-        <viewDetailsLink>#</viewDetailsLink>
-    </product>
-    <product>
-        <name>Sienna6</name>
-        <subheading>Classic Princess Cut Solitaire</subheading>
-        <price>£495.00</price>
-        <imgURL main="true">assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt</description>
-        <addToCartLink>#</addToCartLink>
-        <viewDetailsLink>#</viewDetailsLink>
-    </product>
-    <product>
-        <name>Sienna7</name>
-        <subheading>Classic Princess Cut Solitaire</subheading>
-        <price>£495.00</price>
-        <imgURL main="true">assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt</description>
-        <addToCartLink>#</addToCartLink>
-        <viewDetailsLink>#</viewDetailsLink>
-    </product>
-    <product>
-        <name>Sienna8</name>
-        <subheading>Classic Princess Cut Solitaire</subheading>
-        <price>£495.00</price>
-        <imgURL main="true">assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt</description>
-        <addToCartLink>#</addToCartLink>
-        <viewDetailsLink>#</viewDetailsLink>
-    </product>
-    <product>
-        <name>Sienna9</name>
-        <subheading>Classic Princess Cut Solitaire</subheading>
-        <price>£495.00</price>
-        <imgURL main="true">assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt</description>
-        <addToCartLink>#</addToCartLink>
-        <viewDetailsLink>#</viewDetailsLink>
-    </product>
-    <product>
-        <name>Sienna10</name>
-        <subheading>Classic Princess Cut Solitaire</subheading>
-        <price>£495.00</price>
-        <imgURL main="true">assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt</description>
-        <addToCartLink>#</addToCartLink>
-        <viewDetailsLink>#</viewDetailsLink>
-    </product>
-    <product>
-        <name>Sienna11</name>
-        <subheading>Classic Princess Cut Solitaire</subheading>
-        <price>£495.00</price>
-        <imgURL main="true">assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt</description>
-        <addToCartLink>#</addToCartLink>
-        <viewDetailsLink>#</viewDetailsLink>
-    </product>
-    <product>
-        <name>Sienna12</name>
-        <subheading>Classic Princess Cut Solitaire</subheading>
-        <price>£495.00</price>
-        <imgURL main="true">assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt</description>
-        <addToCartLink>#</addToCartLink>
-        <viewDetailsLink>#</viewDetailsLink>
-    </product>
-    <product>
-        <name>Sienna13</name>
-        <subheading>Classic Princess Cut Solitaire</subheading>
-        <price>£495.00</price>
-        <imgURL main="true">assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt</description>
-        <addToCartLink>#</addToCartLink>
-        <viewDetailsLink>#</viewDetailsLink>
-    </product>
-    <product>
-        <name>Sienna14</name>
-        <subheading>Classic Princess Cut Solitaire</subheading>
-        <price>£495.00</price>
-        <imgURL main="true">assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt</description>
-        <addToCartLink>#</addToCartLink>
-        <viewDetailsLink>#</viewDetailsLink>
-    </product>
-    <product>
-        <name>Sienna15</name>
-        <subheading>Classic Princess Cut Solitaire</subheading>
-        <price>£495.00</price>
-        <imgURL main="true">assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt</description>
-        <addToCartLink>#</addToCartLink>
-        <viewDetailsLink>#</viewDetailsLink>
-    </product>
-    <product>
-        <name>Sienna16</name>
-        <subheading>Classic Princess Cut Solitaire</subheading>
-        <price>£495.00</price>
-        <imgURL main="true">assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <imgURL>assets/product-slider-img.png</imgURL>
-        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt</description>
-        <addToCartLink>#</addToCartLink>
-        <viewDetailsLink>#</viewDetailsLink>
-    </product>
-    <product>
+        <id>fp001</id>
         <name>Sienna17</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -223,6 +16,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp002</id>
         <name>Sienna18</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -236,6 +30,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp003</id>
         <name>Sienna19</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -249,6 +44,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp004</id>
         <name>Sienna20</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -262,6 +58,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp005</id>
         <name>Sienna21</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -275,6 +72,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp006</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -288,6 +86,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp007</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -301,6 +100,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp008</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -314,6 +114,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp009</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -327,6 +128,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp010</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -340,6 +142,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp011</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -353,6 +156,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp012</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -366,6 +170,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp013</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -379,6 +184,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp014</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -392,6 +198,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp015</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -405,6 +212,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp016</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -418,6 +226,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp017</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -431,6 +240,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp018</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -444,6 +254,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp019</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -457,6 +268,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp020</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -470,6 +282,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp021</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -483,6 +296,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp022</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -496,6 +310,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp023</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -509,6 +324,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp024</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -522,6 +338,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp025</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -535,6 +352,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp026</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -548,6 +366,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp027</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -561,6 +380,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp028</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -574,6 +394,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp029</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -587,6 +408,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp030</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -600,6 +422,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp031</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -613,6 +436,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp032</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -626,6 +450,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp033</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -639,6 +464,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp034</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -652,6 +478,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp035</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -665,6 +492,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp036</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -678,6 +506,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp037</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -691,6 +520,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp038</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -704,6 +534,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp039</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -717,6 +548,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp040</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -730,6 +562,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp041</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -743,6 +576,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp042</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -756,6 +590,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp043</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -769,6 +604,7 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp044</id>
         <name>Sienna1</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
@@ -782,7 +618,232 @@
         <viewDetailsLink>#</viewDetailsLink>
     </product>
     <product>
+        <id>fp045</id>
         <name>Sienna1</name>
+        <subheading>Classic Princess Cut Solitaire</subheading>
+        <price>£495.00</price>
+        <imgURL main="true">assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt</description>
+        <addToCartLink>#</addToCartLink>
+        <viewDetailsLink>#</viewDetailsLink>
+    </product>
+    <product>
+        <id>fp046</id>
+        <name>Sienna1</name>
+        <subheading>Classic Princess Cut Solitaire</subheading>
+        <price>£495.00</price>
+        <imgURL main="true">assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt</description>
+        <addToCartLink>#</addToCartLink>
+        <viewDetailsLink>#</viewDetailsLink>
+    </product>
+    <product>
+        <id>fp047</id>
+        <name>Sienna2</name>
+        <subheading>Classic Princess Cut Solitaire</subheading>
+        <price>£495.00</price>
+        <imgURL main="true">assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt</description>
+        <addToCartLink>#</addToCartLink>
+        <viewDetailsLink>#</viewDetailsLink>
+    </product>
+    <product>
+        <id>fp048</id>
+        <name>Sienna3</name>
+        <subheading>Classic Princess Cut Solitaire</subheading>
+        <price>£495.00</price>
+        <imgURL main="true">assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt</description>
+        <addToCartLink>#</addToCartLink>
+        <viewDetailsLink>#</viewDetailsLink>
+    </product>
+    <product>
+        <id>fp049</id>
+        <name>Sienna4</name>
+        <subheading>Classic Princess Cut Solitaire</subheading>
+        <price>£495.00</price>
+        <imgURL main="true">assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt</description>
+        <addToCartLink>#</addToCartLink>
+        <viewDetailsLink>#</viewDetailsLink>
+    </product>
+    <product>
+        <id>fp050</id>
+        <name>Sienna5</name>
+        <subheading>Classic Princess Cut Solitaire</subheading>
+        <price>£495.00</price>
+        <imgURL main="true">assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt</description>
+        <addToCartLink>#</addToCartLink>
+        <viewDetailsLink>#</viewDetailsLink>
+    </product>
+    <product>
+        <id>fp051</id>
+        <name>Sienna6</name>
+        <subheading>Classic Princess Cut Solitaire</subheading>
+        <price>£495.00</price>
+        <imgURL main="true">assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt</description>
+        <addToCartLink>#</addToCartLink>
+        <viewDetailsLink>#</viewDetailsLink>
+    </product>
+    <product>
+        <id>fp052</id>
+        <name>Sienna7</name>
+        <subheading>Classic Princess Cut Solitaire</subheading>
+        <price>£495.00</price>
+        <imgURL main="true">assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt</description>
+        <addToCartLink>#</addToCartLink>
+        <viewDetailsLink>#</viewDetailsLink>
+    </product>
+    <product>
+        <id>fp053</id>
+        <name>Sienna8</name>
+        <subheading>Classic Princess Cut Solitaire</subheading>
+        <price>£495.00</price>
+        <imgURL main="true">assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt</description>
+        <addToCartLink>#</addToCartLink>
+        <viewDetailsLink>#</viewDetailsLink>
+    </product>
+    <product>
+        <id>fp054</id>
+        <name>Sienna9</name>
+        <subheading>Classic Princess Cut Solitaire</subheading>
+        <price>£495.00</price>
+        <imgURL main="true">assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt</description>
+        <addToCartLink>#</addToCartLink>
+        <viewDetailsLink>#</viewDetailsLink>
+    </product>
+    <product>
+        <id>fp055</id>
+        <name>Sienna10</name>
+        <subheading>Classic Princess Cut Solitaire</subheading>
+        <price>£495.00</price>
+        <imgURL main="true">assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt</description>
+        <addToCartLink>#</addToCartLink>
+        <viewDetailsLink>#</viewDetailsLink>
+    </product>
+    <product>
+        <id>fp056</id>
+        <name>Sienna11</name>
+        <subheading>Classic Princess Cut Solitaire</subheading>
+        <price>£495.00</price>
+        <imgURL main="true">assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt</description>
+        <addToCartLink>#</addToCartLink>
+        <viewDetailsLink>#</viewDetailsLink>
+    </product>
+    <product>
+        <id>fp057</id>
+        <name>Sienna12</name>
+        <subheading>Classic Princess Cut Solitaire</subheading>
+        <price>£495.00</price>
+        <imgURL main="true">assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt</description>
+        <addToCartLink>#</addToCartLink>
+        <viewDetailsLink>#</viewDetailsLink>
+    </product>
+    <product>
+        <id>fp058</id>
+        <name>Sienna13</name>
+        <subheading>Classic Princess Cut Solitaire</subheading>
+        <price>£495.00</price>
+        <imgURL main="true">assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt</description>
+        <addToCartLink>#</addToCartLink>
+        <viewDetailsLink>#</viewDetailsLink>
+    </product>
+    <product>
+        <id>fp059</id>
+        <name>Sienna14</name>
+        <subheading>Classic Princess Cut Solitaire</subheading>
+        <price>£495.00</price>
+        <imgURL main="true">assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt</description>
+        <addToCartLink>#</addToCartLink>
+        <viewDetailsLink>#</viewDetailsLink>
+    </product>
+    <product>
+        <id>fp060</id>
+        <name>Sienna15</name>
+        <subheading>Classic Princess Cut Solitaire</subheading>
+        <price>£495.00</price>
+        <imgURL main="true">assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <imgURL>assets/product-slider-img.png</imgURL>
+        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt</description>
+        <addToCartLink>#</addToCartLink>
+        <viewDetailsLink>#</viewDetailsLink>
+    </product>
+    <product>
+        <id>fp061</id>
+        <name>Sienna16</name>
         <subheading>Classic Princess Cut Solitaire</subheading>
         <price>£495.00</price>
         <imgURL main="true">assets/product-slider-img.png</imgURL>

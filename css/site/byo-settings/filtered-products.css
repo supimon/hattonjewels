@@ -130,6 +130,20 @@
     margin: 0px;
     padding: 10px 0px;
 }
+.filtered-product-section .settings-continue{
+    border-radius: 0px;
+    letter-spacing: 2px;
+    padding: 7px 22px;
+    font-size: 12px;
+    border-color: #333;
+    text-transform: uppercase;
+    color: black;
+}
+.filtered-product-section .settings-continue.disabled{
+    border-color: #888;
+    color: #888;
+    background-color: #eee;
+}
 @media (min-width: 768px){
     .filtered-product-holder{
         width: calc(100% - 40px);
