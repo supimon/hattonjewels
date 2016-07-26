@@ -33,7 +33,9 @@ $(function(){
                         sliderHeight: {xs:375, sm:375, md:463, lg:563}, // product sliders height configurations
                         sliderProdCount: {xs:2, sm:3, md:5, lg:5}, // product count within the sliders
                         filteredProdInsertAfterElement: {xs:1, sm:2, md:3, lg:4}, // position to insert the details view
+                        filteredProductsPerPage: 12,
                         productSliders: $('.products-slider-section').length ? resetSliders(true) : '',
+                        filteredProducts: {path: 'xml/products-sample.xml/'},
                         filterMarkups: {
                             "regular": fullValueFilterMarkup,
                             "min-max": minMaxFilterMarkup,
@@ -275,6 +277,116 @@ $(function(){
             lookupTable.productSliders[id].dataExists[lookupTable.productSliders[id].currentSlide] = true;
         });
     }
+    // quick details, pagination and filtered products population
+    if($('.filtered-product-section').length){
+        // quick details overlay
+        $('.filtered-product-section .row').on('mouseover', function(e){
+                if($(e.target).hasClass('product')||$($(e.target).parents()).hasClass('product')) {
+                    var $prodDiv;
+                    if ($(e.target).hasClass('product')) $prodDiv = $(e.target);
+                    else if ($($(e.target).parents()).hasClass('product')) $prodDiv = $($(e.target).parents('product'));
+                    if(!$prodDiv.hasClass('active')) $prodDiv.children('p.overlay-p').show();
+                }
+            })
+            .on('mouseout click', function(e){
+                if($(e.target).hasClass('product')||$($(e.target).parents()).hasClass('product')) {
+                    var $prodDiv;
+                    if ($(e.target).hasClass('product')) $prodDiv = $(e.target);
+                    else if ($($(e.target).parents()).hasClass('product')) $prodDiv = $($(e.target).parents('product'));
+                    $prodDiv.children('p.overlay-p').hide();
+                }
+            });
+        // populate the filtered products
+        $.post(lookupTable.filteredProducts.path, sliderResultObj, function( data ) {
+            var remainder = $(data).find('totalProducts').text() % lookupTable.filteredProductsPerPage,
+                pages = parseInt($(data).find('totalProducts').text()/lookupTable.filteredProductsPerPage),
+                totalPages = remainder == 0 ? pages : pages + 1;
+            // populate page numbers
+            for(var k = 0; k <= totalPages+1; k++){
+                k == 0 ? $('.filtered-product-section .pagination')
+                    .append('<li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>')
+                    : k == (totalPages+1) ? $('.filtered-product-section .pagination')
+                    .append('<li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>') :
+                    $('.filtered-product-section .pagination').append('<li><a href="#">'+ k +'</a></li>');
+            }
+            populateFilteredProducts(data);
+            // bind pagination functionality
+            $('.filtered-product-section .pagination li a').on('click', function(e){
+                e.preventDefault();
+                var pageNum = $(this).text();
+                prepareFilterOptionsObj();
+                $.post(lookupTable.filteredProducts.path, sliderResultObj, function( data ) {
+                    $('.filtered-product-section .row').empty();
+                    populateFilteredProducts(data);
+                    bindProductEvents();
+                });
+            });
+            bindProductEvents();
+        });
+    }
+    // utility function to populate the filtered products
+    function populateFilteredProducts(data){
+        var filteredProdArr = $(data).find('product');
+        filteredProdArr.each(function(i){
+            if(i < 12){
+                var temp = '<div class="col-lg-3 col-md-4 col-sm-6 text-center"><div class="product">' +
+                    '<h3 class="prod-title">'+ $(filteredProdArr[i]).children('name').text() +'</h3>' +
+                    '<p class="prod-price">'+ $(filteredProdArr[i]).children('price').text() +'</p>' +
+                    '<h4 class="sub-heading">'+ $(filteredProdArr[i]).children('subheading').text() +'</h4>' +
+                    '<p class="description">'+ $(filteredProdArr[i]).children('description').text() +'</p>' +
+                    '<img class="prod-thumbnail main" src="'+
+                    $($(filteredProdArr[i]).children('imgURL')[0]).text() +'" />' +
+                    '<img class="prod-thumbnail" src="'+
+                    $($(filteredProdArr[i]).children('imgURL')[1]).text() +'" />' +
+                    '<img class="prod-thumbnail" src="'+
+                    $($(filteredProdArr[i]).children('imgURL')[2]).text() +'" />' +
+                    '<img class="prod-thumbnail" src="'+
+                    $($(filteredProdArr[i]).children('imgURL')[3]).text() +'" />' +
+                    '<p class="overlay-p">Quick View</p>' +
+                    '</div></div>';
+                $('.filtered-product-section .row').append(temp);
+            }
+        });
+    }
+    // bind events to newly populated filtered products to show the details view
+    function bindProductEvents(){
+        // handle filtered product details view
+        $('.filtered-product-section .product').parent().on('click', function(e) {
+            if($(e.target).hasClass('product')||$($(e.target).parents()).hasClass('product')){
+                $('.filtered-product-details').remove();
+                $('.filtered-product-section .product.active').removeClass('active');
+                $(this).children().addClass('active');
+                var i = (lookupTable.filteredProdInsertAfterElement[screenSize] -
+                        $(this).index() % lookupTable.filteredProdInsertAfterElement[screenSize]) +
+                        $(this).index(),
+                    temp = $(this).parents().hasClass('brilliant-cut') ?
+                    '<a class="btn btn-default cart-btn">Add to Cart</a>' +
+                    '<a class="btn btn-default view-btn">View Details</a>' :
+                        '<a class="btn btn-default select-btn">Select</a>';
+                elem = '<div class="col-xs-12 filtered-product-details">' +
+                    '<div><span class="close-prod-details">Close <i class="fa fa-times" aria-hidden="true"></i></span>' +
+                    '<div class="clearfix"></div></div>' +
+                    '<div class="col-sm-6 prod-gallery"></div>' +
+                    '<div class="col-sm-4 prod-details">' +
+                    '<h2 class="prod-details-title">' + $(this).children().children('.prod-title').text() + '</h2>' +
+                    '<h3 class="prod-sub-title">' + $(this).children().children('.sub-heading').text() + '</h3>' +
+                    '<p class="prod-description">' + $(this).children().children('.description').text() + '</p>' +
+                    '</div>' +
+                    '<div class="col-sm-2 price-select text-right">' +
+                    '<p class="price">' + $(this).children().children('.prod-price').text() + '</p>' +
+                    temp +
+                    '</div>' +
+                    '</div>';
+                $(".filtered-product-section .row > div:nth-child(" + (i) + ")").length ?
+                    $(".filtered-product-section .row > div:nth-child(" + (i) + ")").after(elem) :
+                    $(".filtered-product-section .row > div:last-child").after(elem);
+                $('.close-prod-details').on('click', function () {
+                    $('.filtered-product-section .product.active').removeClass('active');
+                    $('.filtered-product-details').remove();
+                });
+            }
+        });
+    }
     // filter sliders
     if($('.filter-section').length) {
         for (sliderKey in lookupTable.filterSliders) {
@@ -352,64 +464,8 @@ $(function(){
         });
         // handle filter search
         $('.reset-search-holder .search').on('click', function () {
-            for (sliderKey in lookupTable.filterSliders) {
-                sliderResultObj[sliderKey] = [];
-                if (lookupTable.filterSliders[sliderKey].type == "regular") {
-                    var lowerLimit = lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue')[0],
-                        upperLimit = lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue')[1];
-                    if ((upperLimit - lowerLimit) == 0) {
-                        sliderResultObj[sliderKey].push(lookupTable.filterSliders[sliderKey]
-                            .obj.ticks_labels[lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue')[1] - 1]);
-                    } else {
-                        for (var k = lowerLimit; k < upperLimit; k++) {
-                            sliderResultObj[sliderKey].push(lookupTable.filterSliders[sliderKey].obj.ticks_labels[k]);
-                        }
-                    }
-                } else if (lookupTable.filterSliders[sliderKey].type == "radio-type" ||
-                    lookupTable.filterSliders[sliderKey].type == "label-type") {
-                    sliderResultObj[sliderKey].push(
-                        lookupTable.filterSliders[sliderKey]
-                            .obj.values[$('#' + lookupTable.filterSliders[sliderKey].obj.id + 'Input ul')
-                            .children('.active').index()]);
-                } else if (lookupTable.filterSliders[sliderKey].type == "shape-filter") {
-                    sliderResultObj[sliderKey]
-                        .push($('#' + lookupTable.filterSliders[sliderKey].obj.id + 'Input .single-filter.active h4').text());
-                } else {
-                    sliderResultObj[sliderKey] = lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue');
-                }
-                // write the AJAX call here
-                console.log(sliderKey + " : " + sliderResultObj[sliderKey]);
-            }
-        });
-        // handle filtered product details view
-        $('.filtered-product-section .product').parent().on('click', function () {
-            $('.filtered-product-details').remove();
-            $('.filtered-product-section .product.active').removeClass('active');
-            $(this).children().addClass('active');
-            var i = (lookupTable.filteredProdInsertAfterElement[screenSize] -
-                    $(this).index() % lookupTable.filteredProdInsertAfterElement[screenSize]) +
-                    $(this).index(),
-                elem = '<div class="col-xs-12 filtered-product-details">' +
-                    '<div><span class="close-prod-details">Close <i class="fa fa-times" aria-hidden="true"></i></span>' +
-                    '<div class="clearfix"></div></div>' +
-                    '<div class="col-sm-6 prod-gallery"></div>' +
-                    '<div class="col-sm-4 prod-details">' +
-                    '<h2 class="prod-details-title">' + $(this).children().children('.prod-title').text() + '</h2>' +
-                    '<h3 class="prod-sub-title">' + $(this).children().children('.sub-heading').text() + '</h3>' +
-                    '<p class="prod-description">' + $(this).children().children('.description').text() + '</p>' +
-                    '</div>' +
-                    '<div class="col-sm-2 price-select text-right">' +
-                    '<p class="price">' + $(this).children().children('.prod-price').text() + '</p>' +
-                    '<a class="btn btn-default select-btn">Select</a>' +
-                    '</div>' +
-                    '</div>';
-            $(".filtered-product-section .row > div:nth-child(" + (i) + ")").length ?
-                $(".filtered-product-section .row > div:nth-child(" + (i) + ")").after(elem) :
-                $(".filtered-product-section .row > div:last-child").after(elem);
-            $('.close-prod-details').on('click', function () {
-                $('.filtered-product-section .product.active').removeClass('active');
-                $('.filtered-product-details').remove();
-            });
+            prepareFilterOptionsObj();
+            // write the AJAX call here
         });
         // expand collapse filters
         $('.collapse-expand .btn').on('click', function () {
@@ -425,5 +481,35 @@ $(function(){
                     $(that).children().removeClass('fa-angle-down').addClass('fa-angle-up');
                 });
         });
+    }
+    // utility function for preparing the AJAX filter options object
+    function prepareFilterOptionsObj(){
+        for (sliderKey in lookupTable.filterSliders) {
+            sliderResultObj[sliderKey] = [];
+            if (lookupTable.filterSliders[sliderKey].type == "regular") {
+                var lowerLimit = lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue')[0],
+                    upperLimit = lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue')[1];
+                if ((upperLimit - lowerLimit) == 0) {
+                    sliderResultObj[sliderKey].push(lookupTable.filterSliders[sliderKey]
+                        .obj.ticks_labels[lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue')[1] - 1]);
+                } else {
+                    for (var k = lowerLimit; k < upperLimit; k++) {
+                        sliderResultObj[sliderKey].push(lookupTable.filterSliders[sliderKey].obj.ticks_labels[k]);
+                    }
+                }
+            } else if (lookupTable.filterSliders[sliderKey].type == "radio-type" ||
+                lookupTable.filterSliders[sliderKey].type == "label-type") {
+                sliderResultObj[sliderKey].push(
+                    lookupTable.filterSliders[sliderKey]
+                        .obj.values[$('#' + lookupTable.filterSliders[sliderKey].obj.id + 'Input ul')
+                        .children('.active').index()]);
+            } else if (lookupTable.filterSliders[sliderKey].type == "shape-filter") {
+                sliderResultObj[sliderKey]
+                    .push($('#' + lookupTable.filterSliders[sliderKey].obj.id + 'Input .single-filter.active h4').text());
+            } else {
+                sliderResultObj[sliderKey] = lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue');
+            }
+            console.log(sliderKey + " : " + sliderResultObj[sliderKey]);
+        }
     }
 });

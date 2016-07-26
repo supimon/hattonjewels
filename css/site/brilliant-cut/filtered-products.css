@@ -19,8 +19,15 @@
     height: 200px;
     position: relative;
 }
+.filtered-product-section .product > *{
+    pointer-events: none;
+}
+.filtered-product-section .product:hover{
+    border: 1px solid #bbb;
+}
 .filtered-product-section .product.active{
     margin-bottom: -10px;
+    border: none;
 }
 .filtered-product-section .prod-title{
     width: 100%;
@@ -97,13 +104,31 @@
     font-size: 23px;
     letter-spacing: 3px;
 }
-.filtered-product-details .select-btn{
+.filtered-product-details .select-btn, .filtered-product-details .view-btn, .filtered-product-details .cart-btn{
     border-radius: 0px;
     letter-spacing: 2px;
     padding: 7px 22px;
-    color: #318389;
-    border-color: #318389;
     font-size: 12px;
+    border-color: #318389;
+    margin-bottom: 20px;
+}
+.filtered-product-details .select-btn, .filtered-product-details .view-btn{
+    color: #318389;
+}
+.filtered-product-details .cart-btn{
+    color: white;
+    background-color: #318389;
+}
+.filtered-product-section .overlay-p{
+    display: none;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(100, 100, 100, 0.5);
+    color: white;
+    font-size: 1em;
+    margin: 0px;
+    padding: 10px 0px;
 }
 @media (min-width: 768px){
     .filtered-product-holder{
@@ -147,6 +172,10 @@
     .filtered-product-details .price {
         margin-bottom: 25px;
     }
+    .filtered-product-details .select-btn, .filtered-product-details .view-btn, .filtered-product-details .cart-btn {
+        padding: 7px 9px;
+        font-size: 10px;
+    }
 }
 @media(min-width: 992px){
     .filtered-product-section .filtered-product-holder {
@@ -170,13 +199,19 @@
         padding: 40px 31px 20px 0px;
     }
     .filtered-product-details .price {
-        margin-bottom: 50px;
         font-size: 25px;
     }
     .filtered-product-details .select-btn {
+        margin-top: 20px;
         font-size: 14px;
+    }
+    .filtered-product-details .select-btn, .filtered-product-details .view-btn, .filtered-product-details .cart-btn {
+        padding: 7px 12px;
+        font-size: 12px;
     }
 }
 @media(min-width: 1200px){
-
+    .filtered-product-details .select-btn, .filtered-product-details .view-btn, .filtered-product-details .cart-btn {
+        padding: 7px 22px;
+    }
 }
