@@ -277,9 +277,9 @@ $(function(){
             lookupTable.productSliders[id].dataExists[lookupTable.productSliders[id].currentSlide] = true;
         });
     }
-    // quick details, pagination and filtered products population
+    // quick details, pagination, filtered products population, settings continue action
     if($('.filtered-product-section').length){
-        // quick details overlay
+        // quick details overlay on each product
         $('.filtered-product-section .row').on('mouseover', function(e){
                 if($(e.target).hasClass('product')||$($(e.target).parents()).hasClass('product')) {
                     var $prodDiv;
@@ -296,7 +296,7 @@ $(function(){
                     $prodDiv.children('p.overlay-p').hide();
                 }
             });
-        // populate the filtered products
+        // AJAX call to populate the filtered products after initial page load
         $.post(lookupTable.filteredProducts.path, sliderResultObj, function( data ) {
             var remainder = $(data).find('totalProducts').text() % lookupTable.filteredProductsPerPage,
                 pages = parseInt($(data).find('totalProducts').text()/lookupTable.filteredProductsPerPage),
@@ -310,7 +310,7 @@ $(function(){
                     $('.filtered-product-section .pagination').append('<li><a href="#">'+ k +'</a></li>');
             }
             populateFilteredProducts(data);
-            // bind pagination functionality
+            // subsequent AJAX filtered products population based on pagination
             $('.filtered-product-section .pagination li a').on('click', function(e){
                 e.preventDefault();
                 var pageNum = $(this).text();
@@ -322,6 +322,10 @@ $(function(){
                 });
             });
             bindProductEvents();
+        });
+        // byo settings continue action
+        $('.filtered-product-section.byo .settings-continue').on('click', function(e){
+            // grab the lookuptable.selectedSettingID and submit the data to new page
         });
     }
     // utility function to populate the filtered products
