@@ -537,4 +537,12 @@ $(function(){
     }
     // handle file upload
     var myDropzone = new Dropzone("form#fileUploadZone", { url: "/file/post", clickable: "#clickable-area"});
+    // handle select tag substitutes
+    if($('form .select-replace').length){
+        $('form .select-replace ul.dropdown-menu li').on('click', function(){
+            var text = $(this).text();
+            $(this).parents('.select-replace').children('.btn-main').text(text);
+            $('#'+$(this).parent().attr('data-id')).value = text;
+        });
+    }
 });
