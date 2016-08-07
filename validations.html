@@ -139,7 +139,7 @@
 <section class="validation-form-section">
     <form class="form-holder" id="fileUploadZone">
         <div class="upper-forms-holder row">
-            <div class="col-sm-5">
+            <div class="col-md-5">
                 <input type="text" class="form-control" id="inputName" placeholder="Name">
                 <input type="email" class="form-control" id="inputEmail" placeholder="Email">
                 <input type="tel" class="form-control" id="inputPhone" placeholder="Telephone">
@@ -170,6 +170,7 @@
                             <li>Something else here</li>
                         </ul>
                     </div>
+                    <div class="clearfix"></div>
                     <input type="text" class="form-control hidden" id="inputItemType">
                     <input type="text" class="form-control hidden" id="inputMetalType">
                 </div>
@@ -188,21 +189,23 @@
                 </div>
                 <input type="text" class="form-control hidden" id="inputAppraisalType">
             </div>
-            <div class="col-sm-7">
+            <div class="col-md-7">
                 <p class="upload-text">Please upload images of your item. If you have a diamond appraisal or grading report, please
                 also upload it here <sup>*</sup></p>
                 <div id="clickable-area">
-                   <p class="drag-text">Drag and Drop or Click to upload</p>
+                   <p class="drag-text"><span class="hidden-xs hidden-sm">Drag and Drop or </span>Click to upload</p>
                    <p class="type-text">Files must be .jpg, .png or .bmp. Max size 10mb</p>
                 </div>
                 <div class="radio-holder">
                     <p>Do you have the original box or paper?</p>
-                    <label class="radio-inline">
-                        <input type="radio" name="hasBoxOrPaper" id="inlineRadio1" value="option1"> Yes
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="hasBoxOrPaper" id="inlineRadio2" value="option2"> No
-                    </label>
+                    <div class="radio-btns">
+                        <label class="radio-inline">
+                            <input type="radio" name="hasBoxOrPaper" id="inlineRadio1" value="option1"> Yes
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="hasBoxOrPaper" id="inlineRadio2" value="option2"> No
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
