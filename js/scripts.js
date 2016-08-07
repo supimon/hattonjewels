@@ -535,4 +535,6 @@ $(function(){
             console.log(sliderKey + " : " + sliderResultObj[sliderKey]);
         }
     }
+    // handle file upload
+    var myDropzone = new Dropzone("form#fileUploadZone", { url: "/file/post", clickable: "#clickable-area"});
 });

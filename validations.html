@@ -137,15 +137,15 @@
 </section>
 <!--form-->
 <section class="validation-form-section">
-    <form class="form-holder">
+    <form class="form-holder" id="fileUploadZone">
         <div class="upper-forms-holder row">
             <div class="col-sm-5">
                 <input type="text" class="form-control" id="inputName" placeholder="Name">
                 <input type="email" class="form-control" id="inputEmail" placeholder="Email">
                 <input type="tel" class="form-control" id="inputPhone" placeholder="Telephone">
-                <div class="form-inline">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-danger">Item Type</button>
+                <div class="form-inline item-metal-type">
+                    <div class="btn-group item">
+                        <button type="button" class="btn btn-danger btn-item">Item Type</button>
                         <button type="button" class="btn btn-danger dropdown-toggle"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="caret"></span>
@@ -157,8 +157,8 @@
                             <li><a href="#">Something else here</a></li>
                         </ul>
                     </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-danger">Metal Type</button>
+                    <div class="btn-group metal">
+                        <button type="button" class="btn btn-danger btn-metal">Metal Type</button>
                         <button type="button" class="btn btn-danger dropdown-toggle"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="caret"></span>
@@ -173,8 +173,8 @@
                     <input type="text" class="form-control hidden" id="inputItemType">
                     <input type="text" class="form-control hidden" id="inputMetalType">
                 </div>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-danger">Report Appraisal Type</button>
+                <div class="btn-group appraisal">
+                    <button type="button" class="btn btn-danger btn-appraisal">Report Appraisal Type</button>
                     <button type="button" class="btn btn-danger dropdown-toggle"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="caret"></span>
@@ -189,12 +189,34 @@
                 <input type="text" class="form-control hidden" id="inputAppraisalType">
             </div>
             <div class="col-sm-7">
-                <p>Please upload images of your item. If you have a diamond appraisal or grading report, please
+                <p class="upload-text">Please upload images of your item. If you have a diamond appraisal or grading report, please
                 also upload it here <sup>*</sup></p>
-
+                <div id="clickable-area">
+                   <p class="drag-text">Drag and Drop or Click to upload</p>
+                   <p class="type-text">Files must be .jpg, .png or .bmp. Max size 10mb</p>
+                </div>
+                <div class="radio-holder">
+                    <p>Do you have the original box or paper?</p>
+                    <label class="radio-inline">
+                        <input type="radio" name="hasBoxOrPaper" id="inlineRadio1" value="option1"> Yes
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="hasBoxOrPaper" id="inlineRadio2" value="option2"> No
+                    </label>
+                </div>
             </div>
         </div>
-        <div class="lower-forms-holder"></div>
+        <div class="lower-forms-holder">
+            <textarea placeholder="Describe your Jewellery"></textarea>
+            <div class="btn-group submit">
+                <button type="button" class="btn btn-danger">Submit</button>
+                <button type="submit" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+            </div>
+            <div class="clearfix"></div>
+        </div>
     </form>
 </section>
 <!--footer-->
@@ -265,6 +287,7 @@
 <script src="js/vendor/jquery/jquery-2.2.3.min.js"></script>
 <script src="js/vendor/bootstrap/bootstrap.min.js"></script>
 <script src="js/vendor/bootstrap/bootstrap-slider.min.js"></script>
+<script src="js/vendor/dropzone/dropzone.js"></script>
 <script src="js/scripts.js"></script>
 </body>
 </html>
