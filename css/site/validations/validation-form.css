@@ -115,6 +115,20 @@
 }
 #fileUploadZone .lower-forms-holder .submit{
     float: right;
+    cursor: pointer;
+}
+#fileUploadZone .lower-forms-holder .submit button{
+    padding: 0px 0px 0px 17px;
+}
+#fileUploadZone .lower-forms-holder .submit .submit-arrow{
+    display: inline-block;
+    width: 40px;
+    height: 46px;
+    background-color: #318389;
+    border-left: 1px solid black;
+    color: white;
+    padding-top: 16px;
+    margin-left: 10px;
 }
 @media(min-width: 768px) {
     #fileUploadZone .col-md-5{

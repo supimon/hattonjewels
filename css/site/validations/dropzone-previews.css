@@ -1,0 +1,18 @@
+form .previews-container .dz-preview{
+    width: 80px;
+    display: inline-block;
+    margin: 0px 13px 13px 0px;
+}
+form .previews-container .dz-preview > *{
+    font-size: 8px;
+    word-wrap: break-word;
+}
+form .previews-container .dz-preview .dz-size{
+    font-size: 10px;
+}
+form .previews-container .dz-preview .dz-remove{
+    color: red;
+}
+form .previews-container .dz-success-mark, form .previews-container .dz-error-mark{
+    display: none;
+}
