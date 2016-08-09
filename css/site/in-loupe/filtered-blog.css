@@ -1,0 +1,150 @@
+.filtered-blog-section{
+    padding: 0px 20px;
+}
+.filtered-blog-section .filtered-blog-holder{
+    background-color: #e8e8e8;
+    margin-bottom: 20px;
+    padding: 50px 50px;
+    margin-top: -29px;
+}
+.filtered-blog-holder .multi-column-stacker{
+    -moz-column-count: 4;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 20px;
+    column-count: 4;
+    column-gap: 20px;
+    width: 100%;
+}
+.filtered-blog-holder .multi-column-stacker .single-blog{
+    display: inline-block;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 10px 10px 25px 10px;
+}
+.filtered-blog-holder .single-blog .blog-title,
+.filtered-blog-holder .single-blog .date-time,
+.filtered-blog-holder .single-blog .social-share{
+    padding-left: 20px;
+    padding-right: 50px;
+}
+.filtered-blog-holder .single-blog ul.social-share li{
+    text-align: center;
+}
+.filtered-blog-section .social{
+    display: inline-block;
+    border-radius: 13px;
+    border: 1px solid #318389;
+    width: 26px;
+    height: 26px;
+}
+.filtered-blog-section ul{
+    margin-bottom: 0px;
+}
+.filtered-blog-section .fa-facebook, .filtered-blog-section .fa-google-plus, .filtered-blog-section .fa-twitter,
+.filtered-blog-section .fa-pinterest-p{
+    color: #318389;
+    margin-top: 5px;
+    font-size: 14px;
+}
+.filtered-blog-section .single-blog .blog-title{
+    font-family: 'AGaramondRegular', serif;
+    text-transform: none;
+    font-size: 19px;
+    letter-spacing: 0px;
+    line-height: 24px;
+}
+.filtered-blog-section .single-blog .date-time{
+    color: #318389;
+    font-size: 14px;
+}
+.filtered-blog-section .single-blog.tweet{
+    padding-bottom: 10px;
+    display: none;
+}
+.filtered-blog-holder .single-blog.tweet .title{
+    font-family: 'AGaramondRegular', serif;
+    text-transform: none;
+    font-size: 30px;
+    line-height: 24px;
+    text-align: center;
+}
+.filtered-blog-holder .single-blog.tweet .sub-title{
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 1.6px;
+    color: #318389;
+}
+.filtered-blog-holder .single-blog.tweet .tweets{
+    background-color: #b4ded3;
+    padding: 12px 8px 12px 12px;
+    font-size: 13px;
+    font-family: "ProximaNovaThin", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0px;
+}
+.filtered-blog-holder .single-blog.tweet .tweet-tags{
+    display: block;
+}
+.filtered-blog-holder .single-blog.tweet .tweet-tags a{
+    color: #318389;
+}
+@media(min-width: 768px){
+    .filtered-blog-holder .multi-column-stacker {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+@media(min-width: 992px){
+    .filtered-blog-holder .multi-column-stacker {
+        -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
+    }
+    .filtered-blog-holder .single-blog .blog-title,
+    .filtered-blog-holder .single-blog .date-time,
+    .filtered-blog-holder .single-blog .social-share{
+        padding-left: 5px;
+        padding-right: 20px;
+    }
+    .filtered-blog-section .single-blog .blog-title {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .filtered-blog-section .single-blog .date-time {
+        font-size: 12px;
+    }
+    .filtered-blog-holder .single-blog .social-share{
+        margin-left: 0px;
+    }
+    .filtered-blog-holder .single-blog ul.social-share li {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+}
+@media(min-width: 1200px){
+    .filtered-blog-holder .single-blog .blog-title,
+    .filtered-blog-holder .single-blog .date-time,
+    .filtered-blog-holder .single-blog .social-share{
+        padding-left: 20px;
+        padding-right: 50px;
+    }
+    .filtered-blog-section .single-blog .blog-title {
+        font-size: 19px;
+        line-height: 24px;
+    }
+    .filtered-blog-section .single-blog .date-time {
+        font-size: 14px;
+    }
+    .filtered-blog-holder .single-blog .social-share{
+        margin-left: -5px;
+    }
+    .filtered-blog-holder .single-blog ul.social-share li {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}

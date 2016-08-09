@@ -1,5 +1,7 @@
 $(function(){
     var screenSize, // indicates current screenSize
+        lastUpdatedBlogCol = 0, // to evenly distribute blog items in columns
+        blogItemsArr = [], // total blog items(containers) on the page
         // a hypothetical config table for ease of configuration changes
         lookupTable = {
             sliderHeight: {xs: 375, sm: 375, md: 463, lg: 563}, // product sliders height configurations
@@ -19,7 +21,7 @@ $(function(){
         getscreenSize();
         $('.slider-section').length ? adjustSliderHeight(): '';
         lookupTable.productSliders ? populateSliderProducts(null): '';
-        //$('.single-blog').length ? setTweetBoxPos(true): '';
+        prepareBlogCols(true);
     }
     // utility function to get width of screen
     function getscreenSize(){
@@ -252,28 +254,32 @@ $(function(){
             $('#'+$(this).parent().attr('data-id')).value = text;
         });
     }
-    // swap tweet-box position
-    /*if($('.single-blog').length){
-        setTweetBoxPos(false);
+    // handle blog items display
+    if($('.single-blog').length){
+        $('.single-blog').each(function(){ blogItemsArr.push($(this)); });
+        prepareBlogCols(true);
     }
-    function setTweetBoxPos(resized){
-        if(resized) {
-            $(".single-blog.tweet").css('display', 'none');
-            $('.copyrights').after($(".single-blog.tweet"));
-            setTimeout(function(){ setTweetBoxPos(false); }, 0);
+    // utility function to help populate blog items
+    function arrangeBlogItems(blogItems){
+        var noOfCols = lookupTable.filteredProdInsertAfterElement[screenSize];
+        for(var i = 0; i < blogItems.length; i++){
+            $($('.col-filtered-blog-holder .row > div')[lastUpdatedBlogCol]).append(blogItems[i]);
+            lastUpdatedBlogCol = ((lastUpdatedBlogCol + 1) > (noOfCols - 1)) ? 0 : lastUpdatedBlogCol + 1 ;
         }
-        var toBeSwappedWithTweetBox = { $obj: '', pos: [0, 1000]};
-        $('.single-blog').each(function(i){
-            if(($(this).position().left > toBeSwappedWithTweetBox.pos[0]) ||
-                (($(this).position().left = toBeSwappedWithTweetBox.pos[0]) &&
-                ($(this).position().top < toBeSwappedWithTweetBox.pos[1]))){
-                toBeSwappedWithTweetBox.$obj = $(this);
-                toBeSwappedWithTweetBox.pos[0] = $(this).position().left;
-                toBeSwappedWithTweetBox.pos[1] = $(this).position().top;
-            }
-        });
-        $(".single-blog.tweet").css('display', 'inline-block');
-        toBeSwappedWithTweetBox.$obj.before($(".single-blog.tweet"));
-        toBeSwappedWithTweetBox.$obj.prependTo($('.multi-column-stacker'));
-    }*/
+    }
+    // utility function to prepare blog item columns for various screen sizes
+    function prepareBlogCols(clearAll){
+        if(clearAll){
+            $('.single-blog').appendTo($('.hidden-blog-items-holder'));
+            $('.copyrights').after($('.tweet-box'));
+            $('.col-filtered-blog-holder .row').empty();
+        }
+        var noOfCols = lookupTable.filteredProdInsertAfterElement[screenSize];
+        for(var i = 0; i < noOfCols; i++){
+            $('.col-filtered-blog-holder .row').append($('<div class="col-sm-6 col-md-4 col-lg-3">'));
+        }
+        $($('.col-filtered-blog-holder .row > div')[$('.col-filtered-blog-holder .row > div').length - 1])
+            .append($('.tweet-box'));
+        arrangeBlogItems(blogItemsArr);
+    }
 });

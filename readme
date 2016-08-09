@@ -16,3 +16,4 @@ NOTE: All the products in the BYO settings page as well as collections page are 
 If this is something that is not required, you can edit the following location:
 goto js > scripts.js > line 312 populateFilteredProducts(data) is the function that does it
 you can copy the HTML markup within that function (line 332) and generate the html directly if that helps in SEO.
+
