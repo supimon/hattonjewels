@@ -1,0 +1,68 @@
+.questions-answers-section .qa-holder{
+    padding: 50px 10px;
+}
+.questions-answers-section .panel-group{
+    margin-bottom: 50px;
+}
+.questions-answers-section .panel-group > h2{
+    font-family: 'AGaramondRegular', serif;
+    text-transform: none;
+    font-size: 24px;
+    line-height: 24px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.questions-answers-section .panel.panel-default, .questions-answers-section .panel-body{
+    border: none;
+}
+.questions-answers-section .panel-heading{
+    border: none;
+    background-color: transparent;
+}
+.questions-answers-section .panel-body{
+    font-size: 17px;
+    font-family: "ProximaNovaThin", Helvetica, Arial, sans-serif;
+    letter-spacing: 0px;
+    line-height: 26px;
+}
+.questions-answers-section .panel-title a{
+    font-size: 17px;
+    line-height: 25px;
+    color: #5d5d5d;
+}
+.questions-answers-section .panel-title a .fa{
+    position: relative;
+}
+.questions-answers-section .panel-title a .fa:before{
+    font-size: 27px;
+    position: absolute;
+    top: -19px;
+    left: 9px;
+}
+.questions-answers-section .panel-title a[aria-expanded="false"] .fa-angle-up,
+.questions-answers-section .panel-title a[aria-expanded="true"] .fa-angle-down
+{
+    display: none;
+}
+.questions-answers-section .panel-title a[aria-expanded="true"] .fa-angle-up,
+.questions-answers-section .panel-title a[aria-expanded="false"] .fa-angle-down{
+    display: inline-block;
+}
+@media(min-width: 768px){
+    .questions-answers-section{
+        padding: 0px 20px;
+    }
+    .questions-answers-section .qa-holder {
+        padding: 50px 50px 0px 50px;
+    }
+}
+@media(min-width: 992px){
+    .questions-answers-section .qa-holder {
+        padding: 50px 100px 0px 100px;
+    }
+}
+@media(min-width: 1200px){
+    .questions-answers-section .qa-holder {
+        padding: 50px 200px 0px 200px;
+    }
+}
