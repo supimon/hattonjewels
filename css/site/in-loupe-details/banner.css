@@ -1,0 +1,29 @@
+.inner-inner.banner-section{
+    position: relative;
+    z-index: 2;
+}
+.inner-inner.banner-section h1{
+    font-family: AGaramondRegular;
+    line-height: 40px;
+    text-align: center;
+    background-color: #318389;
+    color: white;
+    font-size: 1em;
+    letter-spacing: 4px;
+    margin-bottom: 0px;
+    padding-top: 5px;
+}
+@media(min-width: 768px){
+    .inner-inner.banner-section h1 {
+        font-size: 1.375em;
+    }
+    .inner-inner.banner-section h1{
+        font-size: 1.275em;
+        letter-spacing: 5.4px;
+    }
+}
+@media(min-width: 992px){
+    .inner-inner.banner-section h1 {
+        line-height: 50px;
+    }
+}

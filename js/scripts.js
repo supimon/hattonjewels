@@ -255,8 +255,8 @@ $(function(){
         });
     }
     // handle blog items display
-    if($('.single-blog').length){
-        $('.single-blog').each(function(){ blogItemsArr.push($(this)); });
+    if($('.col-filtered-blog-section').length){
+        $('.hidden-blog-items-holder .single-blog').each(function(){ blogItemsArr.push($(this)); });
         prepareBlogCols(true);
     }
     // utility function to help populate blog items
@@ -270,7 +270,7 @@ $(function(){
     // utility function to prepare blog item columns for various screen sizes
     function prepareBlogCols(clearAll){
         if(clearAll){
-            $('.single-blog').appendTo($('.hidden-blog-items-holder'));
+            $('.col-filtered-blog-holder .single-blog').appendTo($('.hidden-blog-items-holder'));
             $('.copyrights').after($('.tweet-box'));
             $('.col-filtered-blog-holder .row').empty();
         }
