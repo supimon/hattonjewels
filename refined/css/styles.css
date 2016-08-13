@@ -1128,6 +1128,39 @@ a:hover, a:focus{
     }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  end engagement.banner-section - - */
+/* - - begin wedding.banner-section - - */
+.wedding.banner-section{
+    height: 80px;
+    background-color: #181818;
+    color: white;
+    padding-top: 4px;
+}
+.wedding.banner-section h1 {
+    font-family: AGaramondRegular;
+    font-size: 1.275em;
+    letter-spacing: 3.4px;
+    margin-bottom: 10px;
+    margin-top: 26px;
+}
+@media(min-width: 768px){
+    .wedding.banner-section{
+        height: 200px;
+        padding-top: 80px;
+    }
+    .wedding.banner-section h1 {
+        letter-spacing: 5.4px;
+        font-size: 1.875em;
+        margin-bottom: 27px;
+        margin-top: 0px;
+    }
+}
+@media(min-width: 992px){
+    .wedding.banner-section{
+        height: 288px;
+        padding-top: 133px;
+    }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end wedding.banner-section - - */
 /* - - begin inner page banner styles - - */
 .inner-inner.banner-section{
     position: relative;
@@ -2083,6 +2116,81 @@ a:hover, a:focus{
     }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end two-products-5-7-section - - */
+/* - - begin two-categories-7-5-section - - */
+.two-categories-7-5-section{
+    font-family: "GILSans", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    padding: 0px 10px;
+}
+.two-categories-7-5-section .two-categories-holder .col-sm-7,
+.two-categories-7-5-section .two-categories-holder .col-sm-5{
+    padding: 0px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.two-categories-7-5-section .category {
+    height: 332px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.two-categories-7-5-section h2{
+    margin: 0px;
+    font-size: 1em;
+    letter-spacing: 3px;
+    color: #3a3a3a;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    line-height: 22px;
+    padding-right: 23px;
+    padding-left: 10px;
+}
+.two-categories-7-5-section .category-2 h2{
+    display: inline-block;
+    width: auto;
+    top: 147px;
+    left: 34px;
+}
+.two-categories-7-5-section .category-1 h2{
+    bottom: 32px
+}
+.two-categories-7-5-section .category-2{
+    background-size: cover;
+}
+.two-categories-7-5-section .category-1{
+    background-color: #c4d4e1 ;/* - to be removed - */
+}
+@media(min-width: 768px) {
+    .two-categories-7-5-section {
+        padding: 0px 20px;
+    }
+    .two-categories-7-5-section.wedding{
+        margin-bottom: 20px;
+    }
+    .two-categories-7-5-section .two-categories-holder .col-sm-7,
+    .two-categories-7-5-section .two-categories-holder .col-sm-5{
+        margin-bottom: 0px;
+    }
+    .two-categories-7-5-section h2{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .two-categories-7-5-section .category-1{
+        margin-right: 10px;
+    }
+    .two-categories-7-5-section .category-2{
+        margin-left: 10px;
+    }
+    .two-categories-7-5-section .category-2 h2{
+        left: 40px;
+    }
+}
+@media(min-width: 1200px) {
+    .two-categories-7-5-section .category-2 h2{
+        left: 138px;
+    }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end two-categories-7-5-section - - */
 /* - - begin instagram-section - - */
 .instagram-section{
     background-color: transparent;
