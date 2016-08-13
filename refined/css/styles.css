@@ -1349,6 +1349,9 @@ a:hover, a:focus{
     margin-bottom: 0px;
     padding-top: 5px;
 }
+.inner-inner.banner-section h1.green{
+    background-color: #318389;
+}
 @media(min-width: 768px){
     .inner-inner.banner-section h1 {
         font-size: 1.375em;
@@ -1843,6 +1846,103 @@ a:hover, a:focus{
     }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end filtered-product-section - - */
+/* - - begin graphic-explain-section - - */
+.graphic-explain-section h2,
+.graphic-explain-section li h3{
+    font-family: 'AGaramondRegular', serif;
+    text-transform: none;
+}
+.graphic-explain-section h2{
+    margin-top: 56px;
+    margin-bottom: 48px;
+}
+.graphic-explain-section li{
+    width: 100%;
+}
+.graphic-explain-section li.item{
+    vertical-align: text-top;
+}
+.graphic-explain-section li.next-step{
+    color: #318389;
+    position: relative;
+    height: 58px;
+}
+.graphic-explain-section li.next-step .fa{
+    position: absolute;
+    top: 18px;
+    left: 50%;
+}
+.graphic-explain-section li span{
+    display: inline-block;
+    width: 74px;
+    height: 74px;
+    background-color: #318389;
+    color: white;
+    border-radius: 37px;
+    position: relative;
+    padding-top: 18px;
+    padding-left: 2px;
+}
+.graphic-explain-section li span:before{
+    content: " ";
+    display: inline-block;
+    width: 84px;
+    height: 84px;
+    border: 2px solid #318389;
+    border-radius: 42px;
+    position: absolute;
+    left: -5px;
+    top: -5px;
+}
+.graphic-explain-section li span .fa{
+    font-size: 35px;
+}
+.graphic-explain-section li h3{
+    font-size: 19px;
+    margin-top: 28px;
+    margin-bottom: 14px;
+}
+.graphic-explain-section li p{
+    font-size: 13px;
+    padding: 0px 22%;
+}
+@media(min-width: 768px){
+    .graphic-explain-section li.item {
+        width: 153px;
+    }
+    .graphic-explain-section li h3 {
+        font-size: 17px;
+    }
+    .graphic-explain-section li p {
+        font-size: 13px;
+        padding: 0px 0px;
+    }
+    .graphic-explain-section li.next-step {
+        width: 24px;
+        height: auto;
+    }
+    .graphic-explain-section li.next-step .fa {
+        left: 5px;
+    }
+}
+@media(min-width: 992px){
+    .graphic-explain-section li.item {
+        width: 183px;
+    }
+    .graphic-explain-section li h3 {
+        font-size: 19px;
+    }
+    .graphic-explain-section li p {
+        padding: 0px 10px;
+    }
+    .graphic-explain-section li.next-step {
+        width: 46px;
+    }
+    .graphic-explain-section li.next-step .fa {
+        left: 15px;
+    }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -end graphic-explain-section - - */
 /* - - begin engagement product slider title - - */
 .engagement-slider-h2 {
     font-family: 'AGaramondRegular', serif;
@@ -1956,6 +2056,42 @@ a:hover, a:focus{
     }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  end products-slider-section - - */
+/* - - begin text-image-section - - */
+.text-image-section{
+    padding: 0px 20px;
+    margin-bottom: 20px;
+    margin-top: 70px;
+}
+.text-image-section .text h2{
+    font-family: 'AGaramondRegular', serif;
+    text-transform: none;
+    font-size: 23px;
+    line-height: 29px;
+    margin-bottom: 25px;
+}
+.text-image-section .text p{
+    font-family: "ProximaNovaThin", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: 0px;
+    font-size: 17px;
+    line-height: 26px;
+}
+.text-image-section .image{
+    margin-bottom: 40px;
+}
+@media(min-width: 992px) {
+    .text-image-section .text h2{
+        padding-right: 80px;
+        margin-bottom: 45px;
+    }
+    .text-image-section .text p{
+        padding-right: 40px;
+    }
+    .text-image-section .image{
+        margin-bottom: 0px;
+    }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end text-image-section - - */
 /* - - begin four-products-categories-section - - */
 .four-products-categories-section{
     margin: 0px auto 0px auto;
@@ -2188,6 +2324,32 @@ a:hover, a:focus{
     }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  end promos-text-section - - */
+/* - - begin faq-promos-section - - */
+.faq-promos-section{
+    padding: 0px 20px;
+    margin-bottom: 20px;
+}
+.faq-promos-section .faq-holder{
+    margin-bottom: 20px;
+}
+.faq-promos-section .faq{
+    height: 460px;
+    background-color: #b4ded3;
+}
+.faq-promos-section .promos{
+    height: 460px;
+    background-color: #b5c6d4;
+}
+@media(min-width: 992px){
+    .faq-promos-section .faq-holder{
+        padding-right: 10px;
+        margin-bottom: 0px;
+    }
+    .faq-promos-section .promos-holder{
+        padding-left: 10px;
+    }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end faq-promos-section - - */
 /* - - begin two-products-5-7-section - - */
 .two-products-5-7-section{
     font-family: "GILSans", Helvetica, Arial, sans-serif;
@@ -2397,6 +2559,224 @@ a:hover, a:focus{
     }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end two-categories-7-5-section - - */
+/* - - begin validation-form-section - - */
+.validation-form-section{
+    padding: 0px;
+    margin-bottom: 20px;
+}
+.validation-form-section .upper-forms-holder{
+    margin-bottom: 20px;
+}
+#fileUploadZone{
+    background-color: #ebebeb;
+    padding: 33px 20px 32px 20px;
+    font-family: "GILSans", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1.6px;
+    word-spacing: 3px;
+}
+#fileUploadZone input {
+    border: 1px solid black;
+    border-radius: 0px;
+    padding: 23px 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 11px;
+    margin-bottom: 20px;
+    background-color: #ebebeb;
+    color: black;
+}
+#fileUploadZone button {
+    border: 1px solid black;
+    border-radius: 0px;
+    padding: 15px 15px 16px 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 11px;
+    background-color: #ebebeb;
+    color: black;
+}
+#fileUploadZone .item-metal-type{
+    margin-bottom: 0px;
+}
+#fileUploadZone .select-replace{
+    width: 100%;
+    margin-bottom: 20px;
+}
+#fileUploadZone .btn-main{
+    overflow: hidden;
+    width: calc(100% - 40px);
+}
+#fileUploadZone button.dropdown-toggle {
+    background-color: #318389;
+    color: white;
+}
+#fileUploadZone .btn-group.metal{
+    float: right;
+}
+#fileUploadZone .btn-group.appraisal{
+    width: 100%;
+}
+#fileUploadZone .btn-appraisal{
+    width: calc(100% - 40px);
+}
+#fileUploadZone .upload-text{
+    line-height: 18px;
+    margin-bottom: 20px;
+}
+#clickable-area{
+    border: 1px solid black;
+    height: 184px;
+    margin-bottom: 20px;
+}
+#clickable-area .drag-text{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    word-spacing: 0px;
+    padding: 70px 10px 35px 10px;
+}
+#clickable-area .type-text{
+    text-transform: none;
+    letter-spacing: 1px;
+    font-size: 11px;
+    word-spacing: 0px;
+    font-family: 'ProximaNovaRegular', sans-serif;
+    padding: 0px 20px;
+}
+#fileUploadZone .radio-holder{
+    padding-top: 15px;
+}
+#fileUploadZone .radio-holder p{
+    float: left;
+    margin-right: 20px;
+}
+#fileUploadZone .radio-btns{
+    display: inline-block;
+    width: 101px;
+}
+#fileUploadZone .radio-holder input{
+    padding: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+#fileUploadZone .lower-forms-holder textarea{
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1.6px;
+    word-spacing: 3px;
+    border: 1px solid black;
+    border-radius: 0px;
+    background-color: #ebebeb;
+    width: 100%;
+    height: 125px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+}
+#fileUploadZone .lower-forms-holder .submit{
+    float: right;
+    cursor: pointer;
+}
+#fileUploadZone .lower-forms-holder .submit button{
+    padding: 0px 0px 0px 17px;
+}
+#fileUploadZone .lower-forms-holder .submit .submit-arrow{
+    display: inline-block;
+    width: 40px;
+    height: 46px;
+    background-color: #318389;
+    border-left: 1px solid black;
+    color: white;
+    padding-top: 16px;
+    margin-left: 10px;
+}
+@media(min-width: 768px) {
+    #fileUploadZone .col-md-5{
+        margin-bottom: 20px;
+    }
+    #fileUploadZone {
+        padding: 93px 180px 62px 180px;
+    }
+    .validation-form-section{
+        padding: 0px 20px;
+    }
+    #fileUploadZone .item-metal-type {
+        margin-bottom: 20px;
+    }
+    #fileUploadZone .select-replace {
+        width: 175px;
+        margin-bottom: 0px;
+    }
+    #clickable-area .drag-text {
+        padding: 70px 10px 50px 10px;
+    }
+}
+@media(min-width: 992px) {
+    #fileUploadZone .col-md-5{
+        margin-bottom: 0px;
+    }
+    .validation-form-section .upper-forms-holder {
+        margin-bottom: 0px;
+    }
+    #clickable-area .drag-text{
+        padding: 44px 10px 50px 10px;
+    }
+    #fileUploadZone .radio-holder {
+        padding-top: 0px;
+    }
+    #fileUploadZone .item-metal-type {
+        margin-bottom: 0px;
+    }
+    #fileUploadZone .select-replace {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #fileUploadZone .upload-text {
+        height: 48px;
+    }
+}
+@media(min-width: 1200px) {
+    .validation-form-section .upper-forms-holder {
+        margin-bottom: 20px;
+    }
+    #clickable-area .drag-text{
+        padding: 70px 10px 50px 10px;
+    }
+    #fileUploadZone .radio-holder {
+        padding-top: 15px;
+    }
+    #fileUploadZone .item-metal-type {
+        margin-bottom: 20px;
+    }
+    #fileUploadZone .select-replace {
+        width: 150px;
+        margin-bottom: 0px;
+    }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  end validation-form-section - - */
+/* - - begin styling dropzone preview area - - */
+form .previews-container .dz-preview{
+    width: 80px;
+    display: inline-block;
+    margin: 0px 13px 13px 0px;
+}
+form .previews-container .dz-preview > *{
+    font-size: 8px;
+    word-wrap: break-word;
+}
+form .previews-container .dz-preview .dz-size{
+    font-size: 10px;
+}
+form .previews-container .dz-preview .dz-remove{
+    color: red;
+}
+form .previews-container .dz-success-mark,
+form .previews-container .dz-error-mark{
+    display: none;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  end styling dropzone preview area - - */
 /* - - begin instagram-section - - */
 .instagram-section{
     background-color: transparent;
