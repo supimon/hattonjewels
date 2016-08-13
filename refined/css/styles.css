@@ -988,6 +988,178 @@ a:hover, a:focus{
     }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end main-content-section - - */
+/* - - begin main-inner-content-section - - */
+.main-inner-content-section{
+    margin: 0px auto 36px auto;
+}
+.main-inner-content-section .more-btn{
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.625em;
+    letter-spacing: 2px;
+    font-weight: 100;
+    display: inline-block;
+    border: 1px solid white;
+    padding: 8px 33px 8px 35px;
+    margin-bottom: 40px;
+}
+.main-inner-content-section .create-your-own{
+    background-color: #32969B;
+    /*background-image: url('../assets/eternity-bg.png');*/
+    background-position: center;
+    background-size: cover;
+    padding-left: 15px;
+    text-align: center;
+    padding-top: 40px;
+    margin: 0px 10px;
+}
+.main-inner-content-section .create-your-own h2{
+    font-size: 1em;
+    margin-bottom: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+    letter-spacing: 3px;
+    line-height: 22px;
+}
+.main-inner-content-section .create-your-own hr{
+    width: 75px;
+    border-top-color: white;
+    margin-bottom: 28px;
+}
+.main-inner-content-section .create-your-own p{
+    color: white;
+    margin-bottom: 30px;
+    font-family: "ProximaNovaThin", Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    text-align: center;
+    padding: 0px 27px;
+}
+@media(min-width: 768px) {
+    .main-inner-content-section{
+        padding: 0px 20px;
+        margin-bottom: 20px;
+    }
+    .main-inner-content-section .create-your-own{
+        margin: 0px 0px 0px 0px;
+        padding-bottom: 20px;
+    }
+    .main-inner-content-section .create-your-own p{
+        padding: 0px 80px;
+        margin-bottom: 20px;
+    }
+    .main-inner-content-section .more-btn{
+        margin-bottom: 20px;
+    }
+    @-moz-document url-prefix() {
+        .main-inner-content-section .create-your-own p {
+            display: block;
+        }
+    }
+    .main-inner-content-section .create-your-own p {
+        display: block\9;
+    }
+}
+@media(min-width: 992px) {
+    .main-inner-content-section .create-your-own{
+        padding-left: 45px;
+        height: 380px;
+        text-align: left;
+    }
+    .main-inner-content-section .create-your-own h2{
+        margin-left: 0px;
+        margin-right: 0px;
+        text-align: left;
+    }
+    .main-inner-content-section .create-your-own hr {
+        display: inline-block
+    }
+    .main-inner-content-section .create-your-own p {
+        width: 300px;
+        height: 112px;
+        text-align: left;
+        padding: 0px;
+        overflow: hidden;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+    }
+}
+@media(min-width: 1200px) {
+    .main-inner-content-section .create-your-own {
+        padding-left: 90px;
+    }
+}
+/* - - - */
+.main-inner-content-section .testimonial{
+    padding-top: 50px;
+}
+.main-inner-content-section .testimonial h2{
+    font-size: 4.25em;
+    font-family: serif;
+    line-height: 22px;
+    color: #38959a;
+    margin-bottom: 20px;
+}
+.main-inner-content-section .testimonial p.testimonial-text{
+    width: 90%;
+    font-family: "AGaramondItalic", serif;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main-inner-content-section .testimonial p.testimonial-from{
+    text-transform: uppercase;
+    color: #38959a;
+    border-bottom: 1px solid #38959a;
+    display: inline-block;
+    padding-bottom: 5px;
+    font-size: 0.75em;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    margin-bottom: 0px;
+}
+@media(min-width: 768px) {
+    .main-inner-content-section .testimonial{
+        height: 380px;
+        margin: 0px;
+    }
+    .main-inner-content-section .testimonial p.testimonial-text{
+        width: 500px;
+        height: 192px;
+        overflow: hidden;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        margin-bottom: 0px;
+    }
+    @-moz-document url-prefix() {
+        .main-inner-content-section .testimonial p.testimonial-text{
+            display: inline-block;
+        }
+    }
+    .main-inner-content-section .testimonial p.testimonial-text{
+        display: block\9;
+    }
+}
+@media(min-width: 992px) {
+    .main-inner-content-section .testimonial p.testimonial-text {
+        margin-bottom: 0px;
+    }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end main-inner-content-section - - */
 /* - - begin engagement.banner-section - - */
 .engagement.banner-section{
     height: 239px;
@@ -2128,6 +2300,10 @@ a:hover, a:focus{
     position: relative;
     margin-bottom: 10px;
 }
+.two-categories-7-5-section.wedding-main .two-categories-holder .col-sm-7,
+.two-categories-7-5-section.wedding-main .two-categories-holder .col-sm-5{
+    margin-top: 10px;
+}
 .two-categories-7-5-section .category {
     height: 332px;
     background-position: center;
@@ -2160,12 +2336,35 @@ a:hover, a:focus{
 .two-categories-7-5-section .category-1{
     background-color: #c4d4e1 ;/* - to be removed - */
 }
+.two-categories-7-5-section.wedding-main .category-1 h2{
+    width: auto;
+    top: 147px;
+    left: 34px;
+}
+.two-categories-7-5-section.wedding-main .category-2 h2{
+    left: 0px;
+    bottom: 32px;
+    width: 100%;
+    top: auto;
+}
+.two-categories-7-5-section.wedding-main .category-2 {
+    background-size: initial;
+    background-color: #c4d4e1;
+}
 @media(min-width: 768px) {
     .two-categories-7-5-section {
         padding: 0px 20px;
     }
+    .two-categories-7-5-section.wedding-main{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
     .two-categories-7-5-section.wedding{
         margin-bottom: 20px;
+    }
+    .two-categories-7-5-section.wedding-main .two-categories-holder .col-sm-7,
+    .two-categories-7-5-section.wedding-main .two-categories-holder .col-sm-5{
+        margin-top: 0px;
     }
     .two-categories-7-5-section .two-categories-holder .col-sm-7,
     .two-categories-7-5-section .two-categories-holder .col-sm-5{
@@ -2181,8 +2380,15 @@ a:hover, a:focus{
     .two-categories-7-5-section .category-2{
         margin-left: 10px;
     }
+    .two-categories-7-5-section.wedding-main .category-1 h2{
+        top: 147px;
+        left: 138px;
+    }
     .two-categories-7-5-section .category-2 h2{
         left: 40px;
+    }
+    .two-categories-7-5-section.wedding-main .category {
+        height: 380px;
     }
 }
 @media(min-width: 1200px) {
