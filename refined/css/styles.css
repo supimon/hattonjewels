@@ -340,6 +340,103 @@ a:hover, a:focus{
     }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  end logo-menu-section - - */
+/* - - begin byo menu selector styles - - */
+.byo-section{
+    position: relative;
+    z-index: 2;
+    background-color: #318389;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1.8px;
+    margin-top: 20px;
+}
+.byo-section ul{
+    padding: 10px 0px;
+}
+.byo-section li{
+    width: 100%;
+    position: relative;
+}
+.byo-section li.active{
+    background-color: #265555;
+}
+.byo-section li.active a span{
+    color: #318389;
+}
+.byo-section li span{
+    display: inline-block;
+    position: relative;
+    margin-right: 24px;
+    z-index: 1;
+}
+.byo-section li span:after{
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    border: 1px solid white;
+    position: absolute;
+    z-index: 0;
+    content: "";
+    top: 9px;
+    left: -11px;
+    border-radius: 14px;
+}
+.byo-section li.active span:before{
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    background-color: white;
+    position: absolute;
+    z-index: -1;
+    content: "";
+    top: 12px;
+    left: -8px;
+    border-radius: 11px;
+}
+.byo-section li a{
+    color: white;
+    line-height: 47px;
+    margin-right: 0px;
+    position: relative;
+}
+.byo-section li:last-child a{
+    margin-right: 0px;
+}
+@media(min-width: 768px){
+    .byo-section ul{
+        padding: 0px;
+    }
+    .byo-section li{
+        width: auto;
+    }
+    .byo-section li a{
+        margin-right: 30px;
+    }
+    .byo-section li.active{
+        background-color: transparent;
+    }
+    .byo-section li.active:before{
+        width: 97%;
+        content: "";
+        position: absolute;
+        height: 63px;
+        background-color: #265555;
+        top: -8px;
+        left: -18px;
+        border-radius: 9px;
+    }
+}
+@media(min-width: 992px){
+    .byo-section li a{
+        margin-right: 80px;
+    }
+    .byo-section li.active:before{
+        width: 92%;
+        left: -34px;
+    }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  end byo-section - - */
 /* - - begin slider-section - - */
 .slider-section{
     position: relative;
@@ -1625,6 +1722,9 @@ a:hover, a:focus{
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end style expand collapse button for filters - - */
 /* - - begin filtered-product-section - - */
+.filtered-product-section.byo{
+    margin-top: -28px;
+}
 .filtered-product-section .filtered-product-holder{
     background-color: #e8e8e8;
     margin-bottom: 20px;
@@ -1750,6 +1850,15 @@ a:hover, a:focus{
 .filtered-product-section .filtered-product-details .cart-btn{
     color: white;
     background-color: #318389;
+}
+.filtered-product-section .settings-continue {
+    border-radius: 0px;
+    letter-spacing: 2px;
+    padding: 7px 22px;
+    font-size: 12px;
+    border-color: #333;
+    text-transform: uppercase;
+    color: black;
 }
 .filtered-product-section .overlay-p{
     display: none;
