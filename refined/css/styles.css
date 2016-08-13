@@ -1352,9 +1352,17 @@ a:hover, a:focus{
 .inner-inner.banner-section h1.green{
     background-color: #318389;
 }
+.inner-inner.banner-section h1.longer{
+    font-size: 1em;
+    letter-spacing: 4px;
+}
 @media(min-width: 768px){
     .inner-inner.banner-section h1 {
         font-size: 1.375em;
+    }
+    .inner-inner.banner-section h1.longer{
+        font-size: 1.375em;
+        letter-spacing: 5.4px;
     }
 }
 @media(min-width: 992px){
@@ -2559,6 +2567,211 @@ a:hover, a:focus{
     }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end two-categories-7-5-section - - */
+/* - - begin blog-content-section - - */
+.blog-content-section{
+    padding: 0px 20px;
+}
+.blog-content-section .blog-content-holder {
+    padding: 26px 0px 66px 0px;
+}
+.blog-content-section .blog-content-holder .title {
+    font-family: 'AGaramondRegular', serif;
+    text-transform: none;
+    margin-top: 12px;
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+.blog-content-section .blog-content-holder .date-time{
+    color: #318389;
+    font-size: 14px;
+}
+.blog-content-section .blog-content-holder .description {
+    margin-top: 30px;
+    font-size: 17px;
+    font-family: "ProximaNovaThin", Helvetica, Arial, sans-serif;
+    letter-spacing: 0px;
+    line-height: 26px;
+    margin-bottom: 30px;
+}
+.blog-content-section .blog-content-holder .description img.img-responsive {
+    max-width: none;
+    width: 104%;
+    margin-left: -2%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.blog-content-section hr {
+    border-top: 2px solid #318389;
+    width: 104%;
+    margin-left: -2%;
+    margin-bottom: 25px;
+}
+.blog-content-section .social{
+    display: inline-block;
+    border-radius: 13px;
+    border: 1px solid #318389;
+    width: 26px;
+    height: 26px;
+}
+.blog-content-section ul{
+    margin-bottom: 0px;
+}
+.blog-content-section ul li.text{
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: ProximaNovaRegular, sans-serif;
+    letter-spacing: 1.2px;
+    color: #318389;
+}
+.blog-content-section ul li{
+    text-align: center;
+}
+.blog-content-section .fa-facebook,
+.blog-content-section .fa-google-plus,
+.blog-content-section .fa-twitter,
+.blog-content-section .fa-pinterest-p{
+    color: #318389;
+    margin-top: 5px;
+    font-size: 14px;
+}
+@media(min-width: 768px){
+    .blog-content-holder .title{
+        font-size: 29px;
+        margin-bottom: 25px;
+    }
+    .blog-content-section .blog-content-holder .description{
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    .blog-content-section .blog-content-holder{
+        padding: 66px 11%;
+    }
+    .blog-content-section .blog-content-holder .description img.img-responsive{
+        width: 120%;
+        margin-left: -10%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .blog-content-section hr{
+        width: 120%;
+        margin-left: -10%;
+        margin-bottom: 60px;
+    }
+    .blog-content-section ul {
+        margin-bottom: 30px;
+    }
+}
+@media(min-width: 992px){
+    .blog-content-section .blog-content-holder{
+        padding: 66px 20%;
+    }
+}
+@media(min-width: 1200px){
+    .blog-content-section .blog-content-holder{
+        padding: 66px 230px;
+    }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end blog-content-section - - */
+/* - - begin related-blog-section - - */
+.related-blog-section .related-blog-holder{
+    background-color: #e8e8e8;
+    margin-bottom: 10px;
+    padding: 30px 10px 50px 10px;
+    margin-top: -29px;
+}
+.related-blog-section .related-blog-holder .title{
+    font-family: 'AGaramondRegular', serif;
+    text-transform: none;
+    margin-top: 12px;
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+.related-blog-section .related-blog-holder .row{
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.related-blog-section .related-blog-holder .row > div{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.related-blog-section .single-blog{
+    display: inline-block;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 10px 10px 25px 10px;
+}
+.related-blog-section .single-blog .blog-title,
+.related-blog-section .single-blog .date-time,
+.related-blog-section .single-blog .social-share{
+    padding-left: 20px;
+    padding-right: 50px;
+}
+.related-blog-section .single-blog ul.social-share li{
+    text-align: center;
+}
+.related-blog-section .social{
+    display: inline-block;
+    border-radius: 13px;
+    border: 1px solid #318389;
+    width: 26px;
+    height: 26px;
+}
+.related-blog-section ul{
+    margin-bottom: 0px;
+}
+.related-blog-section .fa-facebook,
+.related-blog-section .fa-google-plus,
+.related-blog-section .fa-twitter,
+.related-blog-section .fa-pinterest-p{
+    color: #318389;
+    margin-top: 5px;
+    font-size: 14px;
+}
+.related-blog-section .single-blog .blog-title{
+    font-family: 'AGaramondRegular', serif;
+    text-transform: none;
+    font-size: 19px;
+    letter-spacing: 0px;
+    line-height: 24px;
+}
+.related-blog-section .single-blog .date-time{
+    color: #318389;
+    font-size: 14px;
+}
+@media(min-width: 768px) {
+    .related-blog-section{
+        padding: 0px 20px;
+    }
+    .related-blog-section .related-blog-holder{
+        padding: 60px 150px 50px 150px;
+        margin-bottom: 20px;
+    }
+    .related-blog-section .related-blog-holder .title{
+        margin-top: 26px;
+        font-size: 29px;
+        margin-bottom: 30px;
+    }
+    .related-blog-section .related-blog-holder .row{
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .related-blog-section .single-blog{
+        margin-bottom: 20px;
+    }
+}
+@media(min-width: 992px) {
+    .related-blog-section .related-blog-holder {
+        padding: 60px 90px 50px 90px;
+    }
+}
+@media(min-width: 1200px) {
+    .related-blog-section .related-blog-holder {
+        padding: 60px 200px 50px 200px;
+    }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end related-blog-section - - */
 /* - - begin questions-answers-section - - */
 .questions-answers-section .qa-holder{
     padding: 50px 10px;
