@@ -1,0 +1,94 @@
+.graphic-explain-section h2, .graphic-explain-section li h3{
+    font-family: 'AGaramondRegular', serif;
+    text-transform: none;
+}
+.graphic-explain-section h2{
+    margin-top: 56px;
+    margin-bottom: 48px;
+}
+.graphic-explain-section li{
+    width: 100%;
+}
+.graphic-explain-section li.item{
+    vertical-align: text-top;
+}
+.graphic-explain-section li.next-step{
+    color: #318389;
+    position: relative;
+    height: 58px;
+}
+.graphic-explain-section li.next-step .fa{
+    position: absolute;
+    top: 18px;
+    left: 50%;
+}
+.graphic-explain-section li span{
+    display: inline-block;
+    width: 74px;
+    height: 74px;
+    background-color: #318389;
+    color: white;
+    border-radius: 37px;
+    position: relative;
+    padding-top: 18px;
+    padding-left: 2px;
+}
+.graphic-explain-section li span:before{
+    content: " ";
+    display: inline-block;
+    width: 84px;
+    height: 84px;
+    border: 2px solid #318389;
+    border-radius: 42px;
+    position: absolute;
+    left: -5px;
+    top: -5px;
+}
+.graphic-explain-section li span .fa{
+    font-size: 35px;
+}
+.graphic-explain-section li h3{
+    font-size: 19px;
+    margin-top: 28px;
+    margin-bottom: 14px;
+}
+.graphic-explain-section li p{
+    font-size: 13px;
+    padding: 0px 22%;
+}
+@media(min-width: 768px){
+    .graphic-explain-section li.item {
+        width: 153px;
+    }
+    .graphic-explain-section li h3 {
+        font-size: 17px;
+    }
+    .graphic-explain-section li p {
+        font-size: 13px;
+        padding: 0px 0px;
+    }
+    .graphic-explain-section li.next-step {
+        width: 24px;
+        height: auto;
+    }
+    .graphic-explain-section li.next-step .fa {
+        left: 5px;
+    }
+}
+@media(min-width: 992px){
+    .graphic-explain-section li.item {
+        width: 183px;
+    }
+    .graphic-explain-section li h3 {
+        font-size: 19px;
+    }
+    .graphic-explain-section li p {
+        padding: 0px 10px;
+    }
+    .graphic-explain-section li.next-step {
+        width: 46px;
+    }
+    .graphic-explain-section li.next-step .fa {
+        left: 15px;
+    }
+}

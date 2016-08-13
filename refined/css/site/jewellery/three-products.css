@@ -1,0 +1,61 @@
+.three-products-section{
+    font-family: "GILSans", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    padding: 0px 10px;
+}
+.jewellery.three-products-section{
+    margin-top: 10px;
+}
+.three-products-section .col-sm-4{
+    padding: 0px;
+}
+.three-products-section .category{
+    height: 380px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+}
+.three-products-section .category-1{
+    background-color: #e79295 ;/* - to be removed - */
+}
+.three-products-section .category-2{
+    background-color: #c4d4e1 ;/* - to be removed - */
+}
+.three-products-section .category-3{
+    background-color: #d2cecb ;/* - to be removed - */
+}
+.three-products-section h2{
+    margin: 0px;
+    font-size: 1em;
+    letter-spacing: 3px;
+    color: #3a3a3a;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 32px;
+    line-height: 22px;
+    padding-right: 23px;
+    padding-left: 10px;
+}
+@media(min-width: 768px){
+    .three-products-section{
+        padding: 0px 20px;
+    }
+    .jewellery.three-products-section{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .three-products-section .category-1 {
+        margin-right: 14px;
+    }
+    .three-products-section .category-2 {
+        margin-left: 6px;
+        margin-right: 7px;
+    }
+    .three-products-section .category-3{
+        margin-left: 13px;
+    }
+    .three-products-section .category{
+        margin-bottom: 0px;
+    }
+}

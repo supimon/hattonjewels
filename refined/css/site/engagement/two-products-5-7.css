@@ -1,0 +1,98 @@
+.two-products-5-7-section{
+    font-family: "GILSans", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    padding: 0px 25px;
+}
+.two-products-5-7-section .promo-cell{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+}
+.two-products-5-7-section .col-sm-5 .promo{
+    background-color: #c3bfbd;
+}
+.two-products-5-7-section .col-sm-7 .promo{
+    background-color: #4c4c4c;
+}
+.two-products-5-7-section .promo{
+    height: 380px;
+    background-color: #fcfcfc;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 30px;
+    margin-top: 0px;
+    padding-bottom: 58px;
+    position: relative;
+    background-size: cover;
+}
+.two-products-5-7-section h2{
+    font-size: 1em;
+    letter-spacing: 3px;
+    color: white;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    line-height: 28px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.two-products-5-7-section .col-sm-5 h2{
+    top: 23px;
+}
+.two-products-5-7-section .col-sm-7 h2{
+    top: 116px;
+    display: inline;
+    left: 40px;
+    width: auto;
+}
+.two-products-5-7-section .explore-holder{
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+}
+.two-products-5-7-section .more-btn{
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.625em;
+    letter-spacing: 2px;
+    font-weight: 100;
+    display: inline-block;
+    border: 1px solid white;
+    padding: 8px;
+}
+.two-products-5-7-section .col-sm-7 .explore-holder{
+    top: 200px;
+    left: 87px;
+    display: inline-block;
+    width: auto;
+}
+@media(min-width: 768px){
+    .two-products-5-7-section{
+        padding: 0px 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .two-products-5-7-section .col-sm-7 h2 {
+        left: 90px;
+    }
+    .two-products-5-7-section .col-sm-7 .explore-holder {
+        left: 109px;
+    }
+    .two-products-5-7-section .row > div:first-child{
+        padding-right: 10px;
+    }
+    .two-products-5-7-section .row > div:last-child{
+        padding-left: 10px;
+    }
+    .two-products-5-7-section .promo-cell{
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 0px;
+    }
+    .two-products-5-7-section .more-btn{
+        padding: 8px 33px 8px 35px;
+    }
+    .two-products-5-7-section .explore-holder{
+        bottom: 29px;
+    }
+}

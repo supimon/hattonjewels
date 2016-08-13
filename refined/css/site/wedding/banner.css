@@ -1,0 +1,31 @@
+.wedding.banner-section{
+    height: 80px;
+    background-color: #181818;
+    color: white;
+    padding-top: 4px;
+}
+.wedding.banner-section h1 {
+    font-family: AGaramondRegular;
+    font-size: 1.275em;
+    letter-spacing: 3.4px;
+    margin-bottom: 10px;
+    margin-top: 26px;
+}
+@media(min-width: 768px){
+    .wedding.banner-section{
+        height: 200px;
+        padding-top: 80px;
+    }
+    .wedding.banner-section h1 {
+        letter-spacing: 5.4px;
+        font-size: 1.875em;
+        margin-bottom: 27px;
+        margin-top: 0px;
+    }
+}
+@media(min-width: 992px){
+    .wedding.banner-section{
+        height: 288px;
+        padding-top: 133px;
+    }
+}

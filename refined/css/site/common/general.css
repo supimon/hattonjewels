@@ -1,0 +1,58 @@
+@font-face {
+    font-family: ProximaNovaThin;
+    src: url("../../vendor/fonts/Proxima Nova S W01SC Thin.woff");
+}
+@font-face {
+    font-family: ProximaNovaRegular;
+    src: url("../../vendor/fonts/Mark Simonson - Proxima Nova Alt Regular.woff");
+}
+@font-face {
+    font-family: AGaramondItalic;
+    src: url("../../vendor/fonts/AGaramond Italic.woff");
+}
+@font-face {
+    font-family: AGaramondRegular;
+    src: url("../../vendor/fonts/AGaramond-Regular.woff");
+}
+@font-face {
+    font-family: GILSans;
+    src: url("../../vendor/fonts/GIL.woff");
+}
+body{
+    font-family: 'ProximaNovaRegular', sans-serif;
+    letter-spacing: 0.3px;
+    font-size: 16px;
+}
+h1, h2, h3{
+    text-transform: uppercase;
+}
+body > section{
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.img-responsive{
+    width: 100%; /*fix for bootstrap firefox bug*/
+}
+.fa{
+    cursor: pointer;
+}
+li hr{
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    margin: 0px 0px 3px 0px;
+    width: 7px;
+    border-top: 1px solid #808080;
+}
+a, a:hover, a:focus{
+    text-decoration: none;
+}
+a{
+    color: #808080;
+}
+a:hover, a:focus{
+    color: #111;
+}

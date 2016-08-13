@@ -1,0 +1,129 @@
+.logo-menu-section{
+    display: table;
+    width: 100%;
+}
+.logo-menu-section nav{
+    background-color: transparent;
+    border: none;
+}
+.logo-section{
+    padding-top: 34px;
+    margin-top: -55px;
+    display: inline-block;
+}
+.phone, .user-links{
+    padding-top: 10px;
+    font-size: 0.813em;
+    letter-spacing: 0.5px;
+}
+.phone .fa{
+    font-size: 1.385em;
+    color: #38959C;
+    padding-right: 2px;
+}
+.user-links li{
+    padding: 0px 1px;
+}
+.user-links li hr{
+    width: 11px;
+    margin-bottom: 4px;
+}
+.logo{
+    margin-bottom: 19px;
+}
+.badge{
+    font-size: 0.769em;
+    margin-top: 12px;
+    margin-left: -8px;
+    background-color: #38959C;
+}
+.vertical-hr{
+    display: inline-block;
+    width: 25px;
+    margin: 10px 0px 10px 0px;
+    border-top: 1px solid #808080;
+}
+#main-nav{
+    font-family: AGaramondRegular;
+}
+.navbar-nav li a{
+    text-transform: uppercase;
+    padding: 10px 9px;
+    font-size: 0.750em;
+    letter-spacing: 1px;
+    border-bottom: 1px dashed #d1d1d1;
+}
+.navbar-nav li:last-child a{
+    border-bottom: none;
+}
+#bs-example-navbar-collapse-1{
+    margin-bottom: 15px;
+    background-color: #F4F4F4;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        display:block !important;
+    }
+    .navbar-header {
+        float:none;
+    }
+    .navbar-nav{
+        float: none !important;
+    }
+    .navbar-nav > li{
+        float: none !important;
+    }
+    .navbar-right {
+        margin-right: 0px;
+    }
+}
+@media(min-width: 992px){
+    #bs-example-navbar-collapse-1{
+        margin-bottom: 0px;
+        background-color: transparent;
+    }
+    .vertical-hr{
+        margin-bottom: 22px;
+        width: 25px;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    .phone, .user-links {
+        padding-top: 21px;
+    }
+    .logo-menu-section nav{
+        display: table-footer-group;
+    }
+    .logo-section{
+        margin-top: 0px;
+        display: block;
+    }
+    .navbar-nav{
+        display: inline-block;
+        float: none !important;
+    }
+    .navbar-nav li a{
+        border-bottom: none;
+    }
+}
+@media(min-width: 992px) and (max-width: 1199px){
+    .user-links{
+        text-align: left;
+        padding-left: 0px;
+    }
+}
+@media(min-width: 1200px) {
+    .navbar-nav li a {
+        padding: 10px 16px;
+        letter-spacing: 1.8px;
+    }
+}

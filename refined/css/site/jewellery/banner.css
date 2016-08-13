@@ -1,0 +1,119 @@
+.jewellery.banner-section{
+    height: 239px;
+    background-color: #acd6cb;
+    color: white;
+    padding-top: 1px;
+}
+.jewellery.banner-section h1 {
+    font-family: AGaramondRegular;
+    font-size: 1.275em;
+    letter-spacing: 3.4px;
+    margin-bottom: 10px;
+    margin-top: 26px;
+}
+.jewellery.banner-section h3, .jewellery.banner-section a{
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: ProximaNovaRegular, sans-serif;
+    letter-spacing: 1.8px;
+}
+.jewellery.banner-section h3{
+    margin-top: 17px;
+    margin-bottom: 18px;
+}
+.jewellery.banner-section a {
+    display: inline-block;
+    border: 1px solid white;
+    margin: 0px 8px 14px 8px;
+    position: relative;
+    color: white;
+}
+.jewellery.banner-section a span{
+    line-height: 32px;
+}
+.jewellery.banner-section a:before{
+    position: absolute;
+    border: 1px solid white;
+}
+.jewellery.banner-section a.jewels:before{
+    content: " ";
+    width: 102px;
+    height: 42px;
+    top: -5px;
+    left: 3px;
+}
+.jewellery.banner-section .jewels{
+    width: 110px;
+    height: 34px;
+    margin-bottom: 27px;
+    margin-top: 1px;
+}
+.jewellery.banner-section hr{
+    width: 11%;
+}
+@media(min-width: 768px){
+    .jewellery.banner-section{
+        height: 350px;
+        padding-top: 56px;
+    }
+    .jewellery.banner-section h1 {
+        letter-spacing: 5.4px;
+        font-size: 1.875em;
+        margin-bottom: 27px;
+        margin-top: 0px;
+    }
+    .jewellery.banner-section hr{
+        width: 3%;
+    }
+    .jewellery.banner-section h3, .jewellery.banner-section a{
+        font-size: 14px;
+    }
+    .jewellery.banner-section h3{
+        margin-top: 33px;
+        margin-bottom: 36px;
+    }
+    .jewellery.banner-section a{
+        margin: 0px 8px;
+    }
+    .jewellery.banner-section .jewels{
+        width: 150px;
+        height: 42px;
+    }
+    .jewellery.banner-section a.jewels:before{
+        width: 142px;
+        height: 50px;
+    }
+    .jewellery.banner-section a span{
+        position: initial;
+        line-height: 40px;
+    }
+}
+@media(min-width: 992px){
+    .jewellery.banner-section{
+        height: 536px;
+        padding-top: 142px;
+    }
+}
+/* - - - hack for safari - - - */
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+{ @media{
+        .jewellery.banner-section a{
+            font-size: 9px;
+            letter-spacing: 1.2px;
+        }
+        .jewellery.banner-section a span{
+            top: 11px;
+            left: 29px;
+        }
+    }
+    @media(min-width: 768px){
+        .jewellery.banner-section a{
+            font-size: 13px;
+            letter-spacing: 1.2px;
+        }
+        .jewellery.banner-section a span{
+            left: 35px;
+        }
+    }
+}

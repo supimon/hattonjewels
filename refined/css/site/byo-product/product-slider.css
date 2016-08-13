@@ -1,0 +1,84 @@
+.products-slider-section.product-details{
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+.products-slider-section .carousel{
+    width: 70%;
+    display: inline-block;
+}
+.products-slider-section .prod-title{
+    width: 100%;
+    font-size: 10px;
+    position: absolute;
+    letter-spacing: 1.2px;
+    top: 84px;
+}
+.products-slider-section .prod-price{
+    font-size: 13px;
+    color: #38959c;
+    width: 100%;
+    position: absolute;
+    top: 120px;
+    letter-spacing: 1.2px;
+}
+.products-slider-section a.left, .products-slider-section a.right{
+    background-image: none;
+}
+.products-slider-section .product{
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.products-slider-section .product, .products-slider-section .item .row > div, .products-slider-section{
+    height: 140px;
+}
+.carousel-control{
+    width: auto;
+    top: 38%;
+    text-shadow: none;
+    bottom: auto;
+}
+.carousel-control.left{
+    left: -25px;
+}
+.carousel-control.right{
+    right: -25px;
+}
+.fa-arrow-circle-o-left, .fa-arrow-circle-o-right{
+    color: #aaa;
+    font-size: 22px;
+}
+@media(min-width: 992px){
+    .products-slider-section .product, .products-slider-section .item .row > div, .products-slider-section{
+        height: 171px;
+    }
+    .products-slider-section .prod-title{
+        top: 102px;
+    }
+    .products-slider-section .prod-price{
+        top: 140px;
+    }
+    .products-slider-section .col-md-2{
+        width: 20%;
+    }
+    .carousel-control{
+        top: 40%;
+    }
+    .fa-arrow-circle-o-left, .fa-arrow-circle-o-right{
+        font-size: 29px;
+    }
+}
+@media(min-width: 1200px){
+    .products-slider-section .product, .products-slider-section .item .row > div, .products-slider-section{
+        height: 226px;
+    }
+    .products-slider-section .prod-title{
+        top: 139px;
+    }
+    .products-slider-section .prod-price{
+        top: 174px;
+    }
+}
