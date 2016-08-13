@@ -1,0 +1,1214 @@
+/* - - begin general section - - */
+@font-face {
+    font-family: ProximaNovaThin;
+    src: url("vendor/fonts/Proxima Nova S W01SC Thin.woff");
+}
+@font-face {
+    font-family: ProximaNovaRegular;
+    src: url("vendor/fonts/Mark Simonson - Proxima Nova Alt Regular.woff");
+}
+@font-face {
+    font-family: AGaramondItalic;
+    src: url("vendor/fonts/AGaramond Italic.woff");
+}
+@font-face {
+    font-family: AGaramondRegular;
+    src: url("vendor/fonts/AGaramond-Regular.woff");
+}
+@font-face {
+    font-family: GILSans;
+    src: url("vendor/fonts/GIL.woff");
+}
+body{
+    font-family: 'ProximaNovaRegular', sans-serif;
+    letter-spacing: 0.3px;
+    font-size: 16px;
+}
+h1, h2, h3{
+    text-transform: uppercase;
+}
+body > section{
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.img-responsive{
+    width: 100%; /*fix for bootstrap firefox bug*/
+}
+.fa{
+    cursor: pointer;
+}
+li hr{
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    margin: 0px 0px 3px 0px;
+    width: 7px;
+    border-top: 1px solid #808080;
+}
+a, a:hover, a:focus{
+    text-decoration: none;
+}
+a{
+    color: #808080;
+}
+a:hover, a:focus{
+    color: #111;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end general section - - */
+/* - - begin top-nav-section - - */
+.top-nav-section{
+    background-color: #f4f4f4;
+    position: relative;
+    z-index: 1;
+    font-family: "ProximaNovaRegular", Helvetica, Arial, sans-serif;
+}
+.top-nav-section .container{
+    height: 30px;
+    position: relative;
+}
+.top-nav-section ul{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.625em;
+    letter-spacing: 1.2px;
+    word-spacing: 1px;
+    list-style: none;
+    padding-left: 0px;
+    background-color: #f4f4f4;
+    margin-top: 30px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.25s ease-out;
+}
+.top-nav-section ul a{
+    text-decoration: none;
+    color: #808080;
+}
+.top-nav-section ul a:hover{
+    color: #333;
+}
+.top-nav-section ul > li {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-bottom: 1px dashed lightgrey;
+}
+.top-nav-section ul > li:last-child {
+    border-bottom: none;
+}
+.top-nav-section .top-menu-expander{
+    position: absolute;
+    top: 3px;
+    left: 15px;
+    color: #666666;
+}
+.top-menu-expander:hover + ul{
+    max-height: 500px;
+    transition: max-height 0.40s ease-in;
+}
+.top-menu-expander:hover .fa-caret-down{
+    visibility: hidden;
+}
+.top-menu-expander .fa-caret-down{
+    visibility: visible;
+}
+.top-nav-section .search{
+    position: absolute;
+    top: 2px;
+    right: 15px;
+}
+.search-container{
+    width: 270px;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+}
+.search-container input#search{
+    width: 50px;
+    height: 26px;
+    background: #32969B;
+    border: none;
+    font-size: 0.75em;
+    float: right;
+    color: #fefefe;
+    padding-left: 35px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+    -webkit-transition: width .55s ease;
+    -moz-transition: width .55s ease;
+    -ms-transition: width .55s ease;
+    -o-transition: width .55s ease;
+    transition: width .55s ease;
+}
+.search-container .icon{
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    right: -1px\9;
+    padding-left: 18px;
+    padding-top: 2px;
+    z-index: 1;
+    color: #676767;
+    display: inline-block;
+    width: 50px;
+    width: 51px\9;
+    height: 26px;
+    border-radius: 0px 4px 4px 0px;
+    border: none;
+    background-color: #f4f4f4;
+
+    -webkit-transition: background-color .55s ease;
+    -moz-transition: background-color .55s ease;
+    -ms-transition: background-color .55s ease;
+    -o-transition: background-color .55s ease;
+    transition: background-color .55s ease;
+}
+.search-container input#search::-webkit-input-placeholder{
+    color: #B6E4EB;
+}
+.search-container input#search:-moz-placeholder { /* Firefox 18- */
+    color: #B6E4EB;
+}
+.search-container input#search::-moz-placeholder { /* Firefox 19+ */
+    color: #B6E4EB;
+}
+.search-container input#search:-ms-input-placeholder {
+    color: #B6E4EB;
+}
+.search-container input#search:focus,
+.search-container input#search:active{
+    outline:none;
+    width: 250px;
+}
+.search-container:hover input#search{
+    width: 250px;
+}
+.search-container:hover .icon{
+    background-color: #D2CECB;
+}
+@media(min-width: 992px) {
+    .top-nav-section ul{
+        text-align: left;
+        padding-left: 0;
+        margin-left: -5px;
+        margin-top: 7px;
+        max-height: none;
+    }
+    .top-nav-section ul > li {
+        display: inline-block;
+        padding: 0px 5px;
+        border-bottom: none;
+    }
+}
+@media(min-width: 1200px) {
+    .top-nav-section ul {
+        text-align: center;
+    }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  end top-nav-section - - */
+/* - - begin logo-menu-section - - */
+.logo-menu-section{
+    display: table;
+    width: 100%;
+}
+.logo-menu-section nav{
+    background-color: transparent;
+    border: none;
+}
+.logo-menu-section .logo-section{
+    padding-top: 34px;
+    margin-top: -55px;
+    display: inline-block;
+}
+.phone, .user-links{
+    padding-top: 10px;
+    font-size: 0.813em;
+    letter-spacing: 0.5px;
+}
+.phone .fa{
+    font-size: 1.385em;
+    color: #38959C;
+    padding-right: 2px;
+}
+.user-links li{
+    padding: 0px 1px;
+}
+.user-links li hr{
+    width: 11px;
+    margin-bottom: 4px;
+}
+.logo-menu-section .logo{
+    margin-bottom: 19px;
+}
+.badge{
+    font-size: 0.769em;
+    margin-top: 12px;
+    margin-left: -8px;
+    background-color: #38959C;
+}
+.vertical-hr{
+    display: inline-block;
+    width: 25px;
+    margin: 10px 0px 10px 0px;
+    border-top: 1px solid #808080;
+}
+#main-nav{
+    font-family: AGaramondRegular;
+}
+#main-nav .navbar-nav li a{
+    text-transform: uppercase;
+    padding: 10px 9px;
+    font-size: 0.750em;
+    letter-spacing: 1px;
+    border-bottom: 1px dashed #d1d1d1;
+}
+#main-nav .navbar-nav li:last-child a{
+    border-bottom: none;
+}
+/*
+#main-nav .navbar-default .navbar-nav > .active > a,
+#main-nav .navbar-default .navbar-nav > .active > a:focus,
+#main-nav .navbar-default .navbar-nav > .active > a:hover{
+    background-color: transparent;
+    border-bottom: 1px solid #333;
+}*/
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        display:block !important;
+    }
+    .navbar-header {
+        float:none;
+    }
+    .navbar-nav{
+        float: none !important;
+    }
+    .navbar-nav > li{
+        float: none !important;
+    }
+    .navbar-right {
+        margin-right: 0px;
+    }
+}
+@media(min-width: 992px){
+    .vertical-hr{
+        margin-bottom: 22px;
+        width: 25px;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    .phone, .user-links {
+        padding-top: 21px;
+    }
+    .logo-menu-section nav{
+        display: table-footer-group;
+    }
+    .logo-menu-section .logo-section{
+        margin-top: 0px;
+        display: block;
+    }
+    #main-nav .navbar-nav{
+        display: inline-block;
+        float: none !important;
+    }
+    #main-nav .navbar-nav li a{
+        border-bottom: none;
+    }
+}
+@media(min-width: 992px) and (max-width: 1199px){
+    .user-links{
+        text-align: left;
+        padding-left: 0px;
+    }
+}
+@media(min-width: 1200px) {
+    #main-nav .navbar-nav li a {
+        padding: 10px 16px;
+        letter-spacing: 1.8px;
+    }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  end logo-menu-section - - */
+/* - - begin slider-section - - */
+.slider-section{
+    position: relative;
+}
+.slider-section .slide-div{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.slider-section .carousel .fa{
+    position: absolute;
+    top: 45%;
+    font-size: 1.25em;
+}
+.slider-section .carousel .fa-arrow-left{
+    left: 20px;
+}
+.slider-section .carousel  .fa-arrow-right{
+    right: 20px;
+}
+.slider-section .carousel-control{
+    opacity: 0.3;
+}
+.slider-section .carousel-control:hover,
+.slider-section .carousel-control:focus,
+.slider-section .carousel-control:active{
+    opacity: 0.5;
+}
+.slider-section .carousel-caption {
+    bottom: auto;
+    right: auto;
+    left: 31px;
+    top: 0px;
+    width: 183px;
+}
+.slider-section .carousel-caption h2 {
+    color: #4d4d4d;
+    font-size: 0.875em;
+    font-family: "GILSans", Helvetica, Arial, sans-serif;
+    letter-spacing: 3px;
+    line-height: 23px;
+    text-shadow: none;
+    word-spacing: 3px;
+    width: 141px;
+    margin-bottom: 25px;
+}
+.slider-section .carousel-caption ul{
+    margin-bottom: 40px;
+}
+.slider-section .carousel-caption p{
+    color: #111;
+    font-size: 0.75em;
+    font-family: "ProximaNovaThin", Helvetica, Arial, sans-serif;
+    text-shadow: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 26px;
+}
+.slider-section .carousel-caption .more-btn {
+    color: #4d4d4d;
+    text-shadow: none;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    letter-spacing: 2px;
+    font-weight: 400;
+    display: inline-block;
+    border: 1px solid #8c8c8c;
+    padding: 8px 13px 8px 15px;
+    margin-left: -42px;
+}
+@media(min-width: 768px){
+    .slider-section .carousel .fa{
+        font-size: 1.75em;
+    }
+    .slider-section .carousel .fa-arrow-left{
+        left: 40px;
+    }
+    .slider-section .carousel .fa-arrow-right{
+        right: 40px;
+    }
+    .slider-section .carousel-caption{
+        left: 31px;
+        top: 47px;
+        width: auto;
+    }
+    .slider-section .carousel-caption h2 {
+        font-size: 1.063em;
+        letter-spacing: 4px;
+        line-height: 26px;
+        word-spacing: 3px;
+        width: 330px;
+        margin-bottom: 13px;
+    }
+    .slider-section .carousel-caption p {
+        margin-bottom: 19px;
+    }
+    .slider-section .carousel-caption ul{
+        margin-bottom: 19px;
+    }
+    .slider-section .carousel-caption .more-btn{
+        padding: 8px 33px 8px 35px;
+        margin-left: 0px;
+    }
+}
+@media(min-width: 992px){
+    .slider-section .carousel-caption h2 {
+        font-size: 1.688em;
+        letter-spacing: 5px;
+        line-height: 37px;
+        margin-bottom: 25px;
+    }
+    .slider-section .carousel-caption{
+        left: 111px;
+        top: 57px;
+    }
+    .slider-section .carousel-caption p {
+        margin-bottom: 26px;
+    }
+    .slider-section .carousel-caption ul{
+        margin-bottom: 40px;
+    }
+}
+@media(min-width: 1200px){
+    .slider-section .carousel-caption{
+        left: 211px;
+        top: 97px;
+    }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end slider-section - - */
+/* - - begin main-content-section - - */
+.main-content-section{
+    margin: 0px auto 36px auto;
+}
+.main-content-section > div{
+    margin: 10px;
+}
+.main-content-section .main-products > div{
+    padding: 0px;
+}
+.main-content-section .more-btn{
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.625em;
+    letter-spacing: 2px;
+    font-weight: 100;
+    display: inline-block;
+    border: 1px solid white;
+    padding: 8px 33px 8px 35px;
+}
+.main-content-section .main-products .more-btn{
+    padding: 8px;
+}
+.main-content-section .eternity{
+    background-image: url('../assets/eternity-bg.png');
+    background-position: center;
+    background-size: cover;
+    padding-top: 73px;
+    padding-bottom: 58px;
+}
+.main-content-section .eternity, .main-content-section .create-your-own{
+    padding-top: 53px;
+    padding-bottom: 58px;
+}
+.main-content-section .eternity h2,
+.main-content-section .create-your-own h2,
+.main-content-section .our-philosophy h2,
+.main-content-section .wedding-rings h2,
+.main-content-section .jewellery h2,
+.main-content-section .valuations h2,
+.main-content-section .guidance h2{
+    font-family: "GILSans", Helvetica, Arial, sans-serif;
+    color: white;
+    font-size: 1.25em;
+    letter-spacing: 4px;
+    line-height: 29px;
+}
+.main-content-section .diamonds h2,
+.main-content-section .engagements-rings h2,
+.main-content-section .sapphire-rings h2{
+    font-family: "GILSans", Helvetica, Arial, sans-serif;
+    color: white;
+    font-size: .7em;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+.main-content-section .eternity h2, .main-content-section .create-your-own h2{
+    margin-bottom: 309px;
+}
+.main-content-section .create-your-own{
+    background-color: #32969B;
+    /*background-image: url('../assets/eternity-bg.png');*/
+    background-position: center;
+    background-size: cover;
+    padding-left: 15px;
+    text-align: center;
+}
+.main-content-section .create-your-own h2{
+    margin-bottom: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.main-content-section .create-your-own hr{
+    width: 75px;
+    border-top-color: white;
+    margin-bottom: 28px;
+}
+.main-content-section .create-your-own p{
+    color: white;
+    margin-bottom: 100px;
+    font-family: "ProximaNovaThin", Helvetica, Arial, sans-serif;
+    font-size: 1.125em;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    text-align: center;
+    padding: 0px 27px;
+}
+@media(min-width: 768px) {
+    .main-content-section .main-products .more-btn{
+        padding: 8px 33px 8px 35px;
+    }
+    .main-content-section > div{
+        margin: 20px;
+    }
+    .main-content-section .create-your-own p{
+        padding: 0px 80px;
+    }
+    @-moz-document url-prefix() {
+        .main-content-section .create-your-own p {
+            display: block;
+        }
+    }
+    .main-content-section .create-your-own p {
+        display: block\9;
+    }
+}
+@media(min-width: 992px) {
+    .main-content-section {
+        margin-top: -20px; /*hack*/
+    }
+    .main-content-section .eternity{
+        width: calc(58.33333333% - 40px);
+        margin-right: 0px;
+    }
+    .main-content-section .create-your-own{
+        width: calc(41.66666666% - 20px);
+        padding-left: 80px;
+        text-align: left;
+    }
+    .main-content-section .create-your-own h2{
+        margin-left: 0px;
+        margin-right: 0px;
+        text-align: left;
+    }
+    .main-content-section .create-your-own hr {
+        display: inline-block
+    }
+    .main-content-section .create-your-own p {
+        width: 276px;
+        height: 112px;
+        text-align: left;
+        padding: 0px;
+        overflow: hidden;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+    }
+}
+@media(min-width: 1200px) {
+    .main-content-section .create-your-own {
+        padding-left: 110px;
+    }
+}
+/* - - - */
+.main-content-section .diamonds{
+    background-color: #e99096;
+    background-image: url('../assets/diamonds.png');
+    margin-right: 7px;
+}
+.main-content-section .engagements-rings{
+    background-color: #c4d4e0;
+    background-image: url('../assets/engage-ring.png');
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.main-content-section .sapphire-rings{
+    background-color: #d2cecb;
+    background-image: url('../assets/sapphire-ring.png');
+    margin-left: 7px;
+}
+.main-content-section .diamonds span,
+.main-content-section .engagements-rings span,
+.main-content-section .sapphire-rings span{
+    display: inline-block;
+}
+.main-content-section .diamonds, .main-content-section .engagements-rings,
+.main-content-section .sapphire-rings{
+    padding-top: 30px;
+    margin-top: 0px;
+    padding-bottom: 58px;
+    position: relative;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+}
+.main-content-section .main-products .explore-holder{
+    position: absolute;
+    width: 100%;
+    bottom: 38px;
+}
+@media(min-width: 768px) {
+    .main-content-section .diamonds{
+        margin-right: 14px;
+    }
+    .main-content-section .engagements-rings{
+        margin-left: 6px;
+        margin-right: 7px;
+    }
+    .main-content-section .sapphire-rings{
+        margin-left: 13px;
+    }
+    .main-content-section .diamonds, .main-content-section .engagements-rings,
+    .main-content-section .sapphire-rings{
+        background-size: auto;
+        height: 498px;
+    }
+    .main-content-section .diamonds h2,
+    .main-content-section .engagements-rings h2,
+    .main-content-section .sapphire-rings h2{
+        font-size: 1.25em;
+        letter-spacing: 4px;
+        line-height: 29px;
+    }
+    .main-content-section .main-products .explore-holder{
+        bottom: 58px;
+    }
+}
+/*- - - - */
+.main-content-section .our-philosophy, .main-content-section .wedding-rings,
+.main-content-section .jewellery, .main-content-section .testimonial,
+.main-content-section .valuations, .main-content-section .guidance{
+    margin-top: 0px;
+}
+.main-content-section .our-philosophy{
+    padding-top: 22px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 58px;
+    text-align: center;
+}
+.main-content-section .our-philosophy h2,
+.main-content-section .our-philosophy p,
+.main-content-section .our-philosophy .more-btn{
+    color: #4d4d4d;
+}
+.main-content-section .our-philosophy h2{
+    margin-bottom: 64px;
+    text-align: center;
+}
+.main-content-section .our-philosophy p{
+    font-family: "ProximaNovaThin", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: 0px;
+    font-size: 0.9375em;
+    line-height: 30px;
+    margin-bottom: 66px;
+    word-spacing: 2px;
+    text-align: center;
+}
+.main-content-section .our-philosophy .more-btn{
+    border-color: #8c8c8c;
+}
+.main-content-section .wedding-rings{
+    background-image: url('../assets/wedding.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 195px;
+    padding-bottom: 201px;
+}
+.main-content-section .wedding-rings h2{
+    line-height: 38px;
+    margin-bottom: 24px;
+    float: right;
+    margin-top: -92px;
+    margin-right: 5px;
+}
+.main-content-section .wedding-rings .more-btn{
+    float:right;
+    margin-right: -120px;
+    margin-top: 6px;
+}
+@media(min-width: 768px) {
+    .main-content-section .our-philosophy {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .main-content-section .wedding-rings h2{
+        margin-right: 54px;
+    }
+}
+@media(min-width: 992px) {
+    .main-content-section .our-philosophy, .main-content-section .wedding-rings,
+    .main-content-section .valuations, .main-content-section .guidance{
+        width: calc(50% - 30px);
+        margin-right: 0px;
+    }
+    .main-content-section .our-philosophy {
+        padding-left: 49px;
+        padding-right: 0px;
+        text-align: left;
+    }
+    .main-content-section .our-philosophy h2, .main-content-section .our-philosophy p{
+        text-align: left;
+    }
+    .main-content-section .our-philosophy p {
+        margin-bottom: 56px;
+        width: 376px;
+        height: 240px;
+        overflow: hidden;
+        -webkit-line-clamp: 8;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+    }
+    @-moz-document url-prefix() {
+        .main-content-section .our-philosophy p {
+            display: block;
+        }
+    }
+    .main-content-section .our-philosophy p {
+        display: block\9;
+    }
+    .main-content-section .wedding-rings h2{
+        margin-top: -8px;
+        margin-right: 95px;
+    }
+    .main-content-section .wedding-rings .more-btn{
+        margin-right: -120px;
+        margin-top: 93px;
+    }
+
+}
+@media(min-width: 1200px) {
+    .main-content-section .our-philosophy{
+        padding-left: 89px;
+        padding-top: 42px;
+    }
+    .main-content-section .our-philosophy p {
+        margin-bottom: 66px;
+        width: 408px;
+        height: 210px;
+        -webkit-line-clamp: 7;
+    }
+}
+/*- - - - */
+.main-content-section .jewellery{
+    background-image: url('../assets/jewellery.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 195px;
+    padding-bottom: 201px;
+}
+.main-content-section .jewellery h2{
+    line-height: 38px;
+    margin-bottom: 0px;
+    float: right;
+    margin-top: -92px;
+    margin-right: 5px;
+}
+.main-content-section .jewellery .more-btn{
+    float:right;
+    margin-right: 12px;
+    margin-top: -36px;
+}
+.main-content-section .testimonial{
+    padding-top: 72px;
+}
+.main-content-section .testimonial h2{
+    font-size: 4.25em;
+    font-family: serif;
+    line-height: 22px;
+    color: #38959a;
+    margin-bottom: 40px;
+}
+.main-content-section .testimonial p.testimonial-text{
+    width: 90%;
+    font-family: "AGaramondItalic", serif;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main-content-section .testimonial p.testimonial-from{
+    text-transform: uppercase;
+    color: #38959a;
+    border-bottom: 1px solid #38959a;
+    display: inline-block;
+    padding-bottom: 5px;
+    font-size: 0.75em;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    margin-bottom: 28px;
+}
+@media(min-width: 768px) {
+    .main-content-section .jewellery h2{
+        margin-right: 54px;
+        margin-bottom: 0px;
+        margin-top: -51px;
+    }
+    .main-content-section .jewellery .more-btn{
+        margin-right: 60px;
+        margin-top: 6px;
+    }
+    .main-content-section .testimonial p.testimonial-text{
+        width: 325px;
+        height: 192px;
+        overflow: hidden;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+    }
+    @-moz-document url-prefix() {
+        .main-content-section .testimonial p.testimonial-text{
+            display: inline-block;
+        }
+    }
+    .main-content-section .testimonial p.testimonial-text{
+        display: block\9;
+    }
+}
+@media(min-width: 992px) {
+    .main-content-section .jewellery{
+        width: calc(66.66666666% - 60px);
+        margin-right: 0px;
+    }
+    .main-content-section .jewellery h2{
+        margin-top: 10px;
+        margin-right: 95px;
+    }
+    .main-content-section .jewellery .more-btn{
+        margin-right: -129px;
+        margin-top: 74px;
+    }
+    .main-content-section .testimonial p.testimonial-text {
+        margin-bottom: 100px;
+    }
+}
+/*- - - -*/
+.main-content-section .valuations{
+    background-color: #3db0a5;
+    padding-top: 70px;
+}
+.main-content-section .guidance{
+    background-image: url('../assets/guidance.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 150px;
+}
+.main-content-section .valuations{
+    padding-bottom: 58px;
+}
+.main-content-section .guidance{
+    padding-bottom: 152px;
+}
+.main-content-section .valuations h2, .main-content-section .guidance h2{
+    margin-bottom: 32px;
+}
+.main-content-section .valuations p, .main-content-section .guidance p{
+    color: white;
+    font-family: "ProximaNovaThin", Helvetica, Arial, sans-serif;
+    font-size: 1.125em;
+    margin-bottom: 34px;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    text-align: center;
+    width: 219px;
+    display: inline-block;
+}
+.main-content-section .valuations li{
+    font-size: 0.625em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.main-content-section .valuations .more-btn{
+    margin-top: 52px;
+}
+.main-content-section li.arrow img{
+    margin-top: -91px;
+}
+.main-content-section li.process img{
+    margin-bottom: 5px;
+}
+.main-content-section .guidance p{
+    margin-bottom: 30px;
+}
+@media(min-width: 768px) {
+    .main-content-section .valuations p, .main-content-section .guidance p {
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        display: -webkit-inline-box;
+        width: 280px;
+    }
+    @-moz-document url-prefix() {
+        .valuations p, .guidance p {
+            display: inline-block;
+        }
+    }
+    .main-content-section .valuations p, .main-content-section .guidance p {
+        display: inline-block\9;
+    }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end main-content-section - - */
+/* - - begin instagram-section - - */
+.instagram-section{
+    background-color: transparent;
+    border-top: 1px solid #a6a6a6;
+    width: calc(100% - 40px);
+    margin: 0px auto 48px auto;
+    max-width: 1400px;
+}
+.instagram-section h2{
+    text-align: center;
+    font-family: "GILSans", Helvetica, Arial, sans-serif;
+    font-size: 1.1875em;
+    letter-spacing: 3px;
+    margin-top: 37px;
+    margin-bottom: 37px;
+}
+.instagram-section .container{
+    position: relative;
+}
+.instagram-section .left-arrow, .instagram-section .right-arrow{
+    position: absolute;
+    top: 35%;
+    text-decoration: none;
+    font-size: 24px;
+}
+.instagram-section .left-arrow{
+    left: 0px;
+}
+.instagram-section .right-arrow{
+    right: 0px;
+}
+.instagram-section ul{
+    margin-left: 0px;
+}
+.instagram-section ul li{
+    width: 48%;
+    padding: 0px;
+}
+.instagram-section ul li a{
+    display: inline-block;
+    text-align: center;
+}
+@media(min-width: 768px){
+    .instagram-section > .container {
+        width: 720px;
+    }
+    .instagram-section ul li{
+        width: 19.4%;
+    }
+}
+@media(min-width: 992px){
+    .instagram-section ul li{
+        width: 19.5%;
+    }
+    .instagram-section .left-arrow, .instagram-section .right-arrow {
+        font-size: 38px;
+    }
+}
+@media(min-width: 992px) and (max-width: 1199px) {
+    .instagram-section > .container {
+        width: 950px;
+    }
+}
+@media(min-width: 1200px){
+    .instagram-section ul li{
+        width: 19.6%;
+    }
+    .instagram-section > .container {
+        width: 1160px;
+    }
+}
+@media(min-width: 1310px){
+    .instagram-section > .container {
+        width: 1270px;
+    }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  end instagram-section - - */
+/* - - begin footer-section copyrights - - */
+.footer-section footer{
+    font-size: .75em;
+    background-color: #f0eceb;
+    margin: 0px;
+    padding-top: 30px;
+}
+.footer-section hr{
+    border-top-color: #cfcac6;
+    margin-top: 0px;
+    width: 95.5%;
+}
+.footer-section h3{
+    font-family: "GILSans", Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 28px;
+}
+.footer-section .certificates{
+    margin-left: 0px;
+}
+.certificates li{
+    padding: 0px 26px;
+    margin-bottom: 28px;
+}
+.certificates li a{
+    width: 105px;
+    height: 54px;
+    display: inline-block;
+    text-align: center;
+}
+.footer-links li{
+    margin-bottom: 6px;
+    text-align: center;
+}
+.footer-links .customer-service{
+    float: left;
+    display: inline-block;
+    width: 100%;
+}
+.customer-service .multi-column{
+    overflow: hidden;
+}
+.customer-service .multi-column li{
+    width: 50%;
+    float:left;
+    display:inline;
+}
+.customer-service .multi-column li:nth-child(odd):last-child{
+    width: 100%;
+}
+.footer-links .contact-subscribe{
+    width:100%;
+    display: inline-block;
+    float: left;
+    margin-top: 12px;
+}
+.contact-subscribe > div{
+    padding: 0px;
+}
+.contact-subscribe > div:last-child{
+    margin-top: 31px;
+    padding-right: 0px;
+}
+.subscribe{
+    width: 100%;
+    text-align: center;
+}
+.subscribe input{
+    width: 100%;
+    padding: 5px;
+    max-width: 250px;
+}
+.subscribe ul{
+    margin: 23px 0px 36px 0px;
+}
+.subscribe li{
+    padding: 0px 3.3%;
+}
+.subscribe li:first-child{
+    padding-left: 0px;
+}
+.subscribe li:last-child{
+    padding-right: 0px;
+}
+.copyrights{
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-size: .75em;
+}
+@media(min-width: 768px){
+    .footer-section footer{
+        width: calc(100% - 40px);
+        margin: 0px 20px;
+    }
+    .footer-links .customer-service{
+        width: 260px;
+    }
+    .customer-service .multi-column li:nth-child(odd):last-child{
+        width: inherit;
+    }
+    .customer-service .multi-column li {
+        width: 50%;
+    }
+    .footer-links .contact-subscribe {
+        width: calc(100% - 260px);
+        margin-top: 0px;
+    }
+    .contact-subscribe > div{
+        padding: 0px 15px;
+    }
+    .contact-subscribe > div:last-child{
+        margin-top: 0px;
+    }
+    .footer-section h3, .footer-links li {
+        text-align: left;
+    }
+    .subscribe{
+        width: auto;
+    }
+}
+@media(min-width: 768px) and (max-width: 991px){
+    .footer-section footer > .container{
+        width: 720px;
+    }
+    .contact-subscribe .col-sm-7{
+        padding: 0px;
+    }
+}
+@media(min-width: 992px) and (max-width: 1199px) {
+    .footer-section footer > .container {
+        width: 950px;
+    }
+}
+@media(min-width: 992px){
+    .footer-links .customer-service{
+        width: 403px;
+    }
+    .footer-links .contact-subscribe {
+        width: calc(100% - 403px);
+    }
+    .customer-service .multi-column li {
+        width: 33%;
+    }
+    .subscribe h3{
+        text-align: right;
+    }
+}
+@media(min-width: 1200px) {
+    .footer-section footer > .container {
+        width: 1160px;
+    }
+}
+@media(min-width: 1310px){
+    .footer-section footer > .container {
+        width: 1270px;
+    }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  end footer-section copyrights - - */
