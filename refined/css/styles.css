@@ -3476,6 +3476,12 @@ a:hover, a:focus{
     background-size: initial;
     background-color: #c4d4e1;
 }
+@media screen and (min-width:0\0) { /* hack for IE >= 9 */
+    .two-categories-7-5-section.wedding-main .category-2,
+    .two-categories-7-5-section.jewellery .category-2{
+        background-size: auto;
+    }
+}
 @media(min-width: 768px) {
     .two-categories-7-5-section {
         padding: 0px 20px;
