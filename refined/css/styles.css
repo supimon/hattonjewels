@@ -3216,7 +3216,7 @@ a:hover, a:focus{
     line-height: 30px;
     word-spacing: 2px;
     text-transform: none;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     overflow: hidden;
 }
 .promos-text-section .more-btn{
@@ -4360,6 +4360,13 @@ form .previews-container .dz-error-mark{
     background-repeat: no-repeat;
     margin-bottom: 10px;
 }
+@media screen and (min-width:0\0) { /* hack for IE >= 9 */
+    #emailUs input, #emailUs textarea,
+    #bookUs input, #bookUs textarea{
+        padding: 0px 15px;
+        height: 48px;
+    }
+}
 @media(min-width: 768px){
     .contact-content-section{
         padding: 0px 20px;
@@ -4415,15 +4422,13 @@ form .previews-container .dz-error-mark{
     }
     .contact-content-section .book-us {
         padding-bottom: 80px;
+        height: 100%
     }
 }
 @media(min-width: 1200px){
     .contact-content-section .email-us,
     .contact-content-section .book-us {
-        padding: 76px 135px 0px 135px;
-    }
-    .contact-content-section .book-us {
-        padding-bottom: 80px;
+        padding: 76px 135px 80px 135px;
     }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  end contact-content-section - - */

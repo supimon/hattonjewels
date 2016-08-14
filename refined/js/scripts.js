@@ -21,7 +21,9 @@ $(function(){
         getscreenSize();
         $('.slider-section').length ? adjustSliderHeight(): '';
         lookupTable.productSliders ? populateSliderProducts(null): '';
-        prepareBlogCols(true);
+        if($('.col-filtered-blog-section').length) prepareBlogCols(true);
+        if($('.contact-content-section').length)
+            $('.contact-content-section .book').height($('.contact-content-section .bg-img').height());
     }
     // utility function to get width of screen
     function getscreenSize(){
@@ -281,5 +283,9 @@ $(function(){
         $($('.col-filtered-blog-holder .row > div')[$('.col-filtered-blog-holder .row > div').length - 1])
             .append($('.tweet-box'));
         arrangeBlogItems(blogItemsArr);
+    }
+    // equal height for columns in contact page
+    if($('.contact-content-section').length) {
+        $('.contact-content-section .book').height($('.contact-content-section .bg-img').height());
     }
 });
