@@ -4162,6 +4162,12 @@ a:hover, a:focus{
     padding-top: 16px;
     margin-left: 10px;
 }
+@media screen and (min-width:0\0) { /* hack for IE >= 9 */
+    #fileUploadZone input {
+        padding: 0px 15px;
+        height: 48px;
+    }
+}
 @media(min-width: 768px) {
     #fileUploadZone .col-md-5{
         margin-bottom: 20px;
