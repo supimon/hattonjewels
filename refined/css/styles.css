@@ -4168,6 +4168,12 @@ a:hover, a:focus{
         height: 48px;
     }
 }
+@media screen and (-moz-images-in-menus:0) { /* hack for firefox >= 3.6 */
+    #fileUploadZone input {
+        padding: 0px 15px;
+        height: 48px;
+    }
+}
 @media(min-width: 768px) {
     #fileUploadZone .col-md-5{
         margin-bottom: 20px;
@@ -4361,6 +4367,13 @@ form .previews-container .dz-error-mark{
     margin-bottom: 10px;
 }
 @media screen and (min-width:0\0) { /* hack for IE >= 9 */
+    #emailUs input, #emailUs textarea,
+    #bookUs input, #bookUs textarea{
+        padding: 0px 15px;
+        height: 48px;
+    }
+}
+@media screen and (-moz-images-in-menus:0) { /* hack for firefox >= 3.6 */
     #emailUs input, #emailUs textarea,
     #bookUs input, #bookUs textarea{
         padding: 0px 15px;
