@@ -1,19 +1,12 @@
-for populating the filters dynamically on the front end
-- - - - -
-goto js > scripts.js > line 30 var lookupTable > line 42 filterSliders
-populate the filterSliders with the desired sliders as shown
-as an example, almost all of the sliders have been populated on the front end for reference
+Testing issues :
+ - - - - - -
+
+ 1. couple of issues on mobile screens
+    1.a) doesn’t work for  < iOS 7 devices
+    1.b) the top navigation menu tappable area needs to be increased
+    1.c) the instagram slider arrows need to be replaced with images since iOS don’t seem to render it well
 
 
-for coding the API call for AJAX filter search functionality
-- - - - -
-goto js > scripts.js > line 374 (or if the line number changes, Control+F for "// write the AJAX call here" within
-the file
-
-
-NOTE: All the products in the BYO settings page as well as collections page are loaded via AJAX after the page load.
-- - - - -
-If this is something that is not required, you can edit the following location:
-goto js > scripts.js > line 312 populateFilteredProducts(data) is the function that does it
-you can copy the HTML markup within that function (line 332) and generate the html directly if that helps in SEO.
-
+ 2. couple of issues on IE 9
+    2.a) the product slider arrows are screwed up
+    2.b) the placeholders don’t show up
