@@ -22,7 +22,7 @@ $(function(){
             $('.slider-section').length ? adjustSliderHeight() : '';
             lookupTable.productSliders ? populateSliderProducts(null) : '';
             if ($('.col-filtered-blog-section').length) prepareBlogCols(true);
-            if ($('.contact-content-section').length)
+            if ($('.contact-content-section').length && ((screenSize == 'md') || (screenSize == 'lg')))
                 $('.contact-content-section .book').height($('.contact-content-section .bg-img').height());
         }
     }
@@ -289,7 +289,7 @@ $(function(){
         arrangeBlogItems(blogItemsArr);
     }
     // equal height for columns in contact page
-    if($('.contact-content-section').length) {
+    if($('.contact-content-section').length && ((screenSize == 'md') || (screenSize == 'lg'))) {
         $('.contact-content-section .book').height($('.contact-content-section .bg-img').height());
     }
 });
