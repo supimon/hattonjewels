@@ -4255,7 +4255,7 @@ form .previews-container .dz-error-mark{
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  end styling dropzone preview area - - */
 /* - - begin contact-content-section - - */
 .contact-content-section{
-    padding: 0px 10px;
+    padding: 0px 15px;
     font-family: 'AGaramondRegular', serif;
 }
 .contact-content-section .col-md-6{
