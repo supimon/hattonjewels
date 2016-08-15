@@ -3,8 +3,9 @@ Testing issues :
 
  1. couple of issues on mobile screens
     1.a) doesn’t work for  < iOS 7 devices
-    1.b) the top navigation menu tappable area needs to be increased
-    1.c) the instagram slider arrows need to be replaced with images since iOS don’t seem to render it well
+    1.b) the top navigation menu tap-able area needs to be increased
+    1.c) the Instagram slider arrows need to be replaced with images since iOS don’t seem to render it well
+    1.d) doesn't work for < android 4.3 devices
 
 
  2. couple of issues on IE 9
