@@ -282,7 +282,7 @@ a:hover, a:focus{
 }
 #main-nav .navbar-nav li a{
     text-transform: uppercase;
-    padding: 10px 9px;
+    padding: 10px 8px;
     font-size: 0.750em;
     letter-spacing: 1px;
     border-bottom: 1px dashed #d1d1d1;
@@ -290,13 +290,148 @@ a:hover, a:focus{
 #main-nav .navbar-nav li:last-child a{
     border-bottom: none;
 }
-/*
-#main-nav .navbar-default .navbar-nav > .active > a,
-#main-nav .navbar-default .navbar-nav > .active > a:focus,
-#main-nav .navbar-default .navbar-nav > .active > a:hover{
+.logo-menu-section .navbar-nav li a {
+    position: relative;
+}
+.logo-menu-section .navbar-nav li.open a .megadd-arrow{
+    position: absolute;
+    display: inline-block;
+    border-top: 1px solid rgba(0,0,0,.15);
+    border-right: 1px solid rgba(0,0,0,.15);
+    width: 20px;
+    height: 20px;
+    z-index: 1001;
+    background-color: white;
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 36px;
+}
+/*#main-nav .navbar-nav > .active > a,
+#main-nav .navbar-nav > .active > a:focus,
+#main-nav .navbar-nav > .active > a:hover{
     background-color: transparent;
     border-bottom: 1px solid #333;
 }*/
+.megadd-arrow{
+    display: none;
+}
+.logo-menu-section .navbar-nav>li>.dropdown-menu {
+    width: 930px;
+    top: 116%;
+}
+.logo-menu-section .dropdown-menu .megadd-holder > div{
+    padding-top: 10px;
+}
+.logo-menu-section .dropdown-menu .design-jewellery{
+    padding-left: 22px;
+}
+.logo-menu-section .dropdown-menu .design-jewellery h3,
+.logo-menu-section .dropdown-menu .select-category h3{
+    margin-bottom: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: ProximaNovaRegular, sans-serif;
+    letter-spacing: 1.8px;
+    font-size: 13px;
+}
+.logo-menu-section .dropdown-menu .design-jewellery a{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: ProximaNovaRegular, sans-serif;
+    letter-spacing: 1.8px;
+    font-size: 11px;
+    display: inline-block;
+    border: 1px solid #318389 !important;
+    position: relative;
+    color: grey;
+    width: 195px;
+}
+.logo-menu-section .dropdown-menu .design-jewellery a.active{
+    color: white;
+}
+.logo-menu-section .dropdown-menu .design-jewellery a:before {
+    content: " ";
+    width: 186px;
+    height: 37px;
+    top: -1px;
+    left: 3px;
+    position: absolute;
+    z-index: -1;
+}
+.logo-menu-section .dropdown-menu .design-jewellery a.stone{
+    margin-bottom: 30px;
+}
+.logo-menu-section .dropdown-menu .design-jewellery a.active:before {
+    background-color: #318389;
+}
+.logo-menu-section .dropdown-menu .design-jewellery a:after {
+    content: " ";
+    width: 187px;
+    height: 45px;
+    top: -5px;
+    left: 3px;
+    position: absolute;
+    border: 1px solid #318389;
+}
+.logo-menu-section .dropdown-menu .design-jewellery a span{
+    margin-left: 25px;
+}
+.logo-menu-section .dropdown-menu .select-category{
+    position: relative;
+}
+.logo-menu-section .dropdown-menu .select-category .left-divider,
+.logo-menu-section .dropdown-menu .select-category .right-divider{
+    position: absolute;
+    width: 1px;
+    height: 80%;
+    background-color: #8a8a8a;
+    top: 26px;
+}
+.logo-menu-section .dropdown-menu .select-category .left-divider{
+    left: 3px;
+}
+.logo-menu-section .dropdown-menu .select-category .right-divider{
+    right: 0px;
+}
+.logo-menu-section .dropdown-menu .select-category .shapes-filters{
+    margin-bottom: 30px;
+}
+.logo-menu-section .dropdown-menu .select-category .single-filter{
+    display: inline-block;
+    width: 86px;
+    height: 71px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+}
+.logo-menu-section .dropdown-menu .select-category .single-filter h4{
+    font-size: 0.6875em;
+    letter-spacing: 1.2px;
+    position: absolute;
+    width: 100%;
+    top: 42px;
+    color: #3a3a3a;
+    font-family: ProximaNovaRegular, sans-serif;
+    text-transform: uppercase;
+    line-height: 13px;
+}
+.logo-menu-section .dropdown-menu .select-category h3{
+    margin-bottom: 23px;
+}
+.logo-menu-section .dropdown-menu .megadd-holder .categories{
+    padding-top: 85px;
+}
+.logo-menu-section .dropdown-menu .categories .megadd-categories{
+    list-style-type: none;
+    text-transform: uppercase;
+}
+.logo-menu-section .dropdown-menu .categories .megadd-categories li{
+    font-size: .875em;
+    letter-spacing: 1.8px;
+    margin-bottom: 9px;
+}
 @media(min-width: 768px) and (max-width: 991px) {
     .navbar-collapse.collapse {
         display: none !important;
@@ -356,8 +491,20 @@ a:hover, a:focus{
 }
 @media(min-width: 1200px) {
     #main-nav .navbar-nav li a {
-        padding: 10px 16px;
+        padding: 10px 15px;
         letter-spacing: 1.8px;
+    }
+    .logo-menu-section .navbar-nav>li>.dropdown-menu {
+        width: 1140px;
+    }
+    .logo-menu-section .dropdown-menu .design-jewellery{
+        padding-left: 66px;
+    }
+    .logo-menu-section .dropdown-menu .select-category .left-divider{
+        left: 23px;
+    }
+    .logo-menu-section .dropdown-menu .select-category .right-divider{
+        right: 23px;
     }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  end logo-menu-section - - */
