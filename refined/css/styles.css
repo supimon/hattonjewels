@@ -510,6 +510,14 @@ a:hover, a:focus{
         right: 23px;
     }
 }
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0){
+    @media(min-width: 992px){
+        .logo-menu-section .dropdown-menu .design-jewellery a{
+            width: 195px;
+            padding: 10px 0px !important;
+        }
+    }
+}
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  end logo-menu-section - - */
 /* - - begin byo menu selector styles - - */
 .byo-section{
