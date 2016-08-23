@@ -4360,13 +4360,15 @@ a:hover, a:focus{
     padding-top: 16px;
     margin-left: 10px;
 }
-@media screen and (min-width:0\0) { /* hack for IE >= 9 */
+/* hack for IE >= 9 */
+@media screen and (min-width:0\0) {
     #fileUploadZone input {
         padding: 0px 15px;
         height: 48px;
     }
 }
-@media screen and (-moz-images-in-menus:0) { /* hack for firefox >= 3.6 */
+/* hack for firefox >= 3.6 */
+@media screen and (-moz-images-in-menus:0) {
     #fileUploadZone input {
         padding: 0px 15px;
         height: 48px;
@@ -4564,13 +4566,15 @@ form .previews-container .dz-error-mark{
     background-repeat: no-repeat;
     margin-bottom: 10px;
 }
-@media screen and (min-width:0\0) { /* hack for IE >= 9 */
+/* hack for IE >= 9 */
+@media screen and (min-width:0\0) {
     #emailUs input, #bookUs input{
         padding: 0px 15px;
         height: 48px;
     }
 }
-@media screen and (-moz-images-in-menus:0) { /* hack for firefox >= 3.6 */
+/* hack for firefox >= 3.6 */
+@media screen and (-moz-images-in-menus:0) {
     #emailUs input, #bookUs input{
         padding: 0px 15px;
         height: 48px;
