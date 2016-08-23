@@ -510,6 +510,13 @@ a:hover, a:focus{
         right: 23px;
     }
 }
+/* hack for IE >= 9 */
+@media screen and (min-width:0\0) {
+    .logo-menu-section .dropdown-menu .design-jewellery a{
+        width: 195px;
+        padding-right: 3px !important;
+    }
+}
 /* hack for safari */
 @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0){
     @media(min-width: 992px){
@@ -3665,7 +3672,8 @@ a:hover, a:focus{
     background-size: initial;
     background-color: #c4d4e1;
 }
-@media screen and (min-width:0\0) { /* hack for IE >= 9 */
+/* hack for IE >= 9 */
+@media screen and (min-width:0\0) {
     .two-categories-7-5-section.wedding-main .category-2,
     .two-categories-7-5-section.jewellery .category-2{
         background-size: auto;
