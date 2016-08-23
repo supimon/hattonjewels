@@ -510,11 +510,21 @@ a:hover, a:focus{
         right: 23px;
     }
 }
+/* hack for safari */
 @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0){
     @media(min-width: 992px){
         .logo-menu-section .dropdown-menu .design-jewellery a{
             width: 195px;
             padding: 10px 0px !important;
+        }
+    }
+}
+/* hack for firefox >= 3.6 */
+@media screen and (-moz-images-in-menus:0) {
+    @media(min-width: 992px){
+        .logo-menu-section .dropdown-menu .design-jewellery a{
+            width: 195px;
+            padding-right: 3px !important;
         }
     }
 }
