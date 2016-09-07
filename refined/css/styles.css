@@ -4783,6 +4783,7 @@ form .previews-container .dz-error-mark{
     float: left;
     display: inline-block;
     width: 100%;
+    margin-bottom: 30px;
 }
 .customer-service .multi-column{
     overflow: hidden;
@@ -4839,8 +4840,16 @@ form .previews-container .dz-error-mark{
         width: calc(100% - 40px);
         margin: 0px 20px;
     }
+    .footer-links{
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    .footer-links .customer-service-holder{
+        display: inline-block;
+    }
     .footer-links .customer-service{
-        width: 260px;
+        width: 228px;
+        margin-bottom: 0px;
     }
     .customer-service .multi-column li:nth-child(odd):last-child{
         width: inherit;
@@ -4849,8 +4858,8 @@ form .previews-container .dz-error-mark{
         width: 50%;
     }
     .footer-links .contact-subscribe {
-        width: calc(100% - 260px);
-        margin-top: 0px;
+        width: 100%;
+        padding: 30px 100px 0px 100px;
     }
     .contact-subscribe > div{
         padding: 0px 15px;
@@ -4880,10 +4889,11 @@ form .previews-container .dz-error-mark{
 }
 @media(min-width: 992px){
     .footer-links .customer-service{
-        width: 403px;
+        width: 245px;
     }
     .footer-links .contact-subscribe {
-        width: calc(100% - 403px);
+        width: 100%;
+        padding: 50px 180px 0px 180px;
     }
     .customer-service .multi-column li {
         width: 33%;
@@ -4895,6 +4905,19 @@ form .previews-container .dz-error-mark{
 @media(min-width: 1200px) {
     .footer-section footer > .container {
         width: 1160px;
+    }
+    .footer-section .customer-service-holder{
+        float: left;
+    }
+    .footer-links{
+        text-align: initial;
+    }
+    .footer-links .customer-service{
+        width: 210px;
+    }
+    .footer-links .contact-subscribe {
+        width: calc(100% - 630px);
+        padding: 0px 15px;
     }
 }
 @media(min-width: 1310px){
