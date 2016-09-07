@@ -319,6 +319,10 @@ a:hover, a:focus{
 .megadd-arrow{
     display: none;
 }
+/* comment this to reveal the caret for menus*/
+.logo-menu-section .navbar-nav>li .caret{
+    display: none;
+}
 .logo-menu-section .navbar-nav>li>.dropdown-menu {
     width: 930px;
     top: 116%;
