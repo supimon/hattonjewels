@@ -654,7 +654,7 @@ a:hover, a:focus{
     margin-top: 20px;
     margin-bottom: 15px;
 }
-.breadcrumbs.testimonial{
+.breadcrumbs.testimonial, .breadcrumbs.in-loupe-details, .breadcrumbs.faq{
     margin-top: 30px;
 }
 .breadcrumbs ul{
@@ -3937,7 +3937,7 @@ a:hover, a:focus{
         margin-bottom: 60px;
     }
     .blog-content-section .blog-content-holder{
-        padding: 66px 11%;
+        padding: 26px 11%;
     }
     .blog-content-section .blog-content-holder .description img.img-responsive{
         width: 120%;
@@ -3956,12 +3956,12 @@ a:hover, a:focus{
 }
 @media(min-width: 992px){
     .blog-content-section .blog-content-holder{
-        padding: 66px 20%;
+        padding: 26px 20%;
     }
 }
 @media(min-width: 1200px){
     .blog-content-section .blog-content-holder{
-        padding: 66px 230px;
+        padding: 26px 230px;
     }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end blog-content-section - - */
@@ -4066,7 +4066,7 @@ a:hover, a:focus{
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end related-blog-section - - */
 /* - - begin questions-answers-section - - */
 .questions-answers-section .qa-holder{
-    padding: 50px 10px;
+    padding: 10px 10px;
 }
 .questions-answers-section .panel-group{
     margin-bottom: 50px;
@@ -4120,17 +4120,17 @@ a:hover, a:focus{
         padding: 0px 20px;
     }
     .questions-answers-section .qa-holder {
-        padding: 50px 50px 0px 50px;
+        padding: 20px 50px 0px 50px;
     }
 }
 @media(min-width: 992px){
     .questions-answers-section .qa-holder {
-        padding: 50px 100px 0px 100px;
+        padding: 20px 100px 0px 100px;
     }
 }
 @media(min-width: 1200px){
     .questions-answers-section .qa-holder {
-        padding: 50px 200px 0px 200px;
+        padding: 20px 200px 0px 200px;
     }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  end questions-answers-section - - */
