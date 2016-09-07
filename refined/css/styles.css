@@ -2869,26 +2869,21 @@ a:hover, a:focus{
     display: inline-block;
     width: 74px;
     height: 74px;
-    background-color: #318389;
-    color: white;
-    border-radius: 37px;
     position: relative;
-    padding-top: 18px;
-    padding-left: 2px;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
-.graphic-explain-section li span:before{
-    content: " ";
-    display: inline-block;
-    width: 84px;
-    height: 84px;
-    border: 2px solid #318389;
-    border-radius: 42px;
-    position: absolute;
-    left: -5px;
-    top: -5px;
+.graphic-explain-section li span.fill-form{
+    background-image: url("../assets/fill-form.png");
 }
-.graphic-explain-section li span .fa{
-    font-size: 35px;
+.graphic-explain-section li span.initial-value{
+    background-image: url("../assets/initial-value.png");
+}
+.graphic-explain-section li span.ship-item{
+    background-image: url("../assets/shipped.png");
+}
+.graphic-explain-section li span.expert-value{
+    background-image: url("../assets/expert-value.png");
 }
 .graphic-explain-section li h3{
     font-size: 19px;
@@ -4286,6 +4281,13 @@ a:hover, a:focus{
 #fileUploadZone .select-replace{
     width: 100%;
     margin-bottom: 20px;
+}
+#fileUploadZone ul.dropdown-menu{
+    width:100%;
+}
+#fileUploadZone ul.dropdown-menu li {
+    font-size: 10px;
+    padding: 5px 5px 5px 10px;
 }
 #fileUploadZone .btn-main{
     overflow: hidden;
