@@ -374,11 +374,13 @@
                         caretSlider: {
                             obj: {
                                 id: "caretSlider",
-                                min: 0.10, max: 30.00, range: true, value: [0.10, 30.00], step: 0.1,
-                                tooltip: "always"
+                                min: 0.10, max: 30.00, range: true, value: [0.10, 5.00], step: 0.01,
+                                ticks: [0.10, 5.00, 30.00],
+                                ticks_positions: [0, 70, 100],
+                                ticks_labels: ['0.10', '5.00', '30.00']
                             },
                             label: "Caret",
-                            type: "min-max",
+                            type: "regular",
                             sliderObj: ''
                         },
                         claritySlider: {
@@ -407,11 +409,13 @@
                         priceSlider: {
                             obj: {
                                 id: "priceSlider",
-                                min: 200, max: 2500, range: true, value: [200, 2500], step: 1,
-                                tooltip: "always"
+                                min: 200, max: 25000, range: true, value: [200, 2500], step: 1,
+                                ticks: [200, 10000, 25000],
+                                ticks_positions: [0, 70, 100],
+                                ticks_labels: ['200', '10000', '25000']
                             },
                             label: "Price",
-                            type: "min-max",
+                            type: "regular",
                             sliderObj: ''
                         },
                         metalFilter: {
