@@ -2466,6 +2466,7 @@ a:hover, a:focus{
     font-size: 0.6875em;
     letter-spacing: 1.2px;
     cursor: pointer;
+    color: #aaa;
 }
 .filter-section .metal-filter .outer-circle{
     display: inline-block;
@@ -2474,6 +2475,7 @@ a:hover, a:focus{
     border-width: 1px;
     border-style: solid;
     border-radius: 12px;
+    border-color: transparent;
 }
 .filter-section .metal-filter .inner-circle{
     display: inline-block;
@@ -2482,25 +2484,25 @@ a:hover, a:focus{
     margin: 2px;
     border-radius: 9px;
 }
-.filter-section .metal-filter .outer-circle.yellow{
+.filter-section .metal-filter li.active .outer-circle.yellow{
     border-color: #ccac70;
 }
 .filter-section .metal-filter .inner-circle.yellow{
     background-color: #ccac70;
 }
-.filter-section .filter-section .metal-filter .outer-circle.rose{
+.filter-section .metal-filter li.active .outer-circle.rose{
     border-color: #ef9080;
 }
 .filter-section .metal-filter .inner-circle.rose{
     background-color: #ef9080;
 }
-.filter-section .metal-filter .outer-circle.platinum{
+.filter-section .metal-filter li.active .outer-circle.platinum{
     border-color: #b8b9ba;
 }
 .filter-section .metal-filter .inner-circle.platinum{
     background-color: #b8b9ba;
 }
-.filter-section .metal-filter .outer-circle.white{
+.filter-section .metal-filter li.active .outer-circle.white{
     border-color: #dedfe0;
 }
 .filter-section .metal-filter .inner-circle.white{
@@ -2542,7 +2544,6 @@ a:hover, a:focus{
     margin-left: 5px;
 }
 .filter-section .metal-filter ul li.active{
-    border-bottom: 1px dashed #318389;
     color: #318389;
 }
 .filter-section .label-filter ul li.active{
