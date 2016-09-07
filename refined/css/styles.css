@@ -654,6 +654,9 @@ a:hover, a:focus{
     margin-top: 20px;
     margin-bottom: 15px;
 }
+.breadcrumbs.testimonial{
+    margin-top: 30px;
+}
 .breadcrumbs ul{
     margin-left: -2px;
 }
@@ -4211,20 +4214,20 @@ a:hover, a:focus{
 }
 .testimonials-widget-section .testimonial-col .description{
     font-family: ProximaNovaThin, Helvetica, Arial, sans-serif;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: bold;
     color: #333;
-    line-height: 27px;
+    line-height: 25px;
     padding-top: 7px;
     padding-bottom: 10px;
     border-bottom: 1px solid #aaa;
 }
 @media(min-width: 768px) {
     .testimonials-widget-section .testimonials-widget-holder {
-        padding: 100px 80px 50px 80px;
+        padding: 70px 80px 0px 80px;
     }
     .testimonials-widget-section .testimonials-widget-holder .filter {
-        top: 70px;
+        top: 30px;
         right: 79px;
     }
 }
