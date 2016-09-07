@@ -791,6 +791,12 @@ a:hover, a:focus{
     margin-top: 10px;
     color: #318389;
 }
+.gallery-details-section .add-to-bag .btn-group{
+    display: none;
+}
+.gallery-details-section.wedding-bands .add-to-bag .btn-group{
+    display: inline-block;
+}
 .gallery-details-section .free-delivery{
     margin-top: 20px;
     padding: 10px 10px 10px 25px;
@@ -934,7 +940,7 @@ a:hover, a:focus{
         margin-top: 10px;
         margin-bottom: 0px;
     }
-    .gallery-details-section .certificate .btn {
+    .gallery-details-section.wedding-bands .certificate .btn {
         margin-bottom: 72px;
     }
 }
