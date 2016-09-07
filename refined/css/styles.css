@@ -1754,6 +1754,7 @@ a:hover, a:focus{
 .main-content-section .valuations{
     background-color: #3db0a5;
     padding-top: 70px;
+    padding-bottom: 58px;
 }
 .main-content-section .guidance{
     background-image: url('../assets/guidance.png');
@@ -1761,11 +1762,6 @@ a:hover, a:focus{
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 150px;
-}
-.main-content-section .valuations{
-    padding-bottom: 58px;
-}
-.main-content-section .guidance{
     padding-bottom: 152px;
 }
 .main-content-section .valuations h2,
@@ -1825,7 +1821,13 @@ a:hover, a:focus{
         display: inline-block\9;
     }
 }
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end main-content-section - - */
+@media(min-width: 992px) {
+    .main-content-section .valuations, .main-content-section .guidance{
+        height: 505px;
+        padding-bottom: 0px;
+    }
+}
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end main-content-section - - */
 /* - - begin main-inner-content-section - - */
 .main-inner-content-section{
     margin: 0px auto 36px auto;

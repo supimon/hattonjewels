@@ -22,8 +22,11 @@ $(function(){
             $('.slider-section').length ? adjustSliderHeight() : '';
             lookupTable.productSliders ? populateSliderProducts(null) : '';
             if ($('.col-filtered-blog-section').length) prepareBlogCols(true);
-            if ($('.contact-content-section').length && ((screenSize == 'md') || (screenSize == 'lg')))
-                $('.contact-content-section .book').height($('.contact-content-section .bg-img').height());
+            if((screenSize == 'md') || (screenSize == 'lg')) {
+                if ($('.contact-content-section').length)
+                    $('.contact-content-section .book').height($('.contact-content-section .bg-img').height());
+                /* add more if needed */
+            }
         }
     }
     // utility function to get width of screen
@@ -289,7 +292,9 @@ $(function(){
         arrangeBlogItems(blogItemsArr);
     }
     // equal height for columns in contact page
-    if($('.contact-content-section').length && ((screenSize == 'md') || (screenSize == 'lg'))) {
-        $('.contact-content-section .book').height($('.contact-content-section .bg-img').height());
+    if((screenSize == 'md') || (screenSize == 'lg')) {
+        if ($('.contact-content-section').length)
+            $('.contact-content-section .book').height($('.contact-content-section .bg-img').height());
+        /* add more if needed */
     }
 });
