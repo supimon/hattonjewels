@@ -1,5 +1,5 @@
 $(function(){
-    var screenSize, // indicates current screenSize
+    var screenSize = '', // indicates current screenSize
         lastUpdatedBlogCol = 0, // to evenly distribute blog items in columns
         blogItemsArr = [], // total blog items(containers) on the page
         // a hypothetical config table for ease of configuration changes
@@ -18,19 +18,27 @@ $(function(){
     $(window).on('resize', makeResponsiveAdjustments);
     // utility function to make responsive adjustments to page elements
     function makeResponsiveAdjustments(){
-        getscreenSize();
-        $('.slider-section').length ? adjustSliderHeight(): '';
-        lookupTable.productSliders ? populateSliderProducts(null): '';
-        prepareBlogCols(true);
+        if(!getscreenSize()) {
+            $('.slider-section').length ? adjustSliderHeight() : '';
+            lookupTable.productSliders ? populateSliderProducts(null) : '';
+            if ($('.col-filtered-blog-section').length) prepareBlogCols(true);
+            if((screenSize == 'md') || (screenSize == 'lg')) {
+                if ($('.contact-content-section').length)
+                    $('.contact-content-section .book').height($('.contact-content-section .bg-img').height());
+                /* add more if needed */
+            }
+        }
     }
     // utility function to get width of screen
     function getscreenSize(){
+        var temp = screenSize;
         switch($('p.container.copyrights').outerWidth()){
             case 1170: screenSize = "lg"; break;
             case 970: screenSize = "md"; break;
             case 750: screenSize = $("body").width() != 750 ? "sm": "xs"; break;
             default: screenSize = "xs"; break;
         }
+        return temp == screenSize; // to make sure its not a height adjustment
     }
     // make home page slides responsive
     function adjustSliderHeight(){
@@ -196,6 +204,7 @@ $(function(){
                     temp = $(this).parents().hasClass('byo') ?
                             '<a class="btn btn-default select-btn">Select</a>' :
                             '<a class="btn btn-default cart-btn">Add to Cart</a>' +
+                            '<br class="visible-xs"/>' +
                             '<a class="btn btn-default view-btn">View Details</a>',
                     elem = '<div class="col-xs-12 filtered-product-details">' +
                             '<div><span class="close-prod-details">Close ' +
@@ -281,5 +290,11 @@ $(function(){
         $($('.col-filtered-blog-holder .row > div')[$('.col-filtered-blog-holder .row > div').length - 1])
             .append($('.tweet-box'));
         arrangeBlogItems(blogItemsArr);
+    }
+    // equal height for columns in contact page
+    if((screenSize == 'md') || (screenSize == 'lg')) {
+        if ($('.contact-content-section').length)
+            $('.contact-content-section .book').height($('.contact-content-section .bg-img').height());
+        /* add more if needed */
     }
 });

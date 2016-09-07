@@ -6,7 +6,7 @@
     <title>Hatton Jewels | Home</title>
     <link href="css/vendor/fontawesome/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="css/vendor/bootstrap/bootstrap.min.css" rel="stylesheet"/>
-    <link href="css/home-final.css" rel="stylesheet"/>
+    <link href="css/styles.css" rel="stylesheet"/>
 </head>
 <body>
 <!-- top navigations -->
@@ -26,7 +26,9 @@
         </ul>
         <div class="search">
             <div class="search-container">
-                <span class="icon"><i class="fa fa-search"></i></span>
+                <span class="icon">
+                    <span class="icon-circle"><i class="fa fa-search"></i></span>
+                </span>
                 <input type="search" id="search" placeholder="Search..." />
             </div>
         </div>
@@ -46,18 +48,78 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse text-center" id="main-nav">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Engagement</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Engagement <span class="caret hidden-xs hidden-sm"></span>
+                            <span class="megadd-arrow hidden-xs hidden-sm"></span>
+                        </a>
+                        <div class="dropdown-menu hidden-xs hidden-sm">
+                                <div class="megadd-holder">
+                                    <div class="col-md-3 design-jewellery">
+                                        <h3>Design Your Own</h3>
+                                        <a class="stone active" href="#"><span>Start with Stone</span></a>
+                                        <a class="setting" href="#"><span>Start with Setting</span></a>
+                                    </div>
+                                    <div class="col-md-5 select-category">
+                                        <div class="left-divider"></div>
+                                        <div class="right-divider"></div>
+                                        <div class="shapes-filters text-center">
+                                            <h3>Select a Category</h3>
+                                            <div class="single-filter active"
+                                                 style="background-image: url('assets/unique-ring-category.png')">
+                                                <h4>All</h4>
+                                            </div>
+                                            <div class="single-filter"
+                                                 style="background-image: url('assets/unique-ring-category.png')">
+                                                <h4>Solitaire</h4>
+                                            </div>
+                                            <div class="single-filter"
+                                                 style="background-image: url('assets/unique-ring-category.png')">
+                                                <h4>Vintage</h4>
+                                            </div>
+                                            <div class="single-filter"
+                                                 style="background-image: url('assets/unique-ring-category.png')">
+                                                <h4>Halo</h4>
+                                            </div>
+                                            <div class="single-filter"
+                                                 style="background-image: url('assets/unique-ring-category.png')">
+                                                <h4>3-Stone</h4>
+                                            </div>
+                                            <div class="single-filter"
+                                                 style="background-image: url('assets/unique-ring-category.png')">
+                                                <h4>Sapphire</h4>
+                                            </div>
+                                            <div class="single-filter"
+                                                 style="background-image: url('assets/unique-ring-category.png')">
+                                                <h4>Coloured Gem Stone</h4>
+                                            </div>
+                                            <div class="single-filter"
+                                                 style="background-image: url('assets/unique-ring-category.png')">
+                                                <h4>Channel Set</h4>
+                                            </div>
+                                            </div>
+                                    </div>
+                                    <div class="col-md-4 categories">
+                                        <ul class="megadd-categories">
+                                            <li>Ring</li>
+                                            <li>Necklace</li>
+                                            <li>Earrings</li>
+                                            <li>Bespoke Jewellery Service</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                        </div>
+                    </li>
                     <li><a href="#">Wedding</a></li>
                     <li><a href="#">Eternity</a></li>
                     <li><a href="#">Bespoke</a></li>
                     <li><a href="#">Diamond</a></li>
                     <li><a href="#">Jewellery</a></li>
                 </ul>
-                <hr class="vertical-hr"/>
+                <span class="divider-diamond"></span>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Valuations</a></li>
                     <li><a href="#">Guidance</a></li>
@@ -69,7 +131,8 @@
     </nav>
     <div class="logo-section">
         <div class="col-md-6 col-md-push-3 logo"><img src="assets/hatton-logo.png"></div>
-        <a class="col-md-3 col-md-pull-6 phone" href="tel:08000433573"><i class="fa fa-phone" aria-hidden="true"></i> Freephone 0800 043 3573</a>
+        <a class="col-md-3 col-md-pull-6 phone" href="tel:08000433573">
+            <i class="fa fa-phone" aria-hidden="true"></i> + 44 (0) 203 116 0069</a>
         <ul class="col-md-3 list-inline user-links">
             <li>
                 <i class="fa fa-shopping-bag" aria-hidden="true"></i>
@@ -84,7 +147,7 @@
                    aria-haspopup="true" aria-expanded="false">GBP &pound; <span class="caret"></span></a>
                 <ul class="dropdown-menu dropdown-menu-right">
                     <li><a href="#">GBP &pound;</a></li>
-                    <li><a href="#">USD &dollar;</a></li>
+                    <li><a href="#">USD $</a></li>
                     <li><a href="#">EURO &euro;</a></li>
                 </ul>
             </li>
@@ -249,7 +312,7 @@
 <section class="instagram-section">
     <h2>#HattonJewels</h2>
     <div class="container text-center">
-        <a class="left-arrow" href="#">&#10216;</a>
+        <!--<a class="left-arrow" href="#">&#10216;</a>
         <ul class="list-inline">
             <li class="hidden-xs"><a href="#"><img src="assets/insta-img1.png" class="img-responsive"></a></li>
             <li><a href="#"><img src="assets/insta-img2.png" class="img-responsive"></a></li>
@@ -257,7 +320,13 @@
             <li class="hidden-xs"><a href="#"><img src="assets/insta-img4.png" class="img-responsive"></a></li>
             <li class="hidden-xs"><a href="#"><img src="assets/insta-img5.png" class="img-responsive"></a></li>
         </ul>
-        <a class="right-arrow" href="#">&#10217;</a>
+        <a class="right-arrow" href="#">&#10217;</a>-->
+        <!-- LightWidget WIDGET -->
+        <script src="//lightwidget.com/widgets/lightwidget.js"></script>
+        <iframe src="//lightwidget.com/widgets/1de6afd67bf157f4b516ed5a61f0f2fa.html"
+                id="lightwidget_1de6afd67b" name="lightwidget_1de6afd67b"  scrolling="no" allowtransparency="true"
+                class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;">
+        </iframe>
     </div>
 </section>
 <!--footer-->
@@ -276,21 +345,43 @@
         </div>
         <hr/>
         <div class="container footer-links">
-            <div class="customer-service">
-                <h3>Customer Service</h3>
-                <ul class="multi-column list-unstyled">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Press</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Accreditations</a></li>
-                    <li><a href="#">Become an Affiliate</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Testimonials</a></li>
-                    <li><a href="#">Valuations</a></li>
-                    <li><a href="#">FAQs</a></li>
-                </ul>
+            <div class="customer-service-holder">
+                <div class="customer-service">
+                    <h3>Why Hatton Jewels</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#">30 day refunds</a></li>
+                        <li><a href="#">Lifetime Warranty</a></li>
+                        <li><a href="#">Free Delivery</a></li>
+                        <li><a href="#">Conflict Free Diamonds</a></li>
+                        <li><a href="#">Finance Options</a></li>
+                        <li><a href="#">Customer Loyalty Programs</a></li>
+                        <li><a href="#">Certified Diamonds</a></li>
+                        <li><a href="#">Valuation Certificates</a></li>
+                    </ul>
+                </div>
+                <div class="customer-service">
+                    <h3>About</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#">The Story</a></li>
+                        <li><a href="#">Visit the London boutique</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Bespoke Jewellery</a></li>
+                        <li><a href="#">Customer Reviews</a></li>
+                        <li><a href="#">Accreditations</a></li>
+                        <li><a href="#">Press and Awards</a></li>
+                    </ul>
+                </div>
+                <div class="customer-service">
+                    <h3>Terms And Conditions</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Become an Affiliate</a></li>
+                        <li><a href="#">Our Guarantee</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                        <li><a href="#">Delivery and Returns</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
             </div>
             <div class="contact-subscribe">
                 <div class="col-sm-5 get-in-touch">
