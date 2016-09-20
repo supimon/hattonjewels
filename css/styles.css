@@ -2287,13 +2287,15 @@ a:hover, a:focus{
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  end engagement.banner-section - - */
 /* - - begin wedding.banner-section - - */
-.wedding.banner-section{
+.wedding.banner-section,
+.eternity.banner-section{
     height: 80px;
     background-color: #181818;
     color: white;
     padding-top: 4px;
 }
-.wedding.banner-section h1 {
+.wedding.banner-section h1,
+.eternity.banner-section h1{
     font-family: AGaramondRegular;
     font-size: 1.275em;
     letter-spacing: 3.4px;
@@ -2301,11 +2303,13 @@ a:hover, a:focus{
     margin-top: 26px;
 }
 @media(min-width: 768px){
-    .wedding.banner-section{
+    .wedding.banner-section,
+    .eternity.banner-section{
         height: 200px;
         padding-top: 80px;
     }
-    .wedding.banner-section h1 {
+    .wedding.banner-section h1,
+    .eternity.banner-section h1{
         letter-spacing: 5.4px;
         font-size: 1.875em;
         margin-bottom: 27px;
@@ -2313,7 +2317,8 @@ a:hover, a:focus{
     }
 }
 @media(min-width: 992px){
-    .wedding.banner-section{
+    .wedding.banner-section,
+    .eternity.banner-section{
         height: 288px;
         padding-top: 133px;
     }
@@ -3294,7 +3299,8 @@ a:hover, a:focus{
     .three-products-section{
         padding: 0px 20px;
     }
-    .jewellery.three-products-section{
+    .jewellery.three-products-section,
+    .eternity.three-products-section{
         margin-top: 20px;
         margin-bottom: 20px;
     }
@@ -3849,7 +3855,8 @@ a:hover, a:focus{
         margin-top: 20px;
         margin-bottom: 20px;
     }
-    .two-categories-7-5-section.wedding{
+    .two-categories-7-5-section.wedding,
+    .two-categories-7-5-section.eternity{
         margin-bottom: 20px;
     }
     .two-categories-7-5-section.wedding-main .two-categories-holder .col-sm-7,
