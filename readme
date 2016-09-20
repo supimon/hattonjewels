@@ -11,3 +11,7 @@ Testing issues :
  2. couple of issues on IE 9
     2.a) the product slider arrows are screwed up
     2.b) the placeholders don’t show up
+
+
+ 3. the BYO product details as well as regular product details can include HTMLs in the modal but will have to
+    amend the script a bit (line 301, js/scripts.js)
