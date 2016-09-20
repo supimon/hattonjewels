@@ -4031,7 +4031,7 @@ a:hover, a:focus{
     line-height: 26px;
     margin-bottom: 30px;
 }
-.blog-content-section .blog-content-holder .description img.img-responsive {
+.blog-content-section .blog-content-holder .description .img-responsive {
     max-width: none;
     width: 104%;
     margin-left: -2%;
@@ -4085,7 +4085,7 @@ a:hover, a:focus{
     .blog-content-section .blog-content-holder{
         padding: 26px 11%;
     }
-    .blog-content-section .blog-content-holder .description img.img-responsive{
+    .blog-content-section .blog-content-holder .description .img-responsive{
         width: 120%;
         margin-left: -10%;
         margin-top: 40px;
@@ -4119,7 +4119,7 @@ a:hover, a:focus{
     padding-bottom: 10px;
 }
 .blog-content-section.about .blog-content-holder .description.second,
-.blog-content-section.about .blog-content-holder .description.second img {
+.blog-content-section.about .blog-content-holder .description.second .img-responsive {
     margin-bottom: 0px;
 }
 @media(min-width: 992px){
@@ -4128,6 +4128,36 @@ a:hover, a:focus{
     }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end about-blog-section - - */
+/* - - begin guidance-blog-section - - */
+.blog-content-section.guidance .blog-content-holder .description iframe{
+    height: 270px;
+}
+.blog-content-section.guidance .blog-content-holder .description .first-img,
+.blog-content-section.guidance .blog-content-holder .description .second-img{
+    padding: 10px 0px 0px 0px;
+}
+@media(min-width: 768px){
+    .blog-content-section.guidance .blog-content-holder .description iframe{
+        height: 375px;
+    }
+    .blog-content-section.guidance .blog-content-holder .title {
+        font-size: 30px;
+    }
+}
+@media(min-width: 992px){
+    .blog-content-section.guidance .blog-content-holder .description iframe{
+        height: 620px;
+    }
+    .blog-content-section.guidance .blog-content-holder .description .first-img{
+        padding-left: 0;
+        padding-right: 10px;
+    }
+    .blog-content-section.guidance .blog-content-holder .description .second-img{
+        padding-right: 0;
+        padding-left: 10px;
+    }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end guidance-blog-section - - */
 /* - - begin related-blog-section - - */
 .related-blog-section .related-blog-holder{
     background-color: #e8e8e8;
