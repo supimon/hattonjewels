@@ -207,7 +207,8 @@
                 </ul>
                 <hr/>
                 <div class="col-sm-6 certificate">
-                    <a class="btn btn-default" href="#">View Certificate</a>
+                    <a class="btn btn-default" id="view-cert"
+                       data-toggle="modal" data-target="#topNavModal" href="#">View Certificate</a>
                     <p class="price">£495.00</p>
                 </div>
                 <div class="col-sm-6 add-to-bag text-right">
@@ -223,10 +224,13 @@
                             <li><a href="#">Finish Type 4</a></li>
                         </ul>
                     </div><br class="visible-sm"/>
-                    <a href="#" class="btn-link ring-size" data-toggle="modal" data-target="#myModal">Select a Ring Size
+                    <a href="#" class="btn-link ring-size" id="ring-size"
+                       data-toggle="modal" data-target="#topNavModal">Select a Ring Size
                         <span class="size-circle"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
-                    <a class="btn btn-success bag" href="#">Add to Bag</a>
-                    <a class="wishlist" href="#">Add to Wishlist</a>
+                    <a class="btn btn-success bag" id="add-cart"
+                       data-toggle="modal" data-target="#topNavModal" href="#">Add to Bag</a>
+                    <a class="wishlist" id="add-wishlist"
+                       data-toggle="modal" data-target="#topNavModal" href="#">Add to Wishlist</a>
                 </div>
                 <div class="clearfix"></div>
                 <div class="free-delivery">
@@ -341,7 +345,8 @@
             <li class="divider"></li>
         </ul>
     </div>
-    <div><button class="btn btn-default submit-review">Submit A Review</button></div>
+    <div><a class="btn btn-default submit-review" id="submit-reviews"
+                 data-toggle="modal" data-target="#topNavModal" href="#">Submit A Review</a></div>
 </section>
 <!--footer-->
 <section class="footer-section">
@@ -512,6 +517,86 @@
 </div>
 <div class="conflict-free hidden">
     <h4 class="modal-title" id="conflict-free-label">Conflict Free Diamonds</h4>
+    <div class="modal-para">
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+            voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+            cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id
+            est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam
+            libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+            maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+            Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet
+            ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur
+            a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis
+            doloribus asperiores repellat.
+        </p>
+    </div>
+</div>
+<div class="view-cert hidden">
+    <h4 class="modal-title" id="view-cart-label">Certificate Details</h4>
+    <div class="modal-para">
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+            voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+            cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id
+            est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam
+            libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+            maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+            Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet
+            ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur
+            a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis
+            doloribus asperiores repellat.
+        </p>
+    </div>
+</div>
+<div class="ring-size hidden">
+    <h4 class="modal-title" id="ring-size-label">Selecting Ring Sizes</h4>
+    <div class="modal-para">
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+            voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+            cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id
+            est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam
+            libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+            maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+            Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet
+            ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur
+            a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis
+            doloribus asperiores repellat.
+        </p>
+    </div>
+</div>
+<div class="submit-reviews hidden">
+    <h4 class="modal-title" id="submit-reviews-label">Submit Review</h4>
+    <div class="modal-para">
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+            voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+            cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id
+            est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam
+            libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+            maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+            Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet
+            ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur
+            a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis
+            doloribus asperiores repellat.
+        </p>
+    </div>
+</div>
+<div class="add-wishlist hidden">
+    <h4 class="modal-title" id="add-wishlist-label">Wishlist</h4>
+    <div class="modal-para">
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+            voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+            cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id
+            est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam
+            libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+            maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+            Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet
+            ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur
+            a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis
+            doloribus asperiores repellat.
+        </p>
+    </div>
+</div>
+<div class="add-cart hidden">
+    <h4 class="modal-title" id="add-cart-label">Shopping Cart</h4>
     <div class="modal-para">
         <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
             voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
