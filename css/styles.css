@@ -318,6 +318,7 @@ a:hover, a:focus{
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     top: 36px;
+    border-bottom-left-radius: 30px;
 }
 /*#main-nav .navbar-nav > .active > a,
 #main-nav .navbar-nav > .active > a:focus,
