@@ -231,6 +231,62 @@ a:hover, a:focus{
     }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  end top-nav-section - - */
+/* - - begin modal-section - - */
+.modal-content{
+    border-radius: 0px;
+}
+.modal-header{
+    border: none;
+}
+.modal-title{
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+    font-family: 'AGaramondRegular', serif;
+    font-size: 24px;
+}
+.modal-body{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+}
+.modal-para{
+    font-family: "ProximaNovaThin", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: 0px;
+    font-size: 0.9375em;
+    line-height: 25px;
+    word-spacing: 2px;
+    text-transform: none;
+    margin-bottom: 30px;
+}
+@media(min-width: 768px) {
+    .modal-dialog{
+        width: 640px;
+    }
+    .modal-title {
+        margin: 60px 0px 0px 0px;
+        font-size: 30px;
+    }
+    .modal-body{
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 40px;
+    }
+}
+@media(min-width: 992px) {
+    .modal-dialog{
+        width: 740px;
+    }
+    .modal-title {
+        margin: 60px 0px 0px 0px;
+        font-size: 30px;
+    }
+    .modal-body{
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  end modal-section - - */
 /* - - begin logo-menu-section - - */
 .logo-menu-section{
     display: table;
