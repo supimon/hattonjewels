@@ -2357,6 +2357,20 @@ a:hover, a:focus{
     }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end inner-inner.banner-section - - */
+/* - - begin inner page banner styles - - */
+@media(min-width: 768px){
+    .inner-inner.banner-section.about h1{
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+}
+@media(min-width: 992px){
+    .inner-inner.banner-section.about h1{
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end inner-inner.banner-section - - */
 /* - - begin jewellery.banner-section - - */
 .jewellery.banner-section{
     height: 239px;
@@ -4097,6 +4111,23 @@ a:hover, a:focus{
     }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end blog-content-section - - */
+/* - - begin about-blog-section - - */
+.blog-content-section.about .blog-content-holder .description {
+    margin-top: 0px;
+}
+.blog-content-section.about .blog-content-holder{
+    padding-bottom: 10px;
+}
+.blog-content-section.about .blog-content-holder .description.second,
+.blog-content-section.about .blog-content-holder .description.second img {
+    margin-bottom: 0px;
+}
+@media(min-width: 992px){
+    .blog-content-section.about .blog-content-holder{
+        padding-bottom: 20px;
+    }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end about-blog-section - - */
 /* - - begin related-blog-section - - */
 .related-blog-section .related-blog-holder{
     background-color: #e8e8e8;
@@ -4800,6 +4831,29 @@ form .previews-container .dz-error-mark{
     }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  end contact-content-section - - */
+/* - - begin about-contact-section - - */
+.contact-content-section.about{
+    padding: 0px 10px;
+}
+.contact-content-section.about .email-us{
+    background-color: #ebebeb;
+}
+@media (min-width: 768px) {
+    .contact-content-section.about{
+        padding: 0px 20px;
+    }
+    .contact-content-section.about .book-us,
+    .contact-content-section.about .email-us{
+        padding-bottom: 80px;
+    }
+}
+@media(min-width: 992px) {
+    .contact-content-section.about .email-us,
+    .contact-content-section.about .book-us {
+        height: 615px;
+    }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  end about-contact-section - - */
 /* - - begin instagram-section - - */
 .instagram-section{
     background-color: transparent;
