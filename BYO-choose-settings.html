@@ -17,13 +17,21 @@
             <i class="fa fa-caret-down" aria-hidden="true"></i>
         </div>
         <ul>
-            <li><a href="#">30 day Refund Policy</a></li>
+            <li><a href="#" id="refund-policy"
+                   data-toggle="modal" data-target="#topNavModal">30 day Refund Policy</a>
+            </li>
             <li class="hidden-xs hidden-sm"><hr/></li>
-            <li><a href="#">Free Delivery</a></li>
+            <li><a href="#" id="free-delivery"
+                   data-toggle="modal" data-target="#topNavModal">Free Delivery</a>
+            </li>
             <li class="hidden-xs hidden-sm"><hr/></li>
-            <li><a href="#">Lifetime Guarantee</a></li>
+            <li><a href="#" id="guarantee"
+                   data-toggle="modal" data-target="#topNavModal">Lifetime Guarantee</a>
+            </li>
             <li class="hidden-xs hidden-sm"><hr/></li>
-            <li><a href="#">Conflict Free Diamonds</a></li>
+            <li><a href="#" id="conflict-free"
+                   data-toggle="modal" data-target="#topNavModal">Conflict Free Diamonds</a>
+            </li>
         </ul>
         <div class="search">
             <div class="search-container">
@@ -310,6 +318,85 @@
 <p class="container copyrights text-center">
     &copy;&nbsp;HATTON&nbsp;JEWELS&nbsp;Ltd Hatton&nbsp;J,&nbsp;5&nbsp;Hatton&nbsp;Place,&nbsp;London,&nbsp;EC1N BRU
 </p>
+<!--common modal-->
+<div class="modal fade" id="topNavModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <p class="modal-para"></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--content for modal-->
+<div class="refund-policy hidden">
+    <h4 class="modal-title" id="refund-policy-label">30 day Refund Policy</h4>
+    <div class="modal-para">
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+            voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+            cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id
+            est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam
+            libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+            maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+            Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet
+            ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur
+            a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis
+            doloribus asperiores repellat.
+        </p>
+    </div>
+</div>
+<div class="free-delivery hidden">
+    <h4 class="modal-title" id="free-delivery-label">Free Delivery</h4>
+    <div class="modal-para">
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+            voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+            cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id
+            est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam
+            libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+            maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+            Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet
+            ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur
+            a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis
+            doloribus asperiores repellat.
+        </p>
+    </div>
+</div>
+<div class="guarantee hidden">
+    <h4 class="modal-title" id="guarantee-label">Lifetime Guarantee</h4>
+    <div class="modal-para">
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+            voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+            cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id
+            est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam
+            libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+            maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+            Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet
+            ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur
+            a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis
+            doloribus asperiores repellat.
+        </p>
+    </div>
+</div>
+<div class="conflict-free hidden">
+    <h4 class="modal-title" id="conflict-free-label">Conflict Free Diamonds</h4>
+    <div class="modal-para">
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+            voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+            cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id
+            est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam
+            libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+            maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+            Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet
+            ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur
+            a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis
+            doloribus asperiores repellat.
+        </p>
+    </div>
+</div>
 <!--scripts-->
 <script src="js/vendor/jquery/jquery-2.2.3.min.js"></script>
 <script src="js/vendor/bootstrap/bootstrap.min.js"></script>
