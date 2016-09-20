@@ -297,4 +297,10 @@ $(function(){
             $('.contact-content-section .book').height($('.contact-content-section .bg-img').height());
         /* add more if needed */
     }
+    // modal for top navigation
+    $('#topNavModal').on('show.bs.modal', function (event) {
+        var link = $(event.relatedTarget), recipient = link.attr('id'), modal = $(this);
+        modal.find('.modal-title').text($('.'+recipient+' .modal-title').text());
+        modal.find('.modal-para').text($('.'+recipient+' .modal-para').text());
+    });
 });
