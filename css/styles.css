@@ -2754,6 +2754,9 @@ a:hover, a:focus{
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end style expand collapse button for filters - - */
 /* - - begin filtered-product-section - - */
+.filtered-product-section.brilliant-cut{
+    margin-top: -30px;
+}
 .filtered-product-section.byo{
     margin-top: -28px;
 }
