@@ -10,7 +10,7 @@ $(function(){
             filteredProductsPerPage: 12,
             selectedSettingID: '',
             productSliders: $('.products-slider-section').length ? resetSliders(true) : '',
-            filteredProducts: {path: 'xml/products-sample.xml/'}
+            filteredProducts: {path: 'xml/products-sample.xml'}
         }
     // upon load, make responsive adjustments
     makeResponsiveAdjustments();
