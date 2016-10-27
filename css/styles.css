@@ -57,6 +57,48 @@ a{
 a:hover, a:focus{
     color: #111;
 }
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+@media(min-width: 992px) {
+    #return-to-top:hover i {
+        color: #fff;
+        top: 5px;
+    }
+}
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end general section - - */
 /* - - begin top-nav-section - - */
 .top-nav-section{
@@ -4168,6 +4210,176 @@ a:hover, a:focus{
     }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end guidance-blog-section - - */
+/* - - begin guidance-parent-section - - */
+.guidance-parent-section{
+    padding: 0px 0px 10px 0px;
+}
+.guidance-parent-container {
+    background-color: #ebebeb;
+    padding: 10px 10px 0px 10px;
+}
+.guidance-parent-section .guidance-menu{
+    font-family: 'ProximaNovaRegular', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    background-color: white;
+    text-align: center;
+}
+.guidance-parent-section .col-md-9{
+    padding: 0px;
+}
+.guidance-parent-section .guidance-menu li {
+    padding: 10px 10px 10px 20px;
+}
+.guidance-parent-section .guidance-menu li:first-child {
+    padding-top: 30px;
+}
+.guidance-parent-section .guidance-menu li:last-child {
+    padding-bottom: 30px;
+}
+.guidance-parent-section .guidance-menu li a.active,
+.guidance-parent-section .guidance-menu li a:hover{
+    border-bottom: 1px solid #318389;
+    color: black;
+}
+.guidance-parent-section .right-content-container {
+    border-bottom: 1px solid grey;
+    padding-bottom: 6px;
+    padding-top: 0px;
+    margin-left: 5px;
+}
+.guidance-parent-section .right-content-container:first-child {
+    padding-top: 0px;
+}
+.guidance-parent-section .right-content-container:last-child {
+    border: none;
+}
+.guidance-parent-section .blogs-list {
+    text-align: center;
+    margin-left: 5px;
+}
+.guidance-parent-section .right-content-container h2,
+.guidance-parent-section .right-content-container h3{
+    font-family: 'AGaramondRegular', serif;
+    text-transform: none;
+}
+.guidance-parent-section h2.menu-title {
+    margin-bottom: 18px;
+    margin-top: 28px;
+    font-size: 22px;
+    text-align: center;
+}
+.guidance-parent-section h3.sub-title {
+    font-size: 18px;
+}
+.guidance-parent-section .right-content-container li{
+    padding-right: 15px;
+    padding-bottom: 20px;
+}
+.guidance-parent-section .right-content-container li div{
+    padding: 10px;
+    background-color: white;
+}
+@media(min-width: 768px){
+    .guidance-parent-section{
+        padding: 0px 0px 10px 0px;
+    }
+    .guidance-parent-container{
+        padding: 20px 20px 0px 20px;
+    }
+    .guidance-parent-section .right-content-container {
+        padding-bottom: 43px;
+        padding-top: 24px;
+    }
+    .guidance-parent-section .blogs-list{
+        margin-left: 15px;
+    }
+    .guidance-parent-section .col-md-9{
+        padding: 0px 15px;
+    }
+    .guidance-parent-section .guidance-menu li:first-child {
+        padding-top: 30px;
+    }
+    .guidance-parent-section .guidance-menu li:last-child {
+        padding-bottom: 30px;
+    }
+    .guidance-parent-section h2.menu-title {
+        margin-bottom: 30px;
+        margin-top: 40px;
+        font-size: 30px;
+    }
+    .guidance-parent-section h3.sub-title{
+        font-size: 24px;
+    }
+}
+@media(min-width: 992px){
+    .guidance-parent-section{
+        padding: 0px 20px 20px 20px;
+    }
+    .guidance-parent-container{
+        padding: 100px 0px 30px 30px;
+    }
+    .guidance-parent-section .guidance-menu{
+        text-align: left;
+    }
+    .guidance-parent-section .col-md-9{
+        margin-top: -66px;
+    }
+    .guidance-parent-section .right-content-container {
+        padding-bottom: 20px;
+        padding-top: 10px;
+    }
+    .guidance-parent-section h2.menu-title {
+        margin-bottom: 20px;
+        font-size: 24px;
+        margin-top: 20px;
+        text-align: left;
+    }
+    .guidance-parent-section h3.sub-title{
+        font-size: 20px;
+    }
+    .guidance-parent-section .blogs-list{
+        text-align: left;
+        margin-left: -5px;
+    }
+}
+@media(min-width: 1200px){
+    .guidance-parent-container{
+        padding: 150px 100px 50px 100px;
+    }
+    .guidance-parent-section .guidance-menu{
+        font-size: 14px;
+    }
+    .guidance-parent-section .guidance-menu li {
+        padding: 10px 10px 10px 20px;
+    }
+    .guidance-parent-section .guidance-menu li:first-child {
+        padding-top: 50px;
+    }
+    .guidance-parent-section .guidance-menu li:last-child {
+        padding-bottom: 50px;
+    }
+    .guidance-parent-section .col-md-9{
+        margin-top: -83px;
+    }
+    .guidance-parent-section .right-content-container {
+        padding-bottom: 43px;
+        padding-top: 24px;
+        margin-left: 5px;
+    }
+    .guidance-parent-section .right-content-container:first-child {
+        padding-top: 0px;
+    }
+    .guidance-parent-section h2.menu-title{
+        margin-bottom: 30px;
+        font-size: 30px;
+    }
+    .guidance-parent-section h3.sub-title{
+        font-size: 24px;
+    }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - end guidance-parent-section - - */
 /* - - begin related-blog-section - - */
 .related-blog-section .related-blog-holder{
     background-color: #e8e8e8;

@@ -1,4 +1,17 @@
 $(function(){
+    // ===== Scroll to Top ====
+    $(window).scroll(function() {
+        if ($(this).scrollTop() >= 186) {        // If page is scrolled more than 50px
+            $('#return-to-top').fadeIn(200);    // Fade in the arrow
+        } else {
+            $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+        }
+    });
+    $('#return-to-top').click(function() {      // When arrow is clicked
+        $('body,html').animate({
+            scrollTop : 0                       // Scroll to top of body
+        }, 500);
+    });
     var screenSize = '', // indicates current screenSize
         lastUpdatedBlogCol = 0, // to evenly distribute blog items in columns
         blogItemsArr = [], // total blog items(containers) on the page
@@ -303,4 +316,11 @@ $(function(){
         modal.find('.modal-title').text($('.'+recipient+' .modal-title').text());
         modal.find('.modal-para').text($('.'+recipient+' .modal-para').text());
     });
+    // active styles for guidance parent menus
+    if($('.guidance-parent-section').length){
+        $('.guidance-parent-section .guidance-menu li a').click(function(){
+            $('.guidance-parent-section .guidance-menu li a').removeClass('active');
+            $(this).addClass('active');
+        });
+    }
 });
