@@ -3086,6 +3086,18 @@ a:hover, a:focus{
 .graphic-explain-section li span.expert-value{
     background-image: url("../assets/expert-value.png");
 }
+.graphic-explain-section li span.valuation-contact{
+    background-image: url("../assets/contact_valuations.png");
+}
+.graphic-explain-section li span.valuation-delivery{
+    background-image: url("../assets/delivery_valuations.png");
+}
+.graphic-explain-section li span.valuation-certificate{
+    background-image: url("../assets/certificate_valuation.png");
+}
+.graphic-explain-section li span.valuation-collect{
+    background-image: url("../assets/collecting_valuations.png");
+}
 .graphic-explain-section li h3{
     font-size: 19px;
     margin-top: 28px;
