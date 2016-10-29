@@ -3287,7 +3287,16 @@ a:hover, a:focus{
 .text-image-section .image{
     margin-bottom: 40px;
 }
+.text-image-section.valuations .image{
+    margin-bottom: 0px;
+}
 @media(min-width: 992px) {
+    .text-image-section.valuations .text{
+        padding-right: 10px;
+    }
+    .text-image-section.valuations .image{
+        padding-left: 10px;
+    }
     .text-image-section .text h2{
         padding-right: 80px;
         margin-bottom: 45px;
@@ -4665,8 +4674,7 @@ a:hover, a:focus{
 .validation-form-section .upper-forms-holder{
     margin-bottom: 20px;
 }
-#fileUploadZone{
-    background-color: #ebebeb;
+#fileUploadZone, #appointmentForm{
     padding: 33px 20px 32px 20px;
     font-family: "GILSans", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
@@ -4674,7 +4682,13 @@ a:hover, a:focus{
     letter-spacing: 1.6px;
     word-spacing: 3px;
 }
-#fileUploadZone input {
+#fileUploadZone{
+    background-color: #ebebeb;
+}
+#appointmentForm{
+    background-color: #bccdd8;
+}
+#fileUploadZone input, #appointmentForm input {
     border: 1px solid black;
     border-radius: 0px;
     padding: 23px 15px;
@@ -4682,18 +4696,28 @@ a:hover, a:focus{
     letter-spacing: 2px;
     font-size: 11px;
     margin-bottom: 20px;
-    background-color: #ebebeb;
     color: black;
 }
-#fileUploadZone button {
+#fileUploadZone input{
+    background-color: #ebebeb;
+}
+#appointmentForm input{
+    background-color: #bccdd8;
+}
+#fileUploadZone button, #appointmentForm button {
     border: 1px solid black;
     border-radius: 0px;
     padding: 15px 15px 16px 15px;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 11px;
-    background-color: #ebebeb;
     color: black;
+}
+#fileUploadZone button{
+    background-color: #ebebeb;
+}
+#appointmentForm button{
+    background-color: #bccdd8;
 }
 #fileUploadZone .item-metal-type{
     margin-bottom: 0px;
@@ -4702,18 +4726,22 @@ a:hover, a:focus{
     width: 100%;
     margin-bottom: 20px;
 }
-#fileUploadZone ul.dropdown-menu{
+#fileUploadZone ul.dropdown-menu,
+#appointmentForm ul.dropdown-menu{
     width:100%;
 }
-#fileUploadZone ul.dropdown-menu li {
+#fileUploadZone ul.dropdown-menu li,
+#appointmentForm ul.dropdown-menu li {
     font-size: 10px;
     padding: 5px 5px 5px 10px;
 }
-#fileUploadZone .btn-main{
+#fileUploadZone .btn-main,
+#appointmentForm .btn-main{
     overflow: hidden;
     width: calc(100% - 40px);
 }
-#fileUploadZone button.dropdown-toggle {
+#fileUploadZone button.dropdown-toggle,
+#appointmentForm button.dropdown-toggle{
     background-color: #318389;
     color: white;
 }
@@ -4721,10 +4749,15 @@ a:hover, a:focus{
     float: none; /* funny hack for safari */
     float: right;
 }
-#fileUploadZone .btn-group.appraisal{
+#fileUploadZone .btn-group.appraisal,
+#appointmentForm .btn-group.appraisal{
     width: 100%;
 }
-#fileUploadZone .btn-appraisal{
+#appointmentForm .btn-group.appraisal{
+    margin-bottom: 20px;
+}
+#fileUploadZone .btn-appraisal,
+#appointmentForm .btn-appraisal{
     width: calc(100% - 40px);
 }
 #fileUploadZone .upload-text{
@@ -4768,27 +4801,36 @@ a:hover, a:focus{
     margin-bottom: 0px;
     margin-top: 0px;
 }
-#fileUploadZone .lower-forms-holder textarea{
+#fileUploadZone .lower-forms-holder textarea,
+#appointmentForm textarea{
     text-transform: uppercase;
     font-size: 11px;
     letter-spacing: 1.6px;
     word-spacing: 3px;
     border: 1px solid black;
     border-radius: 0px;
-    background-color: #ebebeb;
     width: 100%;
     height: 125px;
     padding: 10px 15px;
     margin-bottom: 15px;
 }
-#fileUploadZone .lower-forms-holder .submit{
+#fileUploadZone .lower-forms-holder textarea{
+    background-color: #ebebeb;
+}
+#appointmentForm textarea{
+    background-color: #bccdd8;
+}
+#fileUploadZone .lower-forms-holder .submit,
+#appointmentForm .submit{
     float: right;
     cursor: pointer;
 }
-#fileUploadZone .lower-forms-holder .submit button{
+#fileUploadZone .lower-forms-holder .submit button,
+#appointmentForm .submit button{
     padding: 0px 0px 0px 17px;
 }
-#fileUploadZone .lower-forms-holder .submit .submit-arrow{
+#fileUploadZone .lower-forms-holder .submit .submit-arrow,
+#appointmentForm .submit .submit-arrow{
     display: inline-block;
     width: 40px;
     height: 46px;
@@ -4800,14 +4842,16 @@ a:hover, a:focus{
 }
 /* hack for IE >= 9 */
 @media screen and (min-width:0\0) {
-    #fileUploadZone input {
+    #fileUploadZone input,
+    #appointmentForm input{
         padding: 0px 15px;
         height: 48px;
     }
 }
 /* hack for firefox >= 3.6 */
 @media screen and (-moz-images-in-menus:0) {
-    #fileUploadZone input {
+    #fileUploadZone input,
+    #appointmentForm input {
         padding: 0px 15px;
         height: 48px;
     }
@@ -4816,8 +4860,11 @@ a:hover, a:focus{
     #fileUploadZone .col-md-5{
         margin-bottom: 20px;
     }
-    #fileUploadZone {
+    #fileUploadZone{
         padding: 93px 180px 62px 180px;
+    }
+    #appointmentForm {
+        padding: 93px 100px 62px 100px;
     }
     .validation-form-section{
         padding: 0px 20px;

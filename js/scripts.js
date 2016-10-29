@@ -12,7 +12,8 @@ $(function(){
             scrollTop : 0                       // Scroll to top of body
         }, 500);
     });
-    var screenSize = '', // indicates current screenSize
+    var diffHeight, // to equalize height
+        screenSize = '', // indicates current screenSize
         lastUpdatedBlogCol = 0, // to evenly distribute blog items in columns
         blogItemsArr = [], // total blog items(containers) on the page
         // a hypothetical config table for ease of configuration changes
@@ -38,6 +39,14 @@ $(function(){
             if((screenSize == 'md') || (screenSize == 'lg')) {
                 if ($('.contact-content-section').length)
                     $('.contact-content-section .book').height($('.contact-content-section .bg-img').height());
+                if ($('.text-image-section.valuations').length)
+                    setTimeout( function() {
+                        diffHeight = $('.text-image-section .text').height() - $('.text-image-section .image').height();
+                        diffHeight >= 0 ?
+                            $('.text-image-section .image form')
+                                .height($('.text-image-section .image form').height() + diffHeight) :
+                            $('.text-image-section .text').height($('.text-image-section .text').height() + diffHeight);
+                    }, 0);
                 /* add more if needed */
             }
         }
