@@ -3276,6 +3276,21 @@ a:hover, a:focus{
     }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  end products-slider-section - - */
+/* - - begin inner-valuations-section - - */
+.inner-valuations-section{
+    margin-top: 20px;
+}
+.inner-valuations-section a{
+    border-radius: 0px;
+    border-color: #318389;
+    color: #318389;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    font-size: 12px;
+    margin: 10px 5px 0px 5px;
+    padding: 10px 20px;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  end inner-valuations-section - - */
 /* - - begin text-image-section - - */
 .text-image-section{
     padding: 0px 20px;
