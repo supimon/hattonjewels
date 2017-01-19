@@ -629,18 +629,40 @@
                                     .slider(lookupTable.filterSliders[sliderKey].obj);
             }
             filterSectionHeight = $('.filter-section').height(); // get filter holder height after the filters get initialised
+            // label-filters with multiple select enabled
             $('.filter-section .metal-filter, .filter-section .label-filter').each(function () {
                 var $allItems = $(this).find('li');
                 $allItems.on('click', function () {
-                    $allItems.removeClass('active');
-                    $(this).addClass('active');
+                    $(this).hasClass('active') ? $(this).removeClass('active') : $(this).addClass('active');
                 });
             });
+            // shape filters with multiple select enabled
             $('.filter-section .category-filters, .filter-section .shape-filters').each(function () {
-                var $allItems = $(this).children('.single-filter');
+                var $allItems = $(this).children('.single-filter'),
+                    $theAllitem = (function(){
+                        for(var i = 0; i < $allItems.length; i++){
+                            if($($allItems[i]).children('h4').text() == "All")
+                                return $($allItems[i]);
+                        }
+                    })();
+
                 $allItems.on('click', function () {
-                    $allItems.removeClass('active');
-                    $(this).addClass('active');
+                    var activeCount = 0;
+
+                    if($(this).children('h4').text() == "All"){
+                        $(this).hasClass('active') ?
+                            $(this).parent().children('.single-filter').removeClass('active') :
+                            $(this).parent().children('.single-filter').addClass('active');
+                    }
+                    else{ // handle the "All" selection
+                        $(this).hasClass('active') ? $(this).removeClass('active') : $(this).addClass('active');
+                        for(var i = 0; i < $allItems.length; i++){
+                            (($($allItems[i]).children('h4').text() != "All") && $($allItems[i]).hasClass('active')) ?
+                                    activeCount++ : '';
+                        }
+                        activeCount == ($allItems.length - 1) ?
+                                $theAllitem.addClass('active') : $theAllitem.removeClass('active');
+                    }
                 });
             });
             // set initial values for filters
@@ -676,23 +698,37 @@
                 if (lookupTable.filterSliders[sliderKey].type == "regular") {
                     var lowerLimit = lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue')[0],
                             upperLimit = lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue')[1];
-                    if ((upperLimit - lowerLimit) == 0) {
-                        sliderResultObj[sliderKey].push(lookupTable.filterSliders[sliderKey]
-                                .obj.ticks_labels[lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue')[1] - 1]);
-                    } else {
-                        for (var k = lowerLimit; k < upperLimit; k++) {
-                            sliderResultObj[sliderKey].push(lookupTable.filterSliders[sliderKey].obj.ticks_labels[k]);
+                    if(sliderKey == 'caretSlider' || sliderKey == 'priceSlider'){
+                        sliderResultObj[sliderKey].push(lowerLimit, upperLimit);
+                    }else{
+                        if ((upperLimit - lowerLimit) == 0) {
+                            sliderResultObj[sliderKey].push(lookupTable.filterSliders[sliderKey]
+                                    .obj.ticks_labels[lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue')[1] - 1]);
+                        } else {
+                            for (var k = lowerLimit; k < upperLimit; k++) {
+                                sliderResultObj[sliderKey].push(lookupTable.filterSliders[sliderKey].obj.ticks_labels[k]);
+                            }
                         }
                     }
-                } else if (lookupTable.filterSliders[sliderKey].type == "radio-type" ||
+
+                } else if (lookupTable.filterSliders[sliderKey].type == "radio-type" || // corrected this for accepting multiple values
                         lookupTable.filterSliders[sliderKey].type == "label-type") {
-                    sliderResultObj[sliderKey].push(
-                            lookupTable.filterSliders[sliderKey]
-                                    .obj.values[$('#' + lookupTable.filterSliders[sliderKey].obj.id + 'Input ul')
-                                    .children('.active').index()]);
-                } else if (lookupTable.filterSliders[sliderKey].type == "shape-filter") {
-                    sliderResultObj[sliderKey]
-                            .push($('#' + lookupTable.filterSliders[sliderKey].obj.id + 'Input .single-filter.active h4').text());
+                    for(var k = 0; k < $('#' + lookupTable.filterSliders[sliderKey].obj.id + 'Input ul li.active').length; k++){
+                        sliderResultObj[sliderKey].push(
+                                lookupTable.filterSliders[sliderKey].obj.values[
+                                        $($('#' + lookupTable.filterSliders[sliderKey].obj.id + 'Input ul')
+                                                .children('.active')[k]).index()
+                                        ]
+                        );
+                    }
+                } else if (lookupTable.filterSliders[sliderKey].type == "shape-filter") { // corrected this for accepting multiple values
+                    for(var k = 0; k < $('#' + lookupTable.filterSliders[sliderKey].obj.id
+                            + 'Input .single-filter.active').length; k++){
+                        if($($('#' + lookupTable.filterSliders[sliderKey].obj.id
+                                        + 'Input .single-filter.active')[k]).children('h4').text() != "All")
+                            sliderResultObj[sliderKey].push($($('#' + lookupTable.filterSliders[sliderKey].obj.id
+                                    + 'Input .single-filter.active')[k]).children('h4').text());
+                    }
                 } else {
                     sliderResultObj[sliderKey] = lookupTable.filterSliders[sliderKey].sliderObj.slider('getValue');
                 }
